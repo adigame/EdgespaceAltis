@@ -1,5 +1,4 @@
 /*
-      Created by SealDrop
       Date: 04.08.2014
 */
 

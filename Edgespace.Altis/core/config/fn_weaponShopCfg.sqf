@@ -24,10 +24,10 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Du bist kein Polizist"};
+			case (playerSide !=west): {"You are not a police officer!"};
 			default
 			{
-				["Praktikanten Polizei Shop",
+				["Police Const Store",
 					[
 						["Rangefinder",nil,10]
 					]
@@ -40,11 +40,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) < 1): {"Du kannst erst als Polizist hier Zugreifen !"};
+			case (playerSide != west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) < 1): {"Police Officers may only access this!"};
 			default
 			{
-				["Altis Visiere & Sonstiges",
+				["Visors & Others",
 					[
 						["ItemMap",nil,10],
 						["ItemWatch",nil,10],
@@ -81,10 +81,10 @@ switch(_shop) do
 	{
 		switch (true) do 
 		{
-			case (playerSide != independent): {"Du bist kein ADAC"};
-			case (__GETC__(life_mediclevel) < 2): {"Du kannst erst als ADAC hier Zugreifen !"}; 
+			case (playerSide != independent): {"You are not a pharamedic/EMS"};
+			case (__GETC__(life_mediclevel) < 2): {"Only pharamedics/EMS can access this!"}; 
 			default {
-				["ADAC Shop",
+				["Medic Shop",
 					[
 						["ItemGPS",nil,10],
 						["Binocular",nil,10],
@@ -106,10 +106,10 @@ switch(_shop) do
 	{
 		switch (true) do 
 		{
-			case (playerSide != independent): {"Du bist kein MEDIC"};
-			case (__GETC__(life_mediclevel) < 1): {"Du kannst erst als MEDIC hier Zugreifen !"}; 
+			case (playerSide != independent): {"You are not a pharamedic/EMS"};
+			case (__GETC__(life_mediclevel) < 1): {"Only pharamedics/EMS can access this!"}; 
 			default {
-				["Hospital EMS Shop",
+				["Pharamedic's Store",
 					[
 						["ItemGPS",nil,10],
 						["Binocular",nil,10],
@@ -131,11 +131,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Du bist kein Polizist"};
-			case (__GETC__(life_coplevel) < 2): {"Du bist noch kein Komissar !"};
+			case (playerSide !=west): {"You are not a police officer"};
+			case (__GETC__(life_coplevel) < 2): {"You are not a Sargent!"};
 			default
 			{
-				["Beamter Waffen Laden",
+				["Police Sgt Store",
 					[
 						["arifle_sdar_F","Taser Sturmgewehr",10],
 						["hgun_Rook40_F","Taser-Pistole",10],
@@ -152,11 +152,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Du bist kein Polizist"};
-			case (__GETC__(life_coplevel) < 3): {"Du bist noch kein Kommissar"};
+			case (playerSide !=west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) < 3): {"You are not a Lieutenant"};
 			default
 			{
-				["Kommisar Waffen Shop",
+				["Police Lt Store",
 					[
 						["arifle_MXC_F",nil,10],
 						["arifle_MX_F",nil,10],
@@ -175,11 +175,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Du bist kein Polizist"};
-			case (__GETC__(life_coplevel) < 4): {"Du bist kein HauptKommissar"};
+			case (playerSide !=west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) < 4): {"You are not a captain"};
 			default
 			{
-				["HauptKommisar Waffen Shop",
+				["Police CPT Store",
 					[
 						["SMG_02_F",nil,10],
 						["arifle_TRG20_F",nil,10],
@@ -199,11 +199,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Du bist kein Polizist"};
-			case (__GETC__(life_coplevel) < 5): {"Du bist kein SEK-Beamter"};
+			case (playerSide !=west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) < 5): {"You are not a major"};
 			default
 			{
-				["SEK Waffen Shop",
+				["Police Maj Store",
 					[
 						["arifle_MXM_Black_F",nil,10],
 						["arifle_MX_Black_F",nil,10],
@@ -226,11 +226,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Du bist kein Polizist"};
-			case (__GETC__(life_coplevel) < 6): {"Du bist nicht bei der GSG9"};
+			case (playerSide !=west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) < 6): {"You are not a lieutenant colonel"};
 			default
 			{
-				["GSG9 Waffen Shop",
+				["Police Lt Col Store",
 					[
 						["arifle_MXM_Black_F",nil,10],
 						["arifle_MX_Black_F",nil,10],
@@ -258,10 +258,10 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a cop!"};
-			case (!license_civ_rebel): {"Du besitz keine Rebellen Lizenz!"};
+			case (!license_civ_rebel): {"You do not have rebel training!"};
 			default
 			{
-				["Mohammed's Waffen Laden",
+				["Mohammed's Gun Store",
 					[
 						["arifle_TRG20_F",nil,350000],
 						["arifle_Katiba_F",nil,300000],
@@ -300,11 +300,11 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"You are not a cop!"};
-			case (!license_civ_gun): {"Du hast keinen Waffenschein!"};
+			case (playerSide != civilian): {"You are not a civillian!"};
+			case (!license_civ_gun): {"You do not have a gun license!"};
 			default
 			{
-				["Billy Joe's Firearms",
+				["Joe's Firearms",
 					[
 						["hgun_P07_F",nil,15000],
 						["hgun_Pistol_heavy_02_F",nil,20000],
@@ -328,7 +328,7 @@ switch(_shop) do
 			case (__GETC__(life_donator) == 0): {"You are not a donator!"};
 			case (__GETC__(life_donator) == 1):
 			{
-				["STS Donator Shop Rang 1",
+				["Donator Shop Rank 1",
 					[
 						["hgun_P07_F",nil,1250],
 						["hgun_PDW2000_F",nil,6500],
@@ -350,7 +350,7 @@ switch(_shop) do
 
 			case (__GETC__(life_donator) == 2):
 			{
-				["STS Donator Shop Rang 2",
+				["Donator Shop Rank  2",
 					[
 						["hgun_P07_F",nil,500],
 						["hgun_PDW2000_F",nil,6500],
@@ -373,7 +373,7 @@ switch(_shop) do
 
 			case (__GETC__(life_donator) == 3):
 			{
-				["Söldner Waffen Händler",
+				["Mercenary Gun Shop",
 					[
 						["hgun_P07_F",nil,5000],
 						["hgun_PDW2000_F",nil,10000],
@@ -414,7 +414,7 @@ switch(_shop) do
 	
 	case "genstore":
 	{
-		["Altis Elektro-Händler",
+		["Dion Wired",
 			[
 				["Binocular",nil,150],
 				["ItemGPS",nil,100],
@@ -436,15 +436,15 @@ switch(_shop) do
     {
         switch(true) do
         {
-            case (playerSide != civilian): {"Du bist kein Zivilist"};
-            case (!license_civ_uranium): {"Du benötigst eine Uran-Lizenz"};
+            case (playerSide != civilian): {"You are not a civillian"};
+            case (!license_civ_uranium): {"You do not have a uranium license"};
             default
             {
                 ["Uran Verkäufer",
                     [
                         ["ToolKit",nil,200],
                         ["FirstAidKit",nil,100],
-                        ["U_I_HeliPilotCoveralls","Anti-Strahlungs Anzug",50000]
+                        ["U_I_HeliPilotCoveralls","Anti-Radiation Suit",50000]
                     ]
                 ];
             };

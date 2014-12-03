@@ -1,6 +1,6 @@
-author = "Tonic | Edit by SealDrop (TheTotenkopf)";
-onLoadName = "٠٠•● S E A L D R O P ●•٠";
-onLoadMission = "• A RPG by SealDrop •";
+author = "Tonic | Edit by NightShade";
+onLoadName = "٠٠•● EDGESPACE ●•٠";
+onLoadMission = "• Altis Life RPG •";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 1;
@@ -153,8 +153,8 @@ class CfgDebriefing
 {
 	class NotWhitelisted
 	{
-		title = "Mission Fehlgeschlagen";
-		subtitle = "Du wurdest vom Dienst suspendiert";
+		title = "Mission Failed";
+		subtitle = "You have been suspended from Duty";
 		description = "You are not allowed to use this slot because you do not have the appropriate permissions, try another slot.";
 		pictureBackground = "";
 		picture = "";
@@ -163,8 +163,8 @@ class CfgDebriefing
 	
 	class Blacklisted
 	{
-		title = "Mission Fehlgeschlagen";
-		subtitle = "Du stehst auf der Polizei Blacklist";
+		title = "Mission Failed";
+		subtitle = "You are on the Police Blacklist";
 		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
 		pictureBackground = "";
 		picture = "";
@@ -173,7 +173,7 @@ class CfgDebriefing
 	
 	class SpyGlass
 	{
-		title = "SpyGlass hat dich gesehen";
+		title = "SpyGlass Has Detected You";
 		subTitle = "You were detected by the SpyGlass";
 		description = "You were detected for cheating and have been reported to the server. Enjoy your day.";
 		pictureBackground = "";
@@ -186,7 +186,7 @@ class CfgNotifications
 {
 	class MedicalRequestEmerg
 	{
-		title = "Notruf";
+		title = "EMS Emergency";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
 		description = "%1";
 		duration = 5;
@@ -222,7 +222,7 @@ class CfgNotifications
 	
 	class TextMessage
 	{
-		title = "Neue Textnachricht";
+		title = "New Text Message";
 		iconPicture = "icons\messagenew.paa";
 		description = "%1";
 		duration = 10;
@@ -231,7 +231,7 @@ class CfgNotifications
 	
 	class PoliceDispatch
 	{
-		title = "Polizei Notruf";
+		title = "Police Emergency";
 		iconPicture = "icons\messagepolice.paa";
 		description = "%1";
 		duration = 10;
@@ -240,7 +240,7 @@ class CfgNotifications
 	
 	class AdminDispatch
 	{
-		title = "Admin Nachrichten Center";
+		title = "Admin Message Center";
 		iconPicture = "icons\messageadmin.paa";
 		description = "%1";
 		duration = 10;
@@ -249,7 +249,7 @@ class CfgNotifications
 	
 	class AdminMessage
 	{
-		title = "Admin Nachricht";
+		title = "Admin Message";
 		iconPicture = "icons\messageadmin.paa";
 		description = "%1";
 		duration = 10;

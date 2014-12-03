@@ -10,7 +10,7 @@ private["_filter","_ret"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 
 //Shop Title Name
-ctrlSetText[3103,"Arzt Bekleidungsshop"];
+ctrlSetText[3103,"Medics Clothing Store"];
 
 _ret = [];
 switch (_filter) do
@@ -20,8 +20,8 @@ switch (_filter) do
 	{
 		_ret = 
 		[
-			["U_O_OfficerUniform_ocamo","Artztuniform",500],
-			["U_B_HeliPilotCoveralls","ADAC Uniform",500]
+			["U_O_OfficerUniform_ocamo","Pharamedic Uniform",500],
+			["U_B_HeliPilotCoveralls","EMS Uniform",500]
 		];
 	};
 	
