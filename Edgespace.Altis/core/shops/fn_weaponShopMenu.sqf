@@ -1,9 +1,7 @@
 /*
 	File: fn_weaponShopMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
 	Description:
-	Something
+
 */
 private["_config","_itemInfo","_itemList"];
 uiNamespace setVariable ["Weapon_Shop",_this select 3];
@@ -19,7 +17,7 @@ ctrlSetText[38401,_config select 0];
 _filters = ((findDisplay 38400) displayCtrl 38402);
 lbClear _filters;
 
-_filters lbAdd "Laden";
-_filters lbAdd "Inventar";
+_filters lbAdd "Store";
+_filters lbAdd "Inventory";
 
 _filters lbSetCurSel 0;

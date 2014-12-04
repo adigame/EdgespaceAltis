@@ -1,9 +1,6 @@
 /*
 	File: fn_getVehicles.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sends a request to query the database information and returns vehicles.
+	Description: Sends a request to query the database information and returns vehicles.
 */
 private["_pid","_side","_type","_unit","_ret","_tickTime","_queryResult"];
 _pid = [_this,0,"",[""]] call BIS_fnc_param;

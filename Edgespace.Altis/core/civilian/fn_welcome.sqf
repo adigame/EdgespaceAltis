@@ -5,7 +5,7 @@
 	
 	Description:
 	Erstellt ein schönen Regel Screen
-*/
+
 
 //Start erst nach Spawn
 waitUntil{!isNull (findDisplay 38500)};
@@ -64,3 +64,4 @@ switch (playerSide) do
 } forEach _text;
         
 format ["Hallo %1, Willkommen auf unserem Server !", name player] hintC _intro;
+*/

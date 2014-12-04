@@ -36,7 +36,7 @@ switch(true) do {
 if(vehicle player != player) exitWith {};
 
 _diff = [_gather,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(_diff == 0) exitWith {hint "Inventar Voll"};
+if(_diff == 0) exitWith {hint "Inventory is Full"};
 life_action_inUse = true;
 for "_i" from 0 to 2 do
 {

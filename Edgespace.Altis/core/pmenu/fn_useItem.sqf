@@ -28,7 +28,7 @@ switch (true) do
 	
 	case (_item == "painkillers"):
 	{
-		if(vehicle player != player) exitWith {hint "Du kannst dich nicht in einem Fahrzeug heilen..."};
+		if(vehicle player != player) exitWith {hint "You cannot use this while in a vehicle"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			player setDamage 0;
@@ -36,14 +36,14 @@ switch (true) do
 			player allowDamage true;
 			player enableSimulation true;
 			closeDialog 0;
-			hint "Die Schmerzmittel haben gewirkt! Du hast nun wieder volles Leben."
+			hint "You are suddenly feeling much better"
 		};
 	};
 	
 	case (_item == "morphium"):
 	{
-		if(playerSide in [west,independent]) exitWith {hint "Du bist im Dienst !"};
-		if(vehicle player != player) exitWith {hint "Du kannst dich nicht in einem Fahrzeug heilen..."};
+		if(playerSide in [west,independent]) exitWith {hint "Only civilians may use this"};
+		if(vehicle player != player) exitWith {hint "You cannot use this while in a vehicle"};
 		if(([false,_item,1]call life_fnc_handleInv)) then
 		{
 			player setFatigue 1;
@@ -77,7 +77,7 @@ switch (true) do
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			life_battery = 100;
-			hint "Deine Battery ist nun auf 100%.";
+			hint "Your battery is now full 100%.";
 		};
 	};
 	
@@ -90,9 +90,9 @@ switch (true) do
 			[] spawn
 			{
 				life_redgull_effect = time;
-				titleText["Du fühlst Dich jetzt beflügelt und hast für 5 Minuten mehr Ausdauer.","PLAIN"];
+				titleText["You now have more stamina for 10 minutes.","PLAIN"];
 				player enableFatigue false;
-				waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (10 * 60))};
 				player enableFatigue true;
 			};
 		};
@@ -100,7 +100,7 @@ switch (true) do
 	
 	case (_item == "spikeStrip"):
 	{
-		if(!isNull life_spikestrip) exitWith {hint "Du hast bereits ein Nagelband in der Hand."};
+		if(!isNull life_spikestrip) exitWith {hint "You already have a Spike Strip active in deployment"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_spikeStrip;
@@ -109,7 +109,7 @@ switch (true) do
 	
 	case (_item == "mauer"):
 	{
-		if(!isNull life_mauer) exitWith {hint "Du stellst schon eine Mauer!"};
+		if(!isNull life_mauer) exitWith {hint "You have already place a barrier!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_mauer;
@@ -118,7 +118,7 @@ switch (true) do
 	
 	case (_item == "fuelF"):
 	{
-		if(vehicle player != player) exitWith {hint "Du befindest Dich in einem Fahrzeug"};
+		if(vehicle player != player) exitWith {hint "You cannot use this while in a vehicle"};
 		[] spawn life_fnc_jerryRefuel;
 	};
 	
@@ -179,7 +179,7 @@ switch (true) do
 	
 	case (_item == "methp"):
 	{
-		if(playerSide in [west,independent]) exitWith {hint "Keine Drogen im Dienst !"};
+		if(playerSide in [west,independent]) exitWith {hint "No Drugs on Duty!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_useMarihuana;
@@ -188,7 +188,7 @@ switch (true) do
 	
 	case (_item == "heroinp"):
 	{
-		if(playerSide in [west,independent]) exitWith {hint "Keine Drogen im Dienst !"};
+		if(playerSide in [west,independent]) exitWith {hint "No Drugs on Duty!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_useHeroin;
@@ -197,7 +197,7 @@ switch (true) do
 	
 	case (_item == "cocainep"):
 	{
-		if(playerSide in [west,independent]) exitWith {hint "Keine Drogen im Dienst !"};
+		if(playerSide in [west,independent]) exitWith {hint "No Drugs on Duty!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_useKokain;
@@ -225,7 +225,7 @@ switch (true) do
 	
 	default
 	{
-		hint "Du kannst diesen Gegenstand nicht benutzen.";
+		hint "You can not use that item.";
 	};
 };
 	

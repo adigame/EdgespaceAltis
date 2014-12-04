@@ -6,7 +6,7 @@
 	Description:
 	Teleport to chosen position.
 */
-if((call life_adminlevel) < 2) exitWith {hint "Du bist noch kein Staff..."};
+if((call life_adminlevel) < 2) exitWith {hint "You do not have the correct permissions"};
 
 //Add Map
 player addItem "ItemMap";

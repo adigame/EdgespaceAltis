@@ -2,7 +2,7 @@
 closeDialog 0;
 
 //Little hint then wait a litle before starting drugs effects
-hint "Ab geht die Party !";
+hint "The drug should start taking effect soon!";
 sleep 3;
 
 //Activate ppEffects we need

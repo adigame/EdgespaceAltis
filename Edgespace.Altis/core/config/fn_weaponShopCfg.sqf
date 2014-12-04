@@ -41,7 +41,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 1): {"Police Officers may only access this!"};
+			case (__GETC__(life_coplevel) < 1): {"Police officers may only access this!"};
 			default
 			{
 				["Visors & Others",
@@ -132,7 +132,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide !=west): {"You are not a police officer"};
-			case (__GETC__(life_coplevel) < 2): {"You are not a Sargent!"};
+			case (__GETC__(life_coplevel) < 2): {"You are not a sargent!"};
 			default
 			{
 				["Police Sgt Store",
@@ -153,7 +153,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide !=west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 3): {"You are not a Lieutenant"};
+			case (__GETC__(life_coplevel) < 3): {"You are not a lieutenant"};
 			default
 			{
 				["Police Lt Store",
@@ -300,7 +300,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"You are not a civillian!"};
+			case (playerSide != civilian): {"You are not a civilian!"};
 			case (!license_civ_gun): {"You do not have a gun license!"};
 			default
 			{
@@ -328,7 +328,7 @@ switch(_shop) do
 			case (__GETC__(life_donator) == 0): {"You are not a donator!"};
 			case (__GETC__(life_donator) == 1):
 			{
-				["Donator Shop Rank 1",
+				["Donator Store Rank 1",
 					[
 						["hgun_P07_F",nil,1250],
 						["hgun_PDW2000_F",nil,6500],
@@ -350,7 +350,7 @@ switch(_shop) do
 
 			case (__GETC__(life_donator) == 2):
 			{
-				["Donator Shop Rank  2",
+				["Donator Store Rank  2",
 					[
 						["hgun_P07_F",nil,500],
 						["hgun_PDW2000_F",nil,6500],
@@ -373,7 +373,7 @@ switch(_shop) do
 
 			case (__GETC__(life_donator) == 3):
 			{
-				["Mercenary Gun Shop",
+				["Mercenary Gun Store",
 					[
 						["hgun_P07_F",nil,5000],
 						["hgun_PDW2000_F",nil,10000],
@@ -436,11 +436,11 @@ switch(_shop) do
     {
         switch(true) do
         {
-            case (playerSide != civilian): {"You are not a civillian"};
+            case (playerSide != civilian): {"You are not a civilian"};
             case (!license_civ_uranium): {"You do not have a uranium license"};
             default
             {
-                ["Uran Verkäufer",
+                ["Uranium Trader",
                     [
                         ["ToolKit",nil,200],
                         ["FirstAidKit",nil,100],

@@ -42,8 +42,8 @@ while {true} do
 	_progressBar progressSetPosition _cP;
 	_titleText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_title];
 	if(_cP >= 1 OR !alive player) exitWith {};
-	if(life_istazed) exitWith {hint "Vorgang abgebrochen"}; //Tazed
-	if(life_interrupted) exitWith {hint "Vorgang abgebrochen"};
+	if(life_istazed) exitWith {hint "You have been tazed"}; //Tazed
+	if(life_interrupted) exitWith {hint "You have been tazed"};
 	if((player getVariable["restrained",false])) exitWith {};
 	if(player distance _target > 4) exitWith {_badDistance = true;};
 	if(_target getVariable["Revive",FALSE]) exitWith {};

@@ -11,7 +11,7 @@ _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price
 
 //Shop Title Name
-ctrlSetText[3103,"Altis Polizei Shop"];
+ctrlSetText[3103,"Police Shop"];
 
 _ret = [];
 switch (_filter) do
@@ -19,24 +19,24 @@ switch (_filter) do
 	//Uniforms
     case 0:
     {
-        _ret set[count _ret,["U_Rangemaster","Praktikant",35]];
+        _ret set[count _ret,["U_Rangemaster","Trainee",35]];
 		if (__GETC__(life_coplevel) > 1) then
 		{
-			_ret set[count _ret, ["U_B_SpecopsUniform_sgg", "Beamten Uniform", 2000]];
+			_ret set[count _ret, ["U_B_SpecopsUniform_sgg", "Tactical Uniform", 2000]];
 		};
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_ret set[count _ret,["U_B_CombatUniform_mcam_vest","Uniform",500]];
-			_ret set[count _ret,["U_B_Wetsuit","Taucher Anzug",500]];
+			_ret set[count _ret,["U_B_Wetsuit","Wet Suit",500]];
 		};
         if(__GETC__(life_coplevel) > 4) then
         {
 			_ret set[count _ret,["U_B_GhillieSuit","GhillieSuit",1000]];
-			_ret set[count _ret,["U_B_CombatUniform_mcam","SEK-Uniform",550]];
+			_ret set[count _ret,["U_B_CombatUniform_mcam","SWAT Uniform",550]];
         };
 		if(__GETC__(life_coplevel) > 5) then
         {
-			_ret set[count _ret,["U_B_CombatUniform_mcam_worn","GSG9-Uniform",1750]];		
+			_ret set[count _ret,["U_B_CombatUniform_mcam_worn","SWAT Uniform 2",1750]];		
         };
     };
 	
@@ -55,8 +55,8 @@ switch (_filter) do
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_ret set[count _ret,["H_CrewHelmetHeli_B","GSG9-Helm",5000]];
-			_ret set[count _ret,["H_HelmetB_black","SEK-Helm",5000]];
+			_ret set[count _ret,["H_CrewHelmetHeli_B","SWAT Helmet",5000]];
+			_ret set[count _ret,["H_HelmetB_black","SWAT Helmet 2",5000]];
 			_ret set[count _ret,["H_Booniehat_mcamo",nil,120]];
 			_ret set[count _ret,["H_MilCap_mcamo",nil,500]];
 			_ret set[count _ret,["H_HelmetIA",nil,1000]];
@@ -104,15 +104,15 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_ret set[count _ret,["V_RebreatherB",nil,5000]];
-			_ret set[count _ret,["V_TacVest_blk_POLICE","Polizeiweste",1500]];
+			_ret set[count _ret,["V_TacVest_blk_POLICE","Police Vest",1500]];
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_ret set[count _ret,["V_TacVestIR_blk","Einsatzweste",3000]];
+			_ret set[count _ret,["V_TacVestIR_blk","Tactical Vest",3000]];
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_ret set[count _ret,["V_PlateCarrier1_blk","SEK/GSG9 Weste",2000]];
+			_ret set[count _ret,["V_PlateCarrier1_blk","Flying Squad Vest",2000]];
 		};
 	};
 	

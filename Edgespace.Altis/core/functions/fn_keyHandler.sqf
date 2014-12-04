@@ -199,7 +199,7 @@ switch (_code) do
 	//F Key
 	case 33:
 	{
-		if (vehicle player != player && (typeOf vehicle player) in["C_Offroad_01_repair_F","B_Truck_01_transport_F"]) exitWith {hint "Sirene nicht verfügbar"};
+		if (vehicle player != player && (typeOf vehicle player) in["C_Offroad_01_repair_F","B_Truck_01_transport_F"]) exitWith {hint "Siren Not Available"};
 		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn
@@ -407,7 +407,7 @@ switch (_code) do
 	// F2 Spike Strips
 	case 60:
 	{	
-		if(vehicle player != player) exitWith {hint "Du kannst nicht in einem Fahrzeug Nagelbänder auslegen.."};
+		if(vehicle player != player) exitWith {hint "You cannot place spike strips while inside a vehicle.."};
 		if(playerSide == west) then {
 		
 		if(!isNull life_spikestrip) exitWith {hint "You already have a Spike Strip active in deployment"};

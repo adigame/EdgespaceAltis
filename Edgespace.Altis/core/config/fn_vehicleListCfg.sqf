@@ -1,10 +1,7 @@
 #include <macro.h>
 /*
-	File:
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Master configuration list / array for buyable vehicles & prices and their shop.
+	File: fn_vehicleListCfg.sqf
+	Description: Master configuration list / array for buy-able vehicles & prices and their shop.
 */
 private["_shop","_return"];
 _shop = [_this,0,"",[""]] call BIS_fnc_param;
