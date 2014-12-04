@@ -1,11 +1,8 @@
 /*
 	File: fn_storeVehicle.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Stores the vehicle in the garage.
+	Description: Stores the vehicle in the garage.
 */
-private["_nearVehicles","_vehicle"];
+private["_nearVehicles","_vehicle","_ropes"];
 if(vehicle player != player) then
 {
 	_vehicle = vehicle player;
@@ -35,3 +32,6 @@ if(isNull _vehicle) exitWith {};
 [[_vehicle,false,(_this select 1)],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
 hint localize "STR_Garage_Store_Server";
 life_garage_store = true;
+ropes = (_vehicle getvariable ["zlt_ropes", []]);
+{deletevehicle _x} foreach _ropes;
+_vehicle setvariable ["zlt_ropes", [], true];

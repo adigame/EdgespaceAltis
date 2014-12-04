@@ -24,10 +24,10 @@ class osefStatusBar {
 			size = 0.03;
 			type = 13;
 			style = 1;
-			text="Lade Server Informationen...";
+			text="Loading game server info...";
 			class Attributes {
 				align="right";
-				color = "#1866c7";
+				color = "#66C718";
 			};
 		};
 	};

@@ -1,9 +1,7 @@
 /*
 	teargas.sqf
-	
 	Description: activate ppEffects if a smoke grenade is near a player
-	
-	Author : Unknown ,reworked by Blackd0g
+
 */
 playerNearGas=false;
 

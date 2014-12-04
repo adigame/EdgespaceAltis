@@ -4,9 +4,10 @@ if(!(player getVariable["restrained",TRUE])) exitWith {hint "Du bist gefesselt"}
 #define MAX_SPEED_ROPES_AVAIL 30
 
 
-#define STR_TOSS_ROPES "Seile abwerfen"
-#define STR_FAST_ROPE "Abseilen"
-#define STR_CUT_ROPES "Seile anheben"
+
+#define STR_TOSS_ROPES "Drop Ropes"
+#define STR_FAST_ROPE "Climb Down"
+#define STR_CUT_ROPES "Pull Up Ropes"
 
 if (isdedicated) exitwith {};
 waituntil {player == player};
@@ -199,5 +200,5 @@ player addAction[""+STR_FAST_ROPE+"", zlt_fnc_fastrope, [], 15, false, false, ''
 player addEventHandler ["Respawn", {
 	player addAction[""+STR_TOSS_ROPES+"", zlt_fnc_createropes, [], -1, false, false, '','[] call zlt_fnc_ropes_cond'];
 	player addAction[""+STR_CUT_ROPES+"", zlt_fnc_removeropes, [], -1, false, false, '','not zlt_mutexAction and count ((vehicle player) getvariable ["zlt_ropes", []]) != 0'];
-	player addAction[""+STR_FAST_ROPE+"", zlt_fnc_fastrope, [], 15, false, false, '','not zlt_mutexAction and count ((vehicle player) getvariable ["zlt_ropes", []]) != 0 and player != driver vehicle player'];
+	player addAction[""+STR_FAST_ROPE+"", zlt_fnc_fastrope, [], 15, false, false, '','not zlt_mutexAction and count ((vehicle player) getvariable ["zlt_ropes", []]) != 0 and player != driver vehicle player && !(player getVariable "restrained")'];
 }];
