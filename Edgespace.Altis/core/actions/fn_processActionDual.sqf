@@ -1,9 +1,6 @@
 /*
     File: fn_processActionDual.sqf
-    Author: Bryan "Tonic" Boardwine
-    Script by Tonic Edit by Nark0t1k
-    Description:
-    Master handling for processing an item.
+    Description:    Master handling for processing an item.
 */
 private["_vendor","_type","_itemInfo","_oldItem1","_oldItem2","_newItem","_cost","_upp","_hasLicense","_itemName","_oldVal","_oldVal1","_oldval2","_ui","_progress","_pgText","_cP","_speed"];
 _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -11,13 +8,13 @@ _type = [_this,3,"",[""]] call BIS_fnc_param;
 _speed = "medium";
 //Error check
 if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
-if ((_type == "uranium2") && (life_inv_puranium == 0)) exitWith {hint "Sie haben kein Produkt um das Uran zu lösen.";};
+if ((_type == "uranium2") && (life_inv_puranium == 0)) exitWith {hint "You do not have any Puranium.";};
 
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing (percent) ..."
 _itemInfo = switch (_type) do
 {
-    case "uranium2": {["uranium2","puranium","uranium3",6000,"Aufgelöstes Legales Uran"];};
-    case "uranium2b": {["uranium2","ipuranium","uranium3",6000,"Aufgelöstes Illegales Uran"];};
+    case "uranium2": {["uranium2","puranium","uranium3",6000,"Legally Purifying Uranium"];};
+    case "uranium2b": {["uranium2","ipuranium","uranium3",6000,"Illegally Purifying Uranium"];};
     default {[]};
 };
 
@@ -72,18 +69,18 @@ if(_hasLicense) then
         if(_cP >= 1) exitWith {};
         if(player distance _vendor > 10) exitWith {};
     };
-    if(player distance _vendor > 10) exitWith {hint "Du mussst mindesten 10 Meter daneben stehen."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+    if(player distance _vendor > 10) exitWith {hint "You must stay within 10 meters to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([false,_oldItem1,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([false,_oldItem2,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem1,_oldVal] call life_fnc_handleInv; [true,_oldItem2,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
     5 cutText ["","PLAIN"];
-    titleText[format["Sie haben %1 %2",_oldVal,_itemName],"PLAIN"];
+    titleText[format["You have processed %1 into %2",_oldVal,_itemName],"PLAIN"];
     life_is_processing = false;
 }
     else
 {
 
-    if(life_cash < _cost) exitWith {hint format["Du benötigst $%1 für eine Lizenz",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+    if(life_cash < _cost) exitWith {hint format["You need $%1 for a license",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
     
     while{true} do
     {
@@ -94,13 +91,13 @@ if(_hasLicense) then
         if(_cP >= 1) exitWith {};
         if(player distance _vendor > 10) exitWith {};
     };
-    if(player distance _vendor > 10) exitWith {hint "Du mussst mindesten 10 Meter daneben stehen."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-    if(life_cash < _cost) exitWith {hint format["Du benötigst $%1 für eine Lizenz",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+    if(player distance _vendor > 10) exitWith {hint "You must stay within 10 meters to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+    if(life_cash < _cost) exitWith {hint format["You need $%1 for a license",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([false,_oldItem1,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([false,_oldItem2,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem1,_oldVal] call life_fnc_handleInv; [true,_oldItem2,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
     5 cutText ["","PLAIN"];
-    titleText[format["Du hast %1 zu %2 umgewandelt und erhälst $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+    titleText[format["You have %1 %2 at a cost of $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
     life_cash = life_cash - _cost;
     life_is_processing = false;
 }; 

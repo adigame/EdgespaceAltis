@@ -1,9 +1,6 @@
 /*
 	File: fn_dropFishingNet.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Drops a virtual fishing net from the boat.
+	Description: Drops a virtual fishing net from the boat.
 */
 private["_fish","_type","_typeName"];
 if(!(vehicle player isKindOf "Ship")) exitWith {};

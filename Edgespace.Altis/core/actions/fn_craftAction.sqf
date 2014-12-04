@@ -1,9 +1,6 @@
 /*
 	File: fn_craftAction.sqf
-	Author: EdgeKiller
-
-	Description:
-	Master handling for crafting an item.
+	Description: Master handling for crafting an item.
 */
 private["_dialog","_item","_itemInfo","_oldItem","_newItem","_upp","_itemName","_ui","_progress","_pgText","_cP","_allMaterial","_matsNeed","_invSize","_handledItem"];
 

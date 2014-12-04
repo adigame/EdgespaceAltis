@@ -167,7 +167,7 @@ switch (_code) do
 		};
 	};
 	
-	//L Key?
+	//L
 	case 38: 
 	{
 		//If cop run checks for turning lights on.
@@ -188,7 +188,7 @@ switch (_code) do
 	};
 	
 	//Z Player Menu
-	case 21:
+	case 15:
 	{
 		if(!_alt && !_ctrlKey && !dialog) then
 		{
@@ -228,8 +228,8 @@ switch (_code) do
 		};
 	};
 	
-	//Ö Key
-	case 39:
+	// F1 Siren
+	case 59:
 	{
 		if(playerSide in [west] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
@@ -259,20 +259,20 @@ switch (_code) do
 		};
 	};
 	
-	//Shift+O Zipties
+	//Shift + O Zip ties Rebels
 	case 24:
 	{
 		if(_shift) then {_handled = true;};
 		if(playerSide in [west,independent]) exitWith {};
-		if !(license_civ_rebel) exitWith { hint "Du brauchst eine Rebellen-Lizenz um Personen festzunehmen."; };
+		if !(license_civ_rebel) exitWith { hint "You need a rebel license to restrain someone"; };
 		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
 			if([false,"zipties",1] call life_fnc_handleInv) then
 			{
 				[] call life_fnc_restrainAction;
-				hint "Du hast ihn Festgenommen ! Mit dem Interaktionsmenü kannst zu weiter fortfahren.";
+				hint "You restrained him, use your interaction menu for more options";
 			} else {
-				hint "Du hast keine Kabelbinder";
+				hint "You have no zipties!";
 			};
 		};
 	};
@@ -290,16 +290,16 @@ switch (_code) do
 			if(_veh isKindOf "House_F" && playerSide == civilian) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
-					if(_door == 0) exitWith {hint "Du befindest dich nicht neben einer Tür"};
+					if(_door == 0) exitWith {hint "You are not near your house"};
 					_locked = _veh getVariable [format["bis_disabled_Door_%1",_door],0];
 					if(_locked == 0) then {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
-						systemChat "Du hast die Tür abgesperrt.";
+						systemChat "You've locked the door to your house";
 					} else {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
-						systemChat "Du hast die Tür aufgesperrt.";
+						systemChat "You've unlocked the door to your house";
 					};
 				};
 			} else {
@@ -311,7 +311,7 @@ switch (_code) do
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
-						systemChat "Du hast Dein Fahrzeug aufgeschlossen.";
+						systemChat "You've unlocked your vehicle.";
 						[[_veh],"life_fnc_LockCarSound",nil,true] spawn life_fnc_MP;
 					} else {
 						if(local _veh) then {
@@ -319,7 +319,7 @@ switch (_code) do
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
-						systemChat "Du hast Dein Fahrzeug abgeschlossen.";
+						systemChat "You've locked your vehicle.";
 						[[_veh],"life_fnc_UnLockCarSound",nil,true] spawn life_fnc_MP;
 					};
 				};
@@ -327,7 +327,7 @@ switch (_code) do
 		};
 	};
 	
-	//EMP Konsole - K
+	//K EMP Console - 
     case 37:
     {
         if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F"])) then
@@ -336,8 +336,8 @@ switch (_code) do
         };
     };
 	
-	//Pickaxe - Q
-	case 41:
+	//TAB Pickaxe
+	case 15:
 	{
 		if((!life_action_inUse) && (vehicle player == player) ) then
 		{
@@ -346,7 +346,7 @@ switch (_code) do
 			_val = missionNameSpace getVariable _x;
 			if(_val > 0 ) then
 				{
-				if( _str == "Spitzhacke" || _str == "pickaxe" ) then
+				if( _str == "Pickaxe" || _str == "pickaxe" ) then
 					{
 					[] spawn life_fnc_pickAxeUse;
 					};
@@ -396,21 +396,21 @@ switch (_code) do
 		};
 	};
 
-	// O Schranken öffnen
-    case 40:
+	// F3 Police Open Gates from Inside of Vehicle
+    case 61:
 	{
 		if (!_shift && !_alt && !_ctrlKey && (playerSide in [west,independent]) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		};
 	};
 
-	//Ü Nagelbänder
-	case 26:
+	// F2 Spike Strips
+	case 60:
 	{	
 		if(vehicle player != player) exitWith {hint "Du kannst nicht in einem Fahrzeug Nagelbänder auslegen.."};
 		if(playerSide == west) then {
 		
-		if(!isNull life_spikestrip) exitWith {hint "Du hast bereits ein Nagelband gelegt"};
+		if(!isNull life_spikestrip) exitWith {hint "You already have a Spike Strip active in deployment"};
 		if(([false,"spikeStrip",1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_spikeStrip;
@@ -418,27 +418,27 @@ switch (_code) do
 
 		};
 	};
-	
+	/*
 	case 59: // F1
 	{
 		closeDialog 0;
-		hintc "Diese Taste wurde vom System blockiert";
+		hintc "";
 		_handled = false;
 	};
-
+	
 	case 60: // F2
 	{
 		closeDialog 0;
-		hintc "Diese Taste wurde vom System blockiert";
+		hintc "";
 		_handled = false;
 	};
-			
+	
 	case 61: // F3
 	{
 		closeDialog 0;
 		_handled = false;
 	};
-
+	*/
 	case 62: // F4 
 	{
 		closeDialog 0;

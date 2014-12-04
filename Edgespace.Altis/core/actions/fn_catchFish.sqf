@@ -1,9 +1,5 @@
-/*
-	File: fn_catchFish.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Catches a fish that is near by.
+/*	File: fn_catchFish.sqf
+	Description:Catches a fish that is near by.
 */
 private["_fish","_type"];
 _fish = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;

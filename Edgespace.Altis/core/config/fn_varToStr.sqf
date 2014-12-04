@@ -83,12 +83,12 @@ switch (_var) do
 	case "life_inv_bottledbeer": {"Bottled Beer"};
 	case "life_inv_bottledshine": {"Bottled Moonshine"};
 	case "life_inv_moonshine": {"Distilled Moonshine"};
-	case "life_inv_puranium": {"Uranium Mixture"}; // Add This
-    case "life_inv_ipuranium": {"Product III Uranium"}; // Add This
-    case "life_inv_uranium1": {"Uranerz"}; // Add This
+	case "life_inv_puranium": {"Legal Uranium Purifier"}; // Add This
+    case "life_inv_ipuranium": {"Illegal Uranium Purifier"}; // Add This
+    case "life_inv_uranium1": {"Uranium Waste"}; // Add This
     case "life_inv_uranium2": {"Raw Uranium"}; // Add This
     case "life_inv_uranium3": {"Purified Uranium"}; // Add This
-    case "life_inv_uranium4": {"Uranium Konzetrat"}; // Add This
+    case "life_inv_uranium4": {"Enriched Uranium"}; // Add This
     case "life_inv_uranium": {"Uranium"}; // Add This
 	case "life_inv_kidney": {"Kidney"}; 
 	case "life_inv_scalpel": {"Scalpel"};

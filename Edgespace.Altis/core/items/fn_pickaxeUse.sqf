@@ -21,8 +21,8 @@ switch (true) do
 	default {_mine = "";};
 };
 //Mine check
-if(_mine == "") exitWith {hint "You are not near a mine!"};
-if(vehicle player != player) exitWith {hint "You can't mine from inside a car!";};
+if(_mine == "") exitWith {hint "You are not a mine!"};
+if(vehicle player != player) exitWith {hint "You must exit your vehicle";};
 
 _diff = [_mine,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint "Your inventory is full."};

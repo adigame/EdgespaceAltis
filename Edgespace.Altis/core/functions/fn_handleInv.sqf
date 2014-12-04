@@ -1,9 +1,6 @@
 /*
 	File: fn_handleInv.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Do I really need one?
+	Description: Do I really need one?
 */
 private["_math","_item","_num","_return","_var","_weight","_value","_diff"];
 _math = [_this,0,false,[false]] call BIS_fnc_param; //true = add; false = subtract;

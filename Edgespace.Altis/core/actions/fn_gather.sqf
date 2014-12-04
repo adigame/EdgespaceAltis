@@ -1,9 +1,6 @@
 /*
 	File: fn_gather.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Main functionality for gathering.
+	Description: Main functionality for gathering.
 */
 if(isNil "life_action_gathering") then {life_action_gathering = false;};
 private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zone"];
@@ -51,7 +48,7 @@ for "_i" from 0 to 2 do
 if(([true,_gather,_diff] call life_fnc_handleInv)) then
 {
 	_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format["Du hast %1 %2x erfarmt.",_itemName,_diff],"PLAIN"];
+	titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
 };
 
 life_action_inUse = false;

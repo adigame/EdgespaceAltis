@@ -1,9 +1,6 @@
 /*
 	File: fn_buyLicense.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Called when purchasing a license. May need to be revised.
+	Description: Called when purchasing a license.
 */
 private["_type"];
 _type = _this select 3;

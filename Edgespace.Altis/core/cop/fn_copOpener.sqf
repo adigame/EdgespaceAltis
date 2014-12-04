@@ -1,7 +1,6 @@
 /*
- police sender, open gates from inside the car (only for cops) 
- by Insane
- www.tdc-clan.eu
+	Open gates from inside the car (only for cops) 
+
 */
 
 {

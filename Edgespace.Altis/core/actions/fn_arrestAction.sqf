@@ -1,8 +1,6 @@
 /*
 	File: fn_arrestAction.sqf
-	
-	Description:
-	Arrests the targeted person.
+	Description: Arrests the targeted person.
 */
 private["_unit","_id","_time"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;

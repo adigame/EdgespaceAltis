@@ -2,7 +2,7 @@
 	private["_fnc_food","_fnc_water","_fnc_battery"];
 	_fnc_food = 
 	{
-		if(life_hunger < 2) then {player setDamage 1; hint "You have starved to death.";}
+		if(life_hunger < 2) then {player setDamage 1; hint "You have starved to death...";}
 		else
 		{
 		life_hunger = life_hunger - 10;
@@ -35,7 +35,7 @@
 	
 	_fnc_battery =
 	{
-		if(life_battery < 2) then {hint "Deine Telefon Batterie ist leer.";}
+		if(life_battery < 2) then {hint "Your phone battery is dead.";}
 		else
 		{
 			life_battery = life_battery - 5;
@@ -43,9 +43,9 @@
 			if(life_battery < 2) then {hint "Your battery is empty.";};
 			switch(life_battery) do 
 			{
-				case 30: {hint "Deine Handy Batterie hat nurnoch 30%.";};
-				case 20: {hint "Deine Handy Batterie hat nurnoch 20%.";};
-				case 10: {hint "Deine Handy Batterie hat nurnoch 10%.";};
+				case 30: {hint "Your phone battery is at 30%.";};
+				case 20: {hint "Your phone battery is at 20%.";};
+				case 10: {hint "Your phone battery is at 10%.";};
 			};
 		};
 	};
@@ -87,7 +87,7 @@
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
 			player setFatigue 1;
-			hint "Du trägst zu viel mit Dir ! Entferne ein paar Items dann kannst du wieder Rennen...";
+			hint "You are carrying too much and can barely walk";
 		} else {
 			if(isForcedWalk player) then {
 				player forceWalk false;
@@ -164,7 +164,7 @@
 		if(life_inv_uranium2 != 0) then {
 			player forceWalk true;
 			player setFatigue 1;
-			hint "Das Uran ist so schwer das du dich nur sehr Langsam bewegen kannst !";
+			hint "The uranium is so heavy you can barely walk..";
 		} else {
 			if(isForcedWalk player) then {
 				player forceWalk false;
@@ -202,11 +202,11 @@
 		{
 			if(uniform player == "U_I_HeliPilotCoveralls") then
 			{
-				hint "!!! ACHTUNG DIE ZONE IST RADIOAKTIV !!! Der Schutz-Anzug Schuetz sie vor der Strahlung !";
+				hint "!!! ENTERING RADIO ACTIVE AREA !!! You are protected from the radiation suit !";
 				sleep 5;
 			}else
 			{
-				hint "!!! ACHTUNG DIE ZONE IST RADIOAKTIV !!! Sie werden gleich Sterben wenn sie keinen Strahlungsanzug tragen!";
+				hint "!!! ENTERING RADIO ACTIVE AREA !!! The Radiation will kill you if you aren't protected!";
 				_damage = damage player;
 				_damage = _damage + 0.1;
 				player setDamage (_damage);
