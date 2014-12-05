@@ -13,7 +13,7 @@ if(count _search == 0) exitWith {hint localize "STR_Service_Chopper_NoAir"};
 if(life_cash < 1000) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
 life_cash = life_cash - 1000;
 life_action_inUse = true;
-_title = localize "STR_Service_Chopper_Servicing";
+_title = "Repairing and refueling helicopter";
 5 cutRsc ["life_progress","PLAIN"];
 _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;

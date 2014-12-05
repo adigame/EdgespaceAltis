@@ -83,7 +83,7 @@ switch (_item) do
     case "uranium2": {1};
     case "uranium3": {4};
     case "uranium4": {4};
-    case "uranium": {4};
+    case "uranium": {100};
 	case "kidney": {20};
 	case "scalpel": {5};
 	case "peach": {2};

@@ -61,7 +61,7 @@ class life_admin_menu {
 		};
 
 		class CloseButtonKey : Life_RscButtonMenu {
-			idc = -1;
+			idc = 2904;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
@@ -71,7 +71,7 @@ class life_admin_menu {
 		};
 		
 		class AdminID : Life_RscButtonMenu {
-			idc = -1;
+			idc = 2905;
 			text = "$STR_Admin_GetID";
 			onButtonClick = "[] call life_fnc_admingetID;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
@@ -81,7 +81,7 @@ class life_admin_menu {
 		};
 		
 		class Spectate : Life_RscButtonMenu {
-			idc = -1;
+			idc = 2906;
 			text = "$STR_Admin_Spectate";
 			onButtonClick = "closeDialog 0; [] call life_fnc_adminSpectate;";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
@@ -91,9 +91,9 @@ class life_admin_menu {
 		};
 		
 		class Teleport : Life_RscButtonMenu {
-			idc = -1;
+			idc = 2907;
 			text = "$STR_Admin_Teleport";
-			onButtonClick = "closeDialog 0; [] call life_fnc_adminTeleport; hint 'Select where you would like to teleport';";
+			onButtonClick = "closeDialog 0; [] call life_fnc_adminTeleport;";
 			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
 			w = (6.25 / 40);
@@ -101,11 +101,120 @@ class life_admin_menu {
 		};
 		
 		class TeleportHere : Life_RscButtonMenu {
-			idc = -1;
+			idc = 2908;
 			text = "$STR_Admin_TpHere";
 			onButtonClick = "[] call life_fnc_adminTpHere;";
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class AdminUnrestrain : Life_RscButtonMenu {
+			idc = 2909;
+			text = "$STR_Admin_unrestrain";
+			onButtonClick = "[] call life_fnc_adminUnrestrain;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.885;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class AdminATM : Life_RscButtonMenu {
+			idc = 2910;
+			text = "$STR_Admin_atm";
+			onButtonClick = "[] spawn life_fnc_adminATM;";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.885;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class AdminKey : Life_RscButtonMenu {
+			idc = 2911;
+			text = "Invisible";
+			onButtonClick = "[] call life_fnc_admininvis;";
+			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.885;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class Compensate : Life_RscButtonMenu {
+			idc = 2912;
+			text = "$STR_Admin_Compensate";
+			onButtonClick = "createDialog ""Life_Admin_Compensate"";";
+			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.885;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class Freeze : Life_RscButtonMenu {
+			idc = 2913;
+			text = "$STR_Admin_Freeze";
+			onButtonClick = "[] call life_fnc_adminFreeze;";
+			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.885;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class Debug : Life_RscButtonMenu {
+			idc = 2914;
+			text = "$STR_Admin_Debug";
+			onButtonClick = "[] call life_fnc_adminDebugCon;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.930;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class Immortal : Life_RscButtonMenu {
+			idc = 2915;
+			text = "$STR_Admin_Immortal";
+			onButtonClick = "[] call life_fnc_adminGodMode;";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.930;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class botone : Life_RscButtonMenu {
+			idc = 2916;
+			text = "TP TO";
+			onButtonClick = "[] call life_fnc_admintpto;";
+			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.930;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class bottwo : Life_RscButtonMenu {
+			idc = 2917;
+			text = "JailLock";
+			onButtonClick = "[] call life_fnc_adminPrisonLock;";
+			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.930;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class botthree : Life_RscButtonMenu {
+			idc = 2918;
+			text = "JailUnlock";
+			onButtonClick = "[] call life_fnc_adminPrisonUnlock;";
+			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.930;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class revive : Life_RscButtonMenu {
+			idc = 2919;
+			text = "Revive";
+			onButtonClick = "[] call life_fnc_adminRevive;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.975;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class ESPadmin : Life_RscButtonMenu {
+			idc = 2920;
+			text = "MAP ESP";
+			onButtonClick = "[] spawn life_fnc_adminmarkers;";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.975;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};

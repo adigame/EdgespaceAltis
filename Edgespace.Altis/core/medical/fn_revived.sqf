@@ -36,4 +36,7 @@ hideBody life_corpse;
 player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
+life_is_alive = true;
+
+[4] call SOCK_fnc_updatePartial;
 [] call life_fnc_hudUpdate; //Request update of hud.

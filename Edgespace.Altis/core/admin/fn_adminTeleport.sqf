@@ -6,11 +6,8 @@
 	Description:
 	Teleport to chosen position.
 */
-if((call life_adminlevel) < 2) exitWith {hint "You do not have the correct permissions"};
-
-//Add Map
-player addItem "ItemMap";
-player assignItem "ItemMap";
+if(__GETC__(life_adminlevel) == 0) exitWith {closeDialog 0;};
+if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint "!!Access Denied!!";};
 
 [] spawn {
   while {dialog} do {

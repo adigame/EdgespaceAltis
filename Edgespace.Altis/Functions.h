@@ -53,13 +53,22 @@ class Life_Client_Core
 		class adminid {};
 		class admingetID {};
 		class adminMenu {};
-		class supportMenu {};
 		class adminQuery {};
-		class adminSpectate {};
-		class adminTeleport {};
-		class adminTpHere {};
-		class supportQuery {};
-		class supportInfo {};
+		class adminSpectate {}; 
+		class adminTeleport {}; 
+		class adminTpHere {}; 
+		class adminDebugCon {}; 
+		class adminGodMode {};
+		class admininvis {};
+		class adminATM {};
+		class adminUnrestrain {};
+		class adminCompensate {};	
+		class adminFreeze {};
+		class admintpto {};
+		class adminPrisonLock {};
+		class adminPrisonUnlock {};
+		class adminRevive {};
+		class adminmarkers {};
 	};
 	
 	class anstrich

@@ -89,7 +89,7 @@ switch (_var) do
     case "life_inv_uranium2": {"Raw Uranium"}; // Add This
     case "life_inv_uranium3": {"Purified Uranium"}; // Add This
     case "life_inv_uranium4": {"Enriched Uranium"}; // Add This
-    case "life_inv_uranium": {"Uranium"}; // Add This
+    case "life_inv_uranium": {"Weapons Grade Uranium"}; // Add This
 	case "life_inv_kidney": {"Kidney"}; 
 	case "life_inv_scalpel": {"Scalpel"};
 	

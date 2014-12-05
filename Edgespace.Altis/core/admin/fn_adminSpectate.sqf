@@ -7,6 +7,7 @@
 	Spectate the chosen player.
 */
 if(__GETC__(life_adminlevel) == 0) exitWith {closeDialog 0;};
+if(__GETC__(life_adminlevel) < 2) exitWith {closeDialog 0; hint "!!Access Denied!!";};
 
 private["_unit"];
 _unit = lbData[2902,lbCurSel (2902)];
@@ -22,6 +23,7 @@ if(_unit == player) exitWith {hint "You can not spectate yourself";};
   };
 };
 
-_unit switchCamera "EXTERNAL";
+_unit switchCamera "INTERNAL";
 hint format["You are now spectating %1 \n\n Press F10 to stop Spectating.",_unit getVariable["realname",name _unit]];
 AM_Exit = (findDisplay 46) displayAddEventHandler ["KeyDown","if((_this select 1) == 68) then {(findDisplay 46) displayRemoveEventHandler ['KeyDown',AM_Exit];player switchCamera 'INTERNAL';hint 'You have stopped spectating';};false"];
+

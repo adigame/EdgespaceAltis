@@ -19,7 +19,7 @@ switch(_craft) do
 		{
 			default
 			{
-				["Waffen herstellen",
+				["Crafting System",
 					[
 						["hgun_P07_F", ["life_inv_goldbar",1,"life_inv_copperr",1]],
 						["SMG_01_F", ["life_inv_goldbar",3,"life_inv_copperr",5,"life_inv_ironr",6,"life_inv_diamondr",1]],

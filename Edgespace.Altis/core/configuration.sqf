@@ -7,6 +7,9 @@
 ****** Backend Variables *****
 *****************************
 */
+life_hidden = false; 
+life_frozen = false;
+life_god = false; 
 life_query_time = time;
 life_action_delay = time;
 life_trunk_vehicle = Objnull;
@@ -42,7 +45,7 @@ life_request_timer = false;
 life_markers = false;
 life_sitting = false;
 life_firstSpawn = false;
-
+life_robbery_in_progress = false;
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?

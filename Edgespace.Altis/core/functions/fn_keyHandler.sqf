@@ -119,7 +119,7 @@ switch (_code) do
 		};
 	};
 	
-	//Knock out - Shift + T
+	//Knock out - Shift + V
 	case 47:
 	{
 		if(_shift) then {_handled = true;};
@@ -187,8 +187,8 @@ switch (_code) do
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	
-	//Z Player Menu
-	case 15:
+	//Y Player Menu
+	case 21:
 	{
 		if(!_alt && !_ctrlKey && !dialog) then
 		{
@@ -243,12 +243,12 @@ switch (_code) do
 			if(isNil {_veh getVariable "siren2"}) then {_veh setVariable["siren2",false,true];};
 			if((_veh getVariable "siren2")) then
 			{
-				titleText ["Warnung AUS","PLAIN"];
+				titleText ["Siren Off","PLAIN"];
 				_veh setVariable["siren2",false,true];
 			}
 				else
 			{
-				titleText ["Warnung AN","PLAIN"];
+				titleText ["Siren On","PLAIN"];
 				_veh setVariable["siren2",true,true];
 				if(playerSide == west) then {
 					[[_veh],"life_fnc_copSiren2",nil,true] spawn life_fnc_MP;
@@ -336,8 +336,8 @@ switch (_code) do
         };
     };
 	
-	//TAB Pickaxe
-	case 15:
+	//Q Pickaxe
+	case 16:
 	{
 		if((!life_action_inUse) && (vehicle player == player) ) then
 		{
@@ -368,36 +368,11 @@ switch (_code) do
 		};
 	};
 	
-	//Wanted List Shift + 2
-	case 3:
-	{
-		if(playerSide in [independent,civilian]) exitWith {};
-		if(_shift) then {_handled = true;};
-		if (_shift) then
-		{
-			if(!_alt && !_ctrlKey && !dialog) then
-			{
-				[] call life_fnc_wantedMenu;
-			};
-		};
-	};
 	
-	//Wanted List Shift + 3
-	case 4:
-	{
-		if(playerSide in [independent,civilian]) exitWith {};
-		if(_shift) then {_handled = true;};
-		if (_shift) then
-		{
-			if(!_alt && !_ctrlKey && !dialog) then
-			{
-				createDialog "life_wantedadd2";
-			};
-		};
-	};
+	
 
-	// F3 Police Open Gates from Inside of Vehicle
-    case 61:
+	// G Police Open Gates from Inside of Vehicle
+    case 34:
 	{
 		if (!_shift && !_alt && !_ctrlKey && (playerSide in [west,independent]) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
@@ -405,7 +380,7 @@ switch (_code) do
 	};
 
 	// F2 Spike Strips
-	case 60:
+	case 126:
 	{	
 		if(vehicle player != player) exitWith {hint "You cannot place spike strips while inside a vehicle.."};
 		if(playerSide == west) then {
@@ -418,7 +393,7 @@ switch (_code) do
 
 		};
 	};
-	/*
+
 	case 59: // F1
 	{
 		closeDialog 0;
@@ -438,7 +413,7 @@ switch (_code) do
 		closeDialog 0;
 		_handled = false;
 	};
-	*/
+
 	case 62: // F4 
 	{
 		closeDialog 0;

@@ -106,22 +106,60 @@
 			<Portuguese>Cancelar</Portuguese>
 		</Key>
 	</Package>
-	<Package name="Admin_Menu">
+		<Package name="Admin_Menu">
 		<Key ID="STR_Admin_Title">
-			<Original>Admin Menu</Original>
-			<English>Admin Menu</English>
-			<German>Admin Menü</German>
-			<Italian>Menu Admin</Italian>
-			<French>Menu Admin</French>
-			<Portuguese>Menu do Admin</Portuguese>
+			<Original>MotD Admin Menu</Original>
 		</Key>
 		<Key ID="STR_Admin_GetID">
 			<Original>Get ID</Original>
-			<English>Get ID</English>
-			<German>ID abfragen</German>
-			<French>Obtenir ID</French>
-			<Italian>Vedi ID</Italian>
-			<Portuguese>Menu do Admin</Portuguese>
+		</Key>
+		<Key ID="STR_Admin_Spectate">
+			<Original>Spectate</Original>
+		</Key>
+		<Key ID="STR_Admin_Teleport">
+			<Original>Teleport</Original>
+		</Key>
+		<Key ID="STR_Admin_TpHere">
+			<Original>TP Here</Original>
+		</Key>
+		<Key ID="STR_Admin_Debug">
+			<Original>Debug Console</Original>
+		</Key>
+		<Key ID="STR_Admin_Immortal">
+			<Original>God Mode</Original>
+		</Key>
+		<Key ID="STR_Admin_key">
+			<Original>Add Keys</Original>
+		</Key>
+		<Key ID="STR_Admin_atm">
+			<Original>ATM</Original>
+		</Key>
+		<Key ID="STR_Admin_unrestrain">
+			<Original>Unrestrain</Original>
+		</Key>
+		<Key ID="STR_Admin_Compensate">
+			<Original>Compensate</Original>
+		</Key>
+		<Key ID="STR_Admin_CompWarn">
+			<Original>You are about to give yourself %1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
+		</Key>
+		<Key ID="STR_Admin_Success"> 
+			<Original>You have added %1 to your account.</Original>
+		</Key>
+		<Key ID="STR_Admin_Fail">
+			<Original>You can not go above 999999.</Original>
+		</Key>
+		<Key ID="STR_Admin_Amount">
+			<Original>Please type in the amount to compensate.</Original>
+		</Key>
+		<Key ID="STR_Admin_Freeze">
+			<Original>Freeze</Original>
+		</Key>
+		<Key ID="STR_Admin_Frozen">
+			<Original>You have disabled %1's input.</Original>
+		</Key>
+		<Key ID="STR_Admin_Unfrozen">
+			<Original>You have enabled %1's input.</Original>
 		</Key>
 	</Package>
 	<Package name="Admin_Notifications">
