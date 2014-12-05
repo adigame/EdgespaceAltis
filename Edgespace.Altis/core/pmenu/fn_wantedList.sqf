@@ -1,11 +1,6 @@
 /*
-	Copyright © 2013 Bryan "Tonic" Boardwine, All rights reserved
-	See http://armafiles.info/life/list.txt for servers that are permitted to use this code.
 	File: fn_wantedList.sqf
-	Author: Bryan "Tonic" Boardwine"
-	
-	Description:
-	Displays wanted list information sent from the server.
+	Description: Displays wanted list information sent from the server.
 */
 private["_info","_display","_list","_units","_entry"];
 disableSerialization;
@@ -26,9 +21,9 @@ _units = [];
 	};
 } foreach _info;
 
-ctrlSetText[2404,"Verbindung Hergestellt"];
+ctrlSetText[2404,"Connection Established"];
 
 if(((lbSize _list)-1) == -1) then
 {
-	_list lbAdd "Keine Anzeigen";
+	_list lbAdd "No criminals";
 };

@@ -1,9 +1,6 @@
 /*
 	File: fn_wantedInfo.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Pulls back information about the wanted criminal.
+	Description: Pulls back information about the wanted criminal.
 */
 private["_display","_list","_crimes","_bounty","_mylist"];
 disableSerialization;
@@ -25,7 +22,7 @@ _bounty = _data select 3;
 	_crime = _x;
 	if(!(_crime in _mylist)) then
 	{
-		_mylist set[count _mylist,_crime];
+		_mylist pushBack _crime;
 		_list lbAdd format["%1 count(s) of %2",{_x == _crime} count _crimes,_crime];
 	};
 } foreach _crimes;

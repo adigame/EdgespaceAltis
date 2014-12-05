@@ -30,7 +30,7 @@ class jail_time
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2651;
-			text = "Ab gehts zum Gefängnis";
+			text = "Put in Jail";
 			x = 0.3;
 			y = 0.2;
 			w = 0.6;
@@ -40,7 +40,7 @@ class jail_time
 		class InfoMsg : Life_RscText
 		{
 			idc = 2601;
-			text = "Zeit in Minuten:";
+			text = "Time in minutes:";
 			x = 0.3;
 			y = 0.163 + (11 / 250);
 			w = 0.45; 
@@ -57,7 +57,7 @@ class jail_time
 		
 		class payTicket: Life_RscButtonMenu {
 			idc = 2402;
-			text = "Absenden";
+			text = "Ok";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick="[] spawn life_fnc_arrestDialog_Arrest;";
 			x = 0.45;

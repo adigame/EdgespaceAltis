@@ -25,218 +25,234 @@ lbClear _list2;
 //lbSetData [_list2, _index, "pfad/zum/bild.paa"];
 //lbSetValue [_list2, _index, "pfad/zum/bild.paa"];
 
-_text = "Fahren ohne Fuehrerschein $15000";
-_data = "1";
-_list2 lbAdd format["%1 (%2)",_text,_data];
-_list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Versuchter Fahrzeug Diebstahl pro Versuch $10000";
+_text = "Attempted theft of civilian vehicle $2000";
 _data = "2";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Diebstahl von Fahrzeugen $20000";
+_text = "Theft of civilian vehicle $5000";
 _data = "3";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Fahren ohne Licht $1500";
+_text = "Driving without lights $500";
 _data = "4";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Ueberhoehte Geschwindigkeit $6000";
+_text = "Multiple Speeding Violations $3000";
 _data = "5";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Gefaehrliche Fahrweise $7500";
+_text = "Dangerous driving $5000";
 _data = "6";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Versuchter Diebstahl e. Polizeifahrzeugs $15000";
+_text = "Attempted theft police vehicle $7500";
 _data = "7";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Diebstahl von Polizeifahrzeugen $25000";
+_text = "Theft of police vehicle $20000";
 _data = "8";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
 
-_text = "Landen ohne Genehmigung $20000";
+_text = "Landing in a no-fly zone $3000";
 _data = "9";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Fahren von illegalen Fahrzeugen $100000";
+_text = "Driving illegal vehicles $8000";
 _data = "10";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Unfallverursacher / Fahrerflucht nach Unfall $5000";
+_text = "Hit and run $10000";
 _data = "11";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Flucht vor der Polizei $17500";
+_text = "Evading from police $7500";
 _data = "12";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Ueberfahren eines anderen Spielers $1234567";
+_text = "Driving over another civilian $10000";
 _data = "13";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Illegale Strassensperren $15000";
+_text = "Illegal roadblocks $5000";
 _data = "14";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Widerstand gegen die Staatsgewalt $45000";
+_text = "Resisting arrest $1500";
 _data = "15";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Nicht befolgen e. pol. Anordnung $5000";
+_text = "Trade in exotic goods $25000";
 _data = "16";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Beamtenbeleidigung $15000";
+_text = "Insulting the authorities $500";
 _data = "17";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Belaestigung eines Polizisten $14000";
+_text = "Harassment to a police officer $1000";
 _data = "18";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Betreten einer pol. Sperrzone $50000";
+_text = "Entering a restricted zone $2500";
 _data = "19";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Toeten eines Polizisten $1234567";
+_text = "Killing a police officer $25000";
 _data = "20";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Beschuss auf Polizei/Beamte/Eigentum $1234567";
+_text = "Firing on police/officials/property $15000";
 _data = "21";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Zerstoerung von Polizeieigentum $15000";
+_text = "Destruction of police property $15000";
 _data = "22";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Drogendelikte $123456";
+_text = "Illegal Contraband(Drugs) $15000";
 _data = "23";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Waffenbesitz ohne Lizenz $70000";
+_text = "Possession of firearms without a license $5000";
 _data = "24";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Mit gez. Waffe durch Stadt $50000";
+_text = "Carrying a weapon inside city limits $2000";
 _data = "25";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Besitz einer illegalen Waffe $150000";
+_text = "Possession of a illegal weapon $5000";
 _data = "26";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Abfeuern einer Waffe innerhalb von Staedten $50000";
+_text = "Use of firearms within cities $10000";
 _data = "27";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Geiselnahme $1234567";
+_text = "Holding a hostage $20000";
 _data = "28";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Raubueberfall auf Personen/Fahrzeuge $60000";
+_text = "Attack on individuals/vehicles $10000";
 _data = "29";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Bankraub $1234567";
+_text = "Bank robbery $150000";
 _data = "30";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Mord $1234567";
+_text = "Murder $60000";
 _data = "31";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Aufstand $75000";
+_text = "Rebellion $35000";
 _data = "32";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Angriff durch Rebellen $75000";
+_text = "Disturbing the peace $7500";
 _data = "33";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Angriff/Belagerung von Hauptstaedten/Checkpoints $1234567";
+_text = "Flying without a pilots license $1500";
 _data = "34";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Landung in einer Flugverbotszone $75000";
+_text = "Flying/hovering below 200m in city limits $3000";
 _data = "35";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Fliegen/Schweben unterhalb 150m ueber Stadt $2000";
+_text = "Prison Break $20000";
 _data = "36";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Ausbruch aus dem Gefaengnis $1234567";
+_text = "Excessive use of Car Horn $1000";
 _data = "37";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Fliegen ohne Fluglizenz $50000";
+_text = "Attempting Murder $10000";
 _data = "38";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Dauerhaftes hupen $7500";
+_text = "Kidnapping $10000";
 _data = "39";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Handel mit exotischen Gütern $500000";
+_text = "Trespassing $1000";
 _data = "40";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Umfahren eines Außenpostens €25000";
+_text = "Illegal Gambling $5000";
 _data = "41";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Kraftwerk manipulation €25000";
+_text = "Trolling $20000";
 _data = "42";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Organ Handel €50000";
-_data = "919";
+_text = "Evading Justice $10000";
+_data = "43";
+_list2 lbAdd format["%1 (%2)",_text,_data];
+_list2 lbSetData [(lbSize _list2)-1,_data];
+
+_text = "Attempting Suicide $5000";
+_data = "44";
+_list2 lbAdd format["%1 (%2)",_text,_data];
+_list2 lbSetData [(lbSize _list2)-1,_data];
+
+_text = "Illegally crossing the border $6000";
+_data = "45";
+_list2 lbAdd format["%1 (%2)",_text,_data];
+_list2 lbSetData [(lbSize _list2)-1,_data];
+
+_text = "Illegal Parking in Kavala $1000";
+_data = "46";
+_list2 lbAdd format["%1 (%2)",_text,_data];
+_list2 lbSetData [(lbSize _list2)-1,_data];
+
+_text = "Harassing Civilians $2000";
+_data = "47";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
