@@ -49,7 +49,7 @@ switch (_var) do
 	case "life_inv_redgull": {"RedBull"};
 	case "life_inv_lockpick": {"Lockpick"};
 	case "life_inv_peach": {"Peach"};
-	case "life_inv_coke": {"Unprocessed Cocaine"};
+	case "life_inv_coke": {"Unprocessed cocoa leaf"};
 	case "life_inv_cokep": {"Proccessed Cocaine"};
 	case "life_inv_spikeStrip": {"Spike Strip"};
 	case "life_inv_rock": {"Rock"};

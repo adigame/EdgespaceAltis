@@ -36,7 +36,7 @@ switch (true) do
 			player allowDamage true;
 			player enableSimulation true;
 			closeDialog 0;
-			hint "You are suddenly feeling much better"
+			hint "You are suddenly feeling much better";
 		};
 	};
 	
@@ -55,6 +55,7 @@ switch (true) do
 			if (life_drink < 0.08) exitWith {};
 			[] spawn life_fnc_drinkwhiskey;
 			closeDialog 0;
+			hint "You are suddenly feeling much better";
 		};
 	};
 	
@@ -182,7 +183,7 @@ switch (true) do
 		if(playerSide in [west,independent]) exitWith {hint "No Drugs on Duty!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			[] spawn life_fnc_useMarihuana;
+			[] spawn life_fnc_useMeth;
 		};
 	};
 	

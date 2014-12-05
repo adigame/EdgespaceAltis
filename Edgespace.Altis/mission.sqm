@@ -49144,7 +49144,7 @@ class Mission
 		{
 			position[]={18414.85,15.303878,7956.3223};
 			name="cocaine_1";
-			text="Coca Leaf Field";
+			text="Cocoa Tree's";
 			type="mil_dot";
 			colorName="ColorRed";
 		};
@@ -50901,7 +50901,7 @@ class Mission
 		{
 			position[]={5195.7974,239.25485,21065.553};
 			name="cocaine_2";
-			text="Coca Leaf Field";
+			text="Cocoa Tree's";
 			type="mil_dot";
 			colorName="ColorRed";
 		};

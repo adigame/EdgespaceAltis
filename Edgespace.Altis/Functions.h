@@ -446,6 +446,7 @@ class Life_Client_Core
 		class useHeroin {};
 		class useKokain {};
 		class useMarihuana {};
+		class useMeth {};
 		class weedSmoke {};
 	};
 	

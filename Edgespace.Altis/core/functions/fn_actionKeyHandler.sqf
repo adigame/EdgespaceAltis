@@ -1,10 +1,7 @@
 #include <macro.h>
 /*
 	File: fn_actionKeyHandler.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Master action key handler, handles requests for picking up various items and
+	Description:Master action key handler, handles requests for picking up various items and
 	interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
 */
 private["_curTarget","_isWater"];
@@ -20,10 +17,10 @@ if(isNull _curTarget) exitWith {
 			[_fish] call life_fnc_catchFish;
 		};
 	} else {
-		if(playerSide == civilian && !life_action_gathering) then {
-			_handle = [] spawn life_fnc_gather;
-			waitUntil {scriptDone _handle};
-			life_action_gathering = false;
+		if(playerSide == civilian) then {
+			[] call life_fnc_gather;
+
+
 		};
 	};
 };
@@ -70,7 +67,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	//It's a vehicle! open the vehicle interaction key!
 	if(_isVehicle) then {
 		if(!dialog) then {
-			if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0) + 2) then {
+			if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0) + 5) then {
 				[_curTarget] call life_fnc_vInteractionMenu;
 			};
 		};
