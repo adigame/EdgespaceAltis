@@ -118,12 +118,12 @@ class CfgSounds
 		sound[] = {"sounds\MedicSirenLong.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	class speech
-	{
-		name = "speech";
-		sound[] = {"sounds\speech.ogg", 1.0, 1};
-		titles[] = {};
-	};
+    class Yelp
+    {
+        name = "Yelp";
+        sound[] = {"\sounds\Yelp.ogg", 1.0, 1};
+        titles[] = {};
+    };
 	class spraycan
 	{
 		name = "spraycan";	

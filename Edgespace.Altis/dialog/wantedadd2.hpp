@@ -31,7 +31,7 @@ class life_wantedadd2 {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2901;
-			text = "Anzeige schreiben";
+			text = "Wanted List Add";
 			x = 0.1;
 			y = 0.2;
 			w = 0.7;
@@ -79,7 +79,7 @@ class life_wantedadd2 {
 
 		class Adminwanted : Life_RscButtonMenu {
 			idc = -1;
-			text = "Hinzufügen";
+			text = "Add";
 			onButtonClick = "[] call life_fnc_wanted2;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 1.1 - (1 / 25);

@@ -14,14 +14,14 @@ life_versionInfo = "Edgespace Altis Life RPG";
 [] execVM "KRON_Strings.sqf"; //Load the Server Strings
 [] execVM "script\fastrope.sqf"; //Load Fastrope
 [] execVM "script\welcome.sqf"; //Load Welcome Intro
-[] execVM "script\teargas.sqf"; //Load Teargas Script for Cops
+[] execVM "script\teargas.sqf"; //Load Teargas 
+[] execVM "script\gasmask.sqf";  // Load Gas Mask for Cops
 [] execVM "script\savezone.sqf"; //Load the Savezones
 [] execVM "script\fn_statusBar.sqf"; //Load the Statusbar
 [] execVM "script\dynamicweather.sqf"; // Load Dynamic Weather
 StartProgress = true;
 
-
-//Scheiß Nebel hau ab
+// Fog
 [] spawn {
 	while{true} do {
 		sleep 10;

@@ -44,7 +44,7 @@ switch(_shop) do
 			case (__GETC__(life_coplevel) < 1): {"Police officers may only access this!"};
 			default
 			{
-				["Visors & Others",
+				["Other",
 					[
 						["ItemMap",nil,10],
 						["ItemWatch",nil,10],
@@ -137,11 +137,11 @@ switch(_shop) do
 			{
 				["Police Sgt Store",
 					[
-						["arifle_sdar_F","Taser Sturmgewehr",10],
-						["hgun_Rook40_F","Taser-Pistole",10],
-						["hgun_Rook40_snds_F","Taser-Pistole Silenced",10],
-						["16Rnd_9x21_Mag","16er Magazin",10],
-						["20Rnd_556x45_UW_mag","556er Magazin",10]
+						["arifle_sdar_F","Taser Rifle",10],
+						["hgun_Rook40_F","Taser Pistol",10],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",10],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",10],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10]
 					]
 				];
 			};
@@ -160,11 +160,11 @@ switch(_shop) do
 					[
 						["arifle_MXC_F",nil,10],
 						["arifle_MX_F",nil,10],
-						["arifle_sdar_F","Taser Sturmgewehr",10],
+						["arifle_sdar_F","Taser Rifle",10],
 						["SMG_02_F",nil,10],
-						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
+						["30Rnd_65x39_caseless_mag","6,5mm Magazine",10],
 						["30Rnd_9x21_Mag","9mm-Gummi",10],
-						["20Rnd_556x45_UW_mag","Taser Waffe Magazin",10]
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10]
 					]
 				];
 			};
@@ -188,7 +188,7 @@ switch(_shop) do
 						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
 						["30Rnd_9x21_Mag",nil,10],
 						["30Rnd_556x45_Stanag",nil,10],
-						["SmokeShellOrange","Rauchgranate",10]
+						["SmokeShellOrange","Orange Smoke Grenade",10],
 					]
 				];
 			};
@@ -210,9 +210,9 @@ switch(_shop) do
 						["arifle_MXC_Black_F",nil,10],
 						["SMG_02_F",nil,10],
 						["arifle_TRG21_F",nil,10],
-						["SmokeShellBlue","CE-Gas",10],
-						["HandGrenade_Stone","Blendgranate",10],
-						["SmokeShellOrange","Rauchgranate",10],
+						["SmokeShellBlue","Tear Gas",10],
+						["HandGrenade_Stone","Flash Bang",10],
+						["SmokeShellOrange","Orange Smoke Grenade",10],
 						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
 						["30Rnd_9x21_Mag",nil,10],
 						["30Rnd_556x45_Stanag",nil,10]
@@ -240,9 +240,9 @@ switch(_shop) do
 						["srifle_EBR_F",nil,10],
 						["arifle_TRG21_F",nil,10],
 						["arifle_TRG20_F",nil,10],
-						["SmokeShellBlue","CE-Gas",10],
-						["HandGrenade_Stone","Blendgranate",10],
-						["SmokeShellOrange","Rauchgranaten",10],
+						["SmokeShellBlue","Tear Gas",10],
+						["HandGrenade_Stone","Flash Bang",10],
+						["SmokeShellOrange","Orange Smoke Grenade",10],
 						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
 						["20Rnd_762x51_Mag",nil,10],
 						["30Rnd_9x21_Mag",nil,10],
@@ -283,12 +283,12 @@ switch(_shop) do
 						["16Rnd_9x21_Mag",nil,150],
 						["SmokeShellGreen",nil,2500],
 						["muzzle_snds_M","6,5mm Silencer",10000],
-						["20Rnd_556x45_UW_mag",nil,125],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10]
 						["30Rnd_45ACP_Mag_SMG_01",nil,500],
-						["20Rnd_762x51_Mag","MK18 Magazin",500],
+						["20Rnd_762x51_Mag","MK18 Magazine",500],
 						["11Rnd_45ACP_Mag",nil,1000],
 						["30Rnd_556x45_Stanag",nil,300],
-						["10Rnd_762x51_Mag","Rahim Magazin",500],
+						["10Rnd_762x51_Mag","Rahim Magazine",500],
 						["30Rnd_65x39_caseless_green",nil,275]
 					]
 				];
