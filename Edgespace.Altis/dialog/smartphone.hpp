@@ -180,7 +180,7 @@ class Life_my_smartphone {
 
 		class DeleteMessages : Life_RscButtonMenu {
 			idc = -1;
-			text = "Nachrichten löschen";
+			text = "Delete Message";
 			onButtonClick = "[3] call life_fnc_smartphone;";
 			colorBackground[] = { 0.584, 0.086, 0.086, 1.0 };
 			x = 0 + 0.7 - (6.25 / 40);

@@ -51,7 +51,7 @@ class SettingsMenu
 		class RevealNearestHeader : PlayerTagsHeader
 		{
 			idc = -1;
-			text = "Zeige Nahe Objekte";
+			text = "Reveal Neaest Objects";
 			
 			y = 0.53;
 		};
@@ -184,7 +184,7 @@ class SettingsMenu
 		
 		class RevealONOFF : PlayerTagsONOFF
 		{
-			tooltip = "Erhöht die Performance bei aktivierung.";
+			tooltip = "It may improve performance.";
 			idc = 2972;
 			y = 0.53;
 		};

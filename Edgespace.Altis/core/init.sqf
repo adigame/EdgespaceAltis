@@ -94,7 +94,7 @@ LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObje
 [] call life_fnc_settingsInit;
 player setVariable["steam64ID",getPlayerUID player];
 player setVariable["realname",profileName,true];
-life_fnc_moveIn = compileFinal
+switch_fnc_moveIn = compileFinal
 "
 	player moveInCargo (_this select 0);
 ";
@@ -119,3 +119,10 @@ life_fnc_garageRefund = compileFinal
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
+[] spawn {
+    while {true} do {
+        sleep 600;
+        [] call SOCK_fnc_updateRequest;
+        hint "Game Autosaved.";
+    };
+};

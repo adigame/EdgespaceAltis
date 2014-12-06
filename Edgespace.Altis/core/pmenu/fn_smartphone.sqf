@@ -16,7 +16,7 @@ _display = findDisplay 88888;
 _cPlayerList = _display displayCtrl 88881;
 _cMessageList = _display displayCtrl 88882;
 _cMessageHeader = _display displayCtrl 88886;
-_cMessageHeader ctrlSetText format["Von:                 Nachricht:"];
+_cMessageHeader ctrlSetText format["From:                 Message:"];
 ctrlEnable[887892,false];
 switch(_type) do
 {

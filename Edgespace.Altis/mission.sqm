@@ -524,7 +524,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_22";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="[WHITELIST] Paramedic/EMS 21";
+					description="[WHITELIST] Mechanic/EMS 21";
 				};
 				class Item22
 				{
@@ -538,7 +538,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_23";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="[WHITELIST] Paramedic/EMS 23";
+					description="[WHITELIST] Mechanic/EMS 23";
 				};
 				class Item23
 				{
@@ -552,7 +552,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_24";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="[WHITELIST] Paramedic/EMS 24";
+					description="[WHITELIST] Mechanic/EMS 24";
 				};
 				class Item24
 				{
@@ -566,7 +566,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_25";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="[WHITELIST] Paramedic/EMS 25";
+					description="[WHITELIST] Mechanic/EMS 25";
 				};
 			};
 		};
@@ -2758,7 +2758,7 @@ class Mission
 					rank="COLONEL";
 					skill=0.60000002;
 					text="medic_1";
-					description="[WHITELIST] Paramedic/EMS 1";
+					description="[WHITELIST] Mechanic/EMS 1";
 				};
 				class Item1
 				{
@@ -2771,7 +2771,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_3";
-					description="[WHITELIST] Paramedic/EMS 3";
+					description="[WHITELIST] Mechanic/EMS 3";
 				};
 				class Item2
 				{
@@ -2784,7 +2784,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_4";
-					description="[WHITELIST] Paramedic/EMS 4";
+					description="[WHITELIST] Mechanic/EMS 4";
 				};
 				class Item3
 				{
@@ -2797,7 +2797,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_2";
-					description="[WHITELIST] Paramedic/EMS 2";
+					description="[WHITELIST] Mechanic/EMS 2";
 				};
 				class Item4
 				{
@@ -2810,7 +2810,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_5";
-					description="[WHITELIST] Paramedic/EMS 5";
+					description="[WHITELIST] Mechanic/EMS 5";
 				};
 				class Item5
 				{
@@ -2823,7 +2823,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_6";
-					description="[WHITELIST] Paramedic/EMS 6";
+					description="[WHITELIST] Mechanic/EMS 6";
 				};
 				class Item6
 				{
@@ -2835,7 +2835,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_7";
-					description="[WHITELIST] Paramedic/EMS 7";
+					description="[WHITELIST] Mechanic/EMS 7";
 				};
 				class Item7
 				{
@@ -2848,7 +2848,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_8";
-					description="[WHITELIST] Paramedic/EMS 8";
+					description="[WHITELIST] Mechanic/EMS 8";
 				};
 				class Item8
 				{
@@ -2861,7 +2861,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_9";
-					description="[WHITELIST] Paramedic/EMS 9";
+					description="[WHITELIST] Mechanic/EMS 9";
 				};
 				class Item9
 				{
@@ -2874,7 +2874,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_10";
-					description="[WHITELIST] Paramedic/EMS 10";
+					description="[WHITELIST] Mechanic/EMS 10";
 				};
 			};
 		};
@@ -3431,7 +3431,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Medic Store"",life_fnc_virt_menu,""medic""]; this addAction[""Paramedic/EMS Items"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[""Medical Clothing"",life_fnc_clothingMenu,""medic""];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_2"",""med"",""Kavala Hosptial""]]; this addAction[""EMS Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Kavala Hosptial""]]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_2""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent '];  removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo"";this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_2""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Medic Store"",life_fnc_virt_menu,""medic""]; this addAction[""Mechanic/EMS Items"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[""Medical Clothing"",life_fnc_clothingMenu,""medic""];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_2"",""med"",""Kavala Hosptial""]]; this addAction[""EMS Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Kavala Hosptial""]]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_2""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent '];  removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo"";this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_2""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
 				};
 			};
 		};
@@ -4141,7 +4141,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false;  this addAction[""Medic Store"",life_fnc_virt_menu,""medic""]; this addAction[""Paramedic/EMS Items"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[""Sanitätskleidung"",life_fnc_clothingMenu,""medic""];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_3"",""med"",""Kavala Hosptial""]]; this addAction[""EMS Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_3"",""med"",""Kavala Hosptial""]]; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_3""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
+					init="this allowDamage false; this enableSimulation false;  this addAction[""Medic Store"",life_fnc_virt_menu,""medic""]; this addAction[""Mechanic/EMS Items"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[""Sanitätskleidung"",life_fnc_clothingMenu,""medic""];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_3"",""med"",""Kavala Hosptial""]]; this addAction[""EMS Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_3"",""med"",""Kavala Hosptial""]]; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_3""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
 				};
 			};
 		};
@@ -4222,7 +4222,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Medic Store"",life_fnc_virt_menu,""medic""]; this addAction[""Medic Items"",life_fnc_weaponShopMenu,""adac_basic""]; this addAction[""EMS Dienstkleidung"",life_fnc_clothingMenu,""medic"",0,false,false,"""",' license_med_adac && playerSide == independent'];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_4"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_4"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_4""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo"";this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_4""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Item Store"",life_fnc_virt_menu,""medic""]; this addAction[""Medic Items"",life_fnc_weaponShopMenu,""adac_basic""]; this addAction[""Mechanic Clothing"",life_fnc_clothingMenu,""medic"",0,false,false,"""",' license_med_adac && playerSide == independent'];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_4"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_4"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_4""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo"";this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_4""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
 				};
 			};
 		};
@@ -4818,14 +4818,14 @@ class Mission
 				class Item0
 				{
 					position[]={3492.5808,19.516792,14155.857};
-					azimut=-184.71117;
+					azimut=-184.711;
 					special="NONE";
 					id=267;
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""EMS-Bedarf"",life_fnc_virt_menu,""medic""]; this addAction[""ADAC Items"",life_fnc_weaponShopMenu,""adac_basic""]; this addAction[""EMS Clothing"",life_fnc_clothingMenu,""medic"",0,false,false,"""",' license_med_adac && playerSide == independent'];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""EMS Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_1"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""EMS Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_5"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_5""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""EMS-Bedarf"",life_fnc_virt_menu,""medic""]; this addAction[""Items"",life_fnc_weaponShopMenu,""adac_basic""]; this addAction[""Clothing"",life_fnc_clothingMenu,""medic"",0,false,false,"""",' license_med_adac && playerSide == independent'];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_1"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""EMS Vehicle Store"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_5"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_5""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
 				};
 			};
 		};
@@ -5619,14 +5619,14 @@ class Mission
 				class Item0
 				{
 					position[]={3490.5288,19.504038,14155.96};
-					azimut=179.92653;
+					azimut=179.927;
 					special="NONE";
 					id=311;
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Medic Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_1"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac'];this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_5""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Mechanic Aircraft Store"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_1"",""med"",""Kavala Hosptial""],0,false,false,"""",'license_med_adac']; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;  createDialog ""Life_impound_menu""; disableSerialization;  ctrlSetText[2802,""Fetching Vehicles....""]; life_garage_sp = ""med_car_5""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Vehicle Garage"",  {[[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";},"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Vehicle Storage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""medic""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""medic"",0,false,false,"""",' !license_med_air && playerSide == independent']; removeHeadgear this; removeBackpack this; removeGoggles this; removeVest this; removeUniform this;  this forceaddUniform ""U_O_OfficerUniform_ocamo""; this addAction[""Aircraft Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent'];";
 				};
 			};
 		};
@@ -48321,7 +48321,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=333;
+		items=336;
 		class Item0
 		{
 			position[]={8471.8662,106.60769,25129.486};
@@ -48427,7 +48427,7 @@ class Mission
 			name="CG";
 			text="SAPS Coast Guard";
 			type="c_ship";
-			colorName="ColorWhite";
+			colorName="ColorWEST";
 		};
 		class Item15
 		{
@@ -48483,7 +48483,7 @@ class Mission
 		};
 		class Item22
 		{
-			position[]={15119.903,12.819189,11241.473};
+			position[]={15120.929,12.772561,11245.215};
 			name="diamond_1";
 			text="Diamond Mine";
 			type="mil_triangle";
@@ -49415,19 +49415,18 @@ class Mission
 		};
 		class Item139
 		{
-			position[]={6799.1924,0.032245863,9719.2266};
-			name="turtle_1";
+			position[]={3668.9478,33.203739,14185.624};
+			name="peaches_circle_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorRed";
-			fillName="SolidBorder";
-			a=350;
-			b=350;
-			drawBorder=1;
+			colorName="ColorGUER";
+			fillName="Grid";
+			a=50;
+			b=50;
 		};
 		class Item140
 		{
-			position[]={6789.8643,0.002595719,9725.6348};
+			position[]={6819.9248,0.10436314,9701.5781};
 			name="turtle_5";
 			text="Turtle Poaching";
 			type="mil_dot";
@@ -50053,7 +50052,7 @@ class Mission
 		{
 			position[]={20699.92,35.599998,16612.51};
 			name="adac_2";
-			text="EMS East";
+			text="Mechanics East";
 			type="o_maint";
 			colorName="ColorYellow";
 		};
@@ -50368,10 +50367,10 @@ class Mission
 		{
 			position[]={3492.8372,19.499184,14146.55};
 			name="adac_base";
-			text="EMS West";
+			text="Mechanics West";
 			type="o_maint";
 			colorName="ColorYellow";
-			angle=-359.86508;
+			angle=-359.86499;
 		};
 		class Item259
 		{
@@ -50389,11 +50388,10 @@ class Mission
 		};
 		class Item261
 		{
-			position[]={15119.903,12.819189,11241.473};
+			position[]={15120.975,12.774632,11245.198};
 			name="diamond_1_1";
-			text="Diamanten Mine";
+			text="Diamond Mine";
 			type="mil_triangle";
-			colorName="Color4_FD_F";
 		};
 		class Item262
 		{
@@ -50546,11 +50544,10 @@ class Mission
 		};
 		class Item280
 		{
-			position[]={15119.903,12.819189,11241.473};
+			position[]={15120.916,12.773003,11245.185};
 			name="diamond_1_2";
-			text="Diamanten Mine";
+			text="Diamond Mine";
 			type="mil_triangle";
-			colorName="Color4_FD_F";
 		};
 		class Item281
 		{
@@ -50894,8 +50891,9 @@ class Mission
 		{
 			position[]={21670.34,15.153601,7570.0747};
 			name="pvp_city";
-			text="PvP Arena";
+			text=" PvP Arena";
 			type="hd_destroy";
+			colorName="ColorRed";
 		};
 		class Item321
 		{
@@ -50983,6 +50981,37 @@ class Mission
 			text="General Store";
 			type="c_unknown";
 			colorName="ColorGreen";
+		};
+		class Item333
+		{
+			position[]={16746.316,12.456931,12511.825};
+			name="Gen_2_3";
+			text="General Store";
+			type="c_unknown";
+			colorName="ColorGreen";
+		};
+		class Item334
+		{
+			position[]={6829.2549,-0.23062843,9707.1992};
+			name="turtle_1_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item335
+		{
+			position[]={7514.8003,21.877459,11950.064};
+			name="peaches_circle_1_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorGUER";
+			fillName="Grid";
+			a=50;
+			b=50;
 		};
 	};
 	class Sensors

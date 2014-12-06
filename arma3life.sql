@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2014-12-03 17:45:18
+Date: 2014-12-06 11:45:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,6 +32,86 @@ CREATE TABLE `economy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of economy
+-- ----------------------------
+INSERT INTO `economy` VALUES ('0', 'salema', '40', '55', '100', '40', '50', '7', 'fishmarket');
+INSERT INTO `economy` VALUES ('1', 'water', '5', '10', '100', '10', '30', '7', 'market');
+INSERT INTO `economy` VALUES ('3', 'rabbit', '50', '75', '100', '75', '150', '7', 'market');
+INSERT INTO `economy` VALUES ('4', 'apple', '40', '50', '100', '75', '150', '2', 'market');
+INSERT INTO `economy` VALUES ('5', 'storagebig', '240000', '250000', '10', '10', '10', '1', 'market');
+INSERT INTO `economy` VALUES ('6', 'storagesmall', '124000', '125000', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('7', 'bottledbeer', '1100', '1250', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('8', 'bottledwhiskey', '5000', '5500', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('9', 'redgull', '800', '1000', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('10', 'battery', '80', '100', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('11', 'tbacon', '65', '75', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('12', 'lockpick', '3500', '4000', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('13', 'pickaxe', '1100', '1200', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('14', 'zipties', '450', '500', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('15', 'peach', '65', '70', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('16', 'boltcutter', '7000', '8000', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('17', 'blastingcharge', '40000', '50000', '0', '0', '0', '0', 'market');
+INSERT INTO `economy` VALUES ('18', 'water', '8', '10', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('19', 'rabbit', '65', '75', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('20', 'apple', '40', '50', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('21', 'redgull', '900', '1000', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('22', 'tbacon', '50', '75', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('23', 'lockpick', '3500', '4000', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('24', 'pickaxe', '1100', '1200', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('25', 'fuelF', '800', '850', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('26', 'peach', '50', '70', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('27', 'blastingcharge', '40000', '50000', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('28', 'boltcutter', '7000', '8000', '0', '0', '0', '0', 'rebel');
+INSERT INTO `economy` VALUES ('29', 'turtlesoup', '12500', '15000', '0', '0', '0', '0', 'wongs');
+INSERT INTO `economy` VALUES ('30', 'turtle', '12500', '15000', '0', '0', '0', '0', 'wongs');
+INSERT INTO `economy` VALUES ('31', 'moonshine', '8000', '9000', '0', '0', '0', '0', 'wongs');
+INSERT INTO `economy` VALUES ('32', 'coffee', '8', '10', '0', '0', '0', '0', 'coffee');
+INSERT INTO `economy` VALUES ('33', 'donuts', '8', '10', '0', '0', '0', '0', 'coffee');
+INSERT INTO `economy` VALUES ('33', 'cocainep', '5000', '6000', '0', '0', '0', '0', 'heroin');
+INSERT INTO `economy` VALUES ('34', 'heroinp', '4000', '5000', '0', '0', '0', '0', 'heroin');
+INSERT INTO `economy` VALUES ('33', 'marijuana', '800', '1000', '0', '0', '0', '0', 'heroin');
+INSERT INTO `economy` VALUES ('34', 'methp', '12000', '15000', '0', '0', '0', '0', 'heroin');
+INSERT INTO `economy` VALUES ('35', 'ornate', '40', '50', '0', '0', '0', '0', 'fishmarket');
+INSERT INTO `economy` VALUES ('36', 'mackerel', '180', '200', '0', '0', '0', '0', 'fishmarket');
+INSERT INTO `economy` VALUES ('37', 'mullet', '270', '300', '0', '0', '0', '0', 'fishmarket');
+INSERT INTO `economy` VALUES ('38', 'tuna', '700', '900', '0', '0', '0', '0', 'fishmarket');
+INSERT INTO `economy` VALUES ('39', 'catshark', '330', '350', '0', '0', '0', '0', 'fishmarket');
+INSERT INTO `economy` VALUES ('40', 'glass', '1400', '1500', '0', '0', '0', '0', 'glass');
+INSERT INTO `economy` VALUES ('41', 'iron_r', '1800', '2000', '0', '0', '0', '0', 'iron');
+INSERT INTO `economy` VALUES ('42', 'copper_r', '1800', '2000', '0', '0', '0', '0', 'iron');
+INSERT INTO `economy` VALUES ('43', 'diamond', '7500', '8000', '0', '0', '0', '0', 'diamond');
+INSERT INTO `economy` VALUES ('44', 'diamondc', '8000', '8500', '0', '0', '0', '0', 'diamond');
+INSERT INTO `economy` VALUES ('45', 'salt_r', '400', '450', '0', '0', '0', '0', 'salt');
+INSERT INTO `economy` VALUES ('46', 'donuts', '8', '10', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('47', 'coffee', '8', '10', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('48', 'spikeStrip', '8', '10', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('49', 'mauer', '450', '500', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('50', 'battery', '85', '100', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('51', 'painkillers', '450', '500', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('52', 'redgull', '900', '1000', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('53', 'defusekit', '450', '500', '0', '0', '0', '0', 'cop');
+INSERT INTO `economy` VALUES ('54', 'cement', '500', '600', '0', '0', '0', '0', 'cement');
+INSERT INTO `economy` VALUES ('55', 'wine', '3800', '4000', '0', '0', '0', '0', 'beer');
+INSERT INTO `economy` VALUES ('56', 'painkillers', '450', '500', '0', '0', '0', '0', 'pharmacy');
+INSERT INTO `economy` VALUES ('57', 'morphium', '1400', '1500', '0', '0', '0', '0', 'pharmacy');
+INSERT INTO `economy` VALUES ('58', 'scalpel', '7000', '7500', '0', '0', '0', '0', 'pharmacy');
+INSERT INTO `economy` VALUES ('59', 'kidney', '14500', '15000', '0', '0', '0', '0', 'pharmacy');
+INSERT INTO `economy` VALUES ('60', 'apple', '50', '65', '0', '0', '0', '0', 'medic');
+INSERT INTO `economy` VALUES ('61', 'donuts', '8', '10', '0', '0', '0', '0', 'medic');
+INSERT INTO `economy` VALUES ('62', 'coffee', '8', '10', '0', '0', '0', '0', 'medic');
+INSERT INTO `economy` VALUES ('63', 'battery', '70', '75', '0', '0', '0', '0', 'medic');
+INSERT INTO `economy` VALUES ('64', 'redgull', '800', '1000', '0', '0', '0', '0', 'medic');
+INSERT INTO `economy` VALUES ('65', 'fuelF', '750', '850', '0', '0', '0', '0', 'medic');
+INSERT INTO `economy` VALUES ('66', 'bottledbeer', '1100', '1250', '0', '0', '0', '0', 'speakeasy');
+INSERT INTO `economy` VALUES ('67', 'bottledwhiskey', '5000', '5500', '0', '0', '0', '0', 'speakeasy');
+INSERT INTO `economy` VALUES ('68', 'bottledshine', '11000', '12000', '0', '0', '0', '0', 'speakeasy');
+INSERT INTO `economy` VALUES ('69', 'bottles', '80', '100', '0', '0', '0', '0', 'bar');
+INSERT INTO `economy` VALUES ('70', 'cornmeal', '450', '500', '0', '0', '0', '0', 'bar');
+INSERT INTO `economy` VALUES ('71', 'ipuranium', '8000', '9000', '0', '0', '0', '0', 'uranium');
+INSERT INTO `economy` VALUES ('72', 'puranium', '900', '1000', '0', '0', '0', '0', 'uranium');
+INSERT INTO `economy` VALUES ('73', 'wine', '850', '0', '0', '0', '0', '0', 'market');
+
+-- ----------------------------
 -- Table structure for gangs
 -- ----------------------------
 DROP TABLE IF EXISTS `gangs`;
@@ -45,7 +125,12 @@ CREATE TABLE `gangs` (
   `active` tinyint(4) DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of gangs
+-- ----------------------------
+INSERT INTO `gangs` VALUES ('1', '76561197971386121', 'Your Gang Name', '\"[`76561197971386121`]\"', '8', '1', '1');
 
 -- ----------------------------
 -- Table structure for houses
@@ -59,7 +144,11 @@ CREATE TABLE `houses` (
   `containers` text,
   `owned` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`id`,`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of houses
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for messages
@@ -74,7 +163,11 @@ CREATE TABLE `messages` (
   `toName` varchar(32) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of messages
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for players
@@ -104,7 +197,12 @@ CREATE TABLE `players` (
   UNIQUE KEY `playerid` (`playerid`),
   KEY `name` (`name`),
   KEY `blacklist` (`blacklist`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of players
+-- ----------------------------
+INSERT INTO `players` VALUES ('12', 'NightShade', '76561197971386121', '985759', '4896704', '7', '\"[[`license_cop_air`,1],[`license_cop_swat`,0],[`license_cop_cg`,1]]\"', '\"[[`license_civ_driver`,1],[`license_civ_air`,1],[`license_civ_heroin`,0],[`license_civ_marijuana`,1],[`license_civ_gang`,0],[`license_civ_boat`,1],[`license_civ_oil`,0],[`license_civ_dive`,0],[`license_civ_truck`,1],[`license_civ_gun`,1],[`license_civ_rebel`,1],[`license_civ_coke`,1],[`license_civ_diamond`,0],[`license_civ_copper`,0],[`license_civ_iron`,0],[`license_civ_sand`,0],[`license_civ_salt`,0],[`license_civ_cement`,0],[`license_civ_grapes`,1],[`license_civ_moonshine`,0],[`license_civ_meth`,1],[`license_civ_home`,1],[`license_civ_stiller`,0],[`license_civ_liquor`,0],[`license_civ_bottler`,0],[`license_civ_uranium`,1]]\"', '\"[[`license_med_air`,1],[`license_med_adac`,0]]\"', '\"[`U_B_CombatUniform_mcam_worn`,`V_PlateCarrier1_blk`,`B_Carryall_oucamo`,`G_Sport_Checkered`,``,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],`arifle_SDAR_F`,`hgun_Rook40_F`,[`optic_DMS`],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`],[`H_CrewHelmetHeli_B`],[],[`V_PlateCarrier1_blk`,`H_Watchcap_blk`],[`16Rnd_9x21_Mag`,`16Rnd_9x21_Mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`20Rnd_556x45_UW_mag`,`16Rnd_9x21_Mag`],[``,``,``],[``,``,``],[`life_inv_coffee`,`life_inv_spikeStrip`,`life_inv_spikeStrip`,`life_inv_defusekit`]]\"', '\"[``,``,``,``,``,[],[],[],[],[],[],[],[],[],[],[],[]]\"', '5', '0', '\"[`NightShade`]\"', '3', '5', '\"[`U_C_Poloshirt_stripped`,``,``,``,``,[`ItemMap`,`ItemCompass`,`ItemWatch`,`ItemGPS`],``,``,[],[],[],[],[],[],[],[],[]]\"', '0', '0');
 
 -- ----------------------------
 -- Table structure for vehicles
@@ -125,7 +223,25 @@ CREATE TABLE `vehicles` (
   KEY `side` (`side`),
   KEY `pid` (`pid`),
   KEY `type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of vehicles
+-- ----------------------------
+INSERT INTO `vehicles` VALUES ('1', 'civ', 'B_Heli_Light_01_F', 'Air', '76561197971386121', '1', '1', '360733', '1', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('2', 'civ', 'C_Kart_01_Blu_F', 'Car', '76561197971386121', '1', '1', '696861', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('3', 'civ', 'C_SUV_01_F', 'Car', '76561197971386121', '1', '1', '602644', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('4', 'civ', 'O_Heli_Light_02_unarmed_F', 'Air', '76561197971386121', '1', '0', '321674', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('5', 'civ', 'C_SUV_01_F', 'Car', '76561197971386121', '1', '1', '818637', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('6', 'civ', 'C_SUV_01_F', 'Car', '76561197971386121', '1', '1', '56926', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('7', 'civ', 'C_Van_01_fuel_F', 'Car', '76561197971386121', '1', '1', '693271', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('8', 'civ', 'C_Hatchback_01_F', 'Car', '76561197971386121', '1', '1', '316127', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('9', 'cop', 'I_MRAP_03_F', 'Car', '76561197971386121', '1', '1', '531100', '1', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('10', 'cop', 'B_MRAP_01_F', 'Car', '76561197971386121', '1', '1', '497589', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('11', 'cop', 'B_MRAP_01_F', 'Car', '76561197971386121', '1', '1', '919511', '2', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('12', 'cop', 'B_MRAP_01_F', 'Car', '76561197971386121', '1', '1', '823791', '0', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('13', 'cop', 'C_Hatchback_01_F', 'Car', '76561197971386121', '1', '1', '706292', '8', '\"[]\"');
+INSERT INTO `vehicles` VALUES ('14', 'civ', 'C_SUV_01_F', 'Car', '76561197971386121', '1', '0', '239989', '0', '\"[]\"');
 
 -- ----------------------------
 -- Procedure structure for deleteDeadVehicles
@@ -147,134 +263,5 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteEconomyPrices`()
     NO SQL
 TRUNCATE `economy`;
-;;
-DELIMITER ;
-
--- ----------------------------
--- Procedure structure for deleteOldGangs
--- ----------------------------
-DROP PROCEDURE IF EXISTS `deleteOldGangs`;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteOldGangs`()
-BEGIN
-  DELETE FROM `gangs` WHERE `active` = 0;
-END
-;;
-DELIMITER ;
-
--- ----------------------------
--- Procedure structure for deleteOldHouses
--- ----------------------------
-DROP PROCEDURE IF EXISTS `deleteOldHouses`;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteOldHouses`()
-BEGIN
-  DELETE FROM `houses` WHERE `owned` = 0;
-END
-;;
-DELIMITER ;
-
--- ----------------------------
--- Procedure structure for deleteOldMessages
--- ----------------------------
-DROP PROCEDURE IF EXISTS `deleteOldMessages`;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteOldMessages`()
-TRUNCATE TABLE `messages`;
-;;
-DELIMITER ;
-
--- ----------------------------
--- Procedure structure for deleteSelledHouses
--- ----------------------------
-DROP PROCEDURE IF EXISTS `deleteSelledHouses`;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteSelledHouses`()
-DELETE FROM `houses` WHERE `owned` = 0;
-;;
-DELIMITER ;
-
--- ----------------------------
--- Procedure structure for resetLifeVehicles
--- ----------------------------
-DROP PROCEDURE IF EXISTS `resetLifeVehicles`;
-DELIMITER ;;
-CREATE DEFINER=`arma3`@`localhost` PROCEDURE `resetLifeVehicles`()
-BEGIN
-	UPDATE vehicles SET `active`= 0;
-END
-;;
-DELIMITER ;
-
--- ----------------------------
--- Procedure structure for setEconomyPrices
--- ----------------------------
-DROP PROCEDURE IF EXISTS `setEconomyPrices`;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `setEconomyPrices`()
-    NO SQL
-INSERT INTO `economy` (`numero`, `ressource`, `sellprice`, `buyprice`, `varprice`, `minprice`, `maxprice`, `factor`, `shoptype`) VALUES
-(1, 'apple', 50, 65, 1, 1, 60, '1', 'market'),
-(2, 'heroinu', 2250, 0, 5, 1, 4000, '0', 'heroin'),
-(3, 'heroinp', 4500, 0, 10, 1, 5000, '2', 'heroin'),
-(4, 'salema', 45, 55, 1, 1, 100, '4', 'fishmarket'),
-(5, 'ornate', 40, 50, 1, 1, 100, '4', 'fishmarket'),
-(6, 'mackerel', 175, 200, 1, 1, 1000, '4', 'fishmarket'),
-(7, 'tuna', 700, 900, 1, 1, 2000, '4', 'fishmarket'),
-(8, 'mullet', 250, 300, 1, 1, 1000, '4', 'fishmarket'),
-(9, 'catshark', 300, 350, 1, 1, 1000, '4', 'fishmarket'),
-(10, 'rabbit', 65, 75, 1, 1, 500, '0', 'market'),
-(11, 'oilp', 2250, 0, 2, 1, 3500, '3', 'oil'),
-(12, 'turtle', 5750, 15000, 10, 1, 8000, '0', 'wongs'),
-(13, 'water', 0, 10, 0, 1, 25, '0', 'market'),
-(14, 'coffee', 0, 10, 0, 1, 75, '0', 'cop'),
-(15, 'turtlesoup', 4500, 15000, 0, 1, 5000, '0', 'wongs'),
-(16, 'donuts', 0, 10, 0, 1, 200, '0', 'cop'),
-(17, 'marijuana', 3000, 0, 10, 1, 6000, '2', 'heroin'),
-(18, 'tbacon', 25, 75, 0, 1, 75, '0', 'market'),
-(19, 'lockpick', 750, 4000, 0, 1, 4100, '0', 'market'),
-(20, 'redgull', 750, 1000, 0, 1, 1200, '0', 'market'),
-(21, 'peach', 65, 70, 1, 1, 100, '1', 'market'),
-(22, 'cocaine', 2500, 0, 5, 1, 4500, '0', 'heroin'),
-(23, 'cocainep', 5000, 0, 10, 1, 8000, '2', 'heroin'),
-(24, 'diamond', 1500, 0, 3, 1, 2000, '3', 'diamond'),
-(25, 'diamondc', 3000, 0, 3, 1, 6000, '3', 'diamond'),
-(26, 'iron_r', 1500, 0, 3, 1, 3000, '3', 'iron'),
-(27, 'copper_r', 1000, 0, 3, 1, 1500, '3', 'iron'),
-(28, 'salt_r', 2500, 0, 3, 1, 5000, '3', 'salt'),
-(29, 'glass', 1500, 0, 3, 1, 3000, '3', 'glass'),
-(30, 'fuelF', 10, 500, 0, 1, 1500, '0', 'market'),
-(31, 'spikeStrip', 0, 10, 0, 1, 2000, '0', 'cop'),
-(32, 'cement', 1000, 0, 3, 1, 8000, '3', 'cement'),
-(33, 'goldbar', 90000, 0, 0, 1, 180000, '0', 'goldbar'),
-(34, 'blastingcharge', 10000, 50000, 0, 1, 50000, '0', 'market'),
-(35, 'boltcutter', 5000, 8000, 0, 1, 5000, '0', 'market'),
-(36, 'defusekit', 0, 10, 0, 1, 2500, '0', 'cop'),
-(37, 'storagesmall', 10, 125000, 0, 1, 10, '0', 'market'),
-(38, 'storagebig', 10, 250000, 0, 1, 10, '0', 'market'),
-(39, 'pickaxe', 700, 1200, 0, 1, 750, '0', 'market'),
-(40, 'methu', 1875, 3750, 5, 1, 3600, '2', 'heroin'),
-(41, 'methp', 3750, 0, 10, 1, 6500, '2', 'heroin'),
-(42, 'bottledwhiskey', 5500, 3750, 5, 1, 6000, '2', 'speakeasy'),
-(43, 'bottledbeer', 750, 1250, 5, 1, 1450, '2', 'speakeasy'),
-(44, 'whiskey', 1250, 5500, 4, 1, 2500, '2', 'speakeasy'),
-(45, 'wine', 1000, 4000, 2, 1, 4500, '2', 'beer'),
-(46, 'grapes', 70, 95, 2, 1, 140, '2', 'market'),
-(47, 'battery', 50, 100, 0, 1, 100, '2', 'market'),
-(48, 'painkillers', 250, 500, 0, 1, 500, '2', 'pharmacy'),
-(49, 'mash', 500, 2500, 1, 1, 1500, '2', 'bar'),
-(50, 'rye', 2000, 0, 2, 1, 3500, '2', 'bar'),
-(51, 'morphium', 100, 1500, 0, 1, 1500, '2', 'pharmacy'),
-(52, 'yeast', 2000, 0, 2, 1, 3500, '2', 'pharmacy'),
-(53, 'cornmeal', 200, 500, 2, 1, 750, '2', 'bar'),
-(54, 'bottles', 50, 100, 1, 1, 100, '2', 'bar'),
-(55, 'uranium', 10000, 0, 8, 1, 12500, '2', 'uranium'),
-(56, 'kidney', 9000, 15000, 0, 1, 16750, '2', 'pharmacy'),
-(57, 'scalpel', 1000, 7500, 0, 1, 7500, '2', 'pharmacy'),
-(58, 'beerp', 550, 3750, 3, 1, 1500, '2', 'speakeasy'),
-(59, 'mauer', 5, 10, 0, 1, 10, '2', 'cop'),
-(60, 'zipties', 5, 500, 0, 1, 500, '2', 'market'),
-(61, 'puranium', 250, 1000, 0, 1, 1000, '2', 'uranium'),
-(62, 'ipuranium', 3500, 9000, 0, 1, 9000, '2', 'uranium');
 ;;
 DELIMITER ;

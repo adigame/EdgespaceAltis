@@ -43,7 +43,7 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 
 switch (_code) do
 {
-	//Space key for Jumping
+	//SPACE Jump
 	case 57:
 	{
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
@@ -55,7 +55,7 @@ switch (_code) do
 		};
 	};
 	
-	//Map Key
+	//M Map Key
 	case _mapKey:
 	{
 		switch (playerSide) do 
@@ -66,7 +66,7 @@ switch (_code) do
 		};
 	};
 	
-	//Surrender... shift + g
+	//SHIFT + G Surrender
 	case 34:
 	{
 		if(_shift) then {_handled = true;};
@@ -86,7 +86,7 @@ switch (_code) do
 		};
 	};
 	
-	//Holster / recall weapon.
+	//SHIFT + H Holster / Recall weapon
 	case 35:
 	{
 		if(_shift && !_ctrlKey && currentWeapon player != "") then {
@@ -102,7 +102,7 @@ switch (_code) do
 		};
 	};
 	
-	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
+	//Windows Key Interaction key mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey:
 	{
 		if(!life_action_inUse) then {
@@ -116,7 +116,7 @@ switch (_code) do
 		};
 	};
 	
-	//Knock out - Shift + V
+	//SHIFT + V Knock Out
 	case 47:
 	{
 		if(_shift) then {_handled = true;};
@@ -129,7 +129,7 @@ switch (_code) do
 		};
 	};
 	
-	//Restraining (Shift + R)
+	//SHIFT + R Restrain
 	case 19:
 	{
 		if(_shift) then {_handled = true;};
@@ -139,7 +139,7 @@ switch (_code) do
 		};
 	};
 
-	//T Key (Trunk)
+	//T Trunk
 	case 20:
 	{
 		if(!_alt && !_ctrlKey) then
@@ -164,7 +164,7 @@ switch (_code) do
 		};
 	};
 	
-	//L
+	//L Lights
 	case 38: 
 	{
 		//If cop run checks for turning lights on.
@@ -193,7 +193,7 @@ switch (_code) do
 		};
 	};
 	
-	//F Key
+	//F Siren Cops
 	case 33:
 	{
         if(_shift) then
@@ -203,7 +203,7 @@ switch (_code) do
                 [] spawn
                 {
                     life_siren2_active = true;
-                    sleep 1.2;
+                    sleep 1.0;
                     life_siren2_active = false;
                 };
                 _veh = vehicle player;
@@ -254,7 +254,7 @@ switch (_code) do
         };
 	};
 	
-	//Shift + O Zip ties Rebels
+	//SHIFT + O Zipties Rebels
 	case 24:
 	{
 		if(_shift) then {_handled = true;};
@@ -272,7 +272,7 @@ switch (_code) do
 		};
 	};
 	
-	//U Key
+	//U Lock Unlock Vehicle
 	case 22:
 	{
 		if(!_alt && !_ctrlKey) then {
@@ -322,7 +322,7 @@ switch (_code) do
 		};
 	};
 	
-	//K EMP Console - 
+	//K EMS Console 
     case 37:
     {
         if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F"])) then
@@ -350,7 +350,7 @@ switch (_code) do
 		}
 	};
 	
-	//SmartPhone  Shift + 1
+	//SHIFT + 1 SmartPhone  
 	case 2:
 	{
 		if(_shift) then {_handled = true;};
@@ -362,20 +362,16 @@ switch (_code) do
 			};
 		};
 	};
-	
-	
-	
-
-	// G Police Open Gates from Inside of Vehicle
-    case 34:
+	//O Open Gates Cop
+    case 49:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide in [west,independent]) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		};
 	};
 
-	// F2 Spike Strips
-	case 126:
+	//H Spike Strips
+	case 35:
 	{	
 		if(vehicle player != player) exitWith {hint "You cannot place spike strips while inside a vehicle.."};
 		if(playerSide == west) then {

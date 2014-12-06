@@ -107,11 +107,11 @@ switch(_type) do
 	//adacrequest
 	case 8:
 	{
-		if(({side _x == independent} count playableUnits) == 0) exitWith {hint format["There are currently no paramedics or EMS online."];};
+		if(({side _x == independent} count playableUnits) == 0) exitWith {hint format["There are currently no mechanics online."];};
 		ctrlShow[888900,false];
 		if(_msg == "") exitWith {hint "You must enter a message to send!";ctrlShow[888900,true];};
 		[[ObjNull,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
-		hint format["You have sent a message to all EMS Units.",_msg];
+		hint format["You have sent a message to all Mechanic Units.",_msg];
 		ctrlShow[888900,true];
 		closeDialog 887890;
 	};

@@ -36,8 +36,9 @@ _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
 
 if("ToolKit" in (items player)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
+// If it is Paramedic or Mechinic Impound the Vehicle as a Tow Action
 if(playerSide == independent) then {
-	_Btn5 ctrlSetText "Abschleppen";
+	_Btn5 ctrlSetText "Tow Vehicle";
 	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
 	_Btn4 ctrlShow false;
 };

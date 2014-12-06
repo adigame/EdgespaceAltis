@@ -11,7 +11,7 @@ _spikeStrip attachTo[player,[0,5.5,0]];
 _spikeStrip setDir 90;
 _spikeStrip setVariable["item","spikeDeployed",true];
 
-life_action_spikeStripDeploy = player addAction["Platziere Nagelband",{if(!isNull life_spikestrip) then {detach life_spikeStrip; life_spikeStrip = ObjNull;}; player removeAction life_action_spikeStripDeploy; life_action_spikeStripDeploy = nil;},"",999,false,false,"",'!isNull life_spikestrip'];
+life_action_spikeStripDeploy = player addAction["Place Spike Strips",{if(!isNull life_spikestrip) then {detach life_spikeStrip; life_spikeStrip = ObjNull;}; player removeAction life_action_spikeStripDeploy; life_action_spikeStripDeploy = nil;},"",999,false,false,"",'!isNull life_spikestrip'];
 life_spikestrip = _spikeStrip;
 waitUntil {isNull life_spikeStrip};
 if(!isNil "life_action_spikeStripDeploy") then {player removeAction life_action_spikeStripDeploy;};

@@ -15,7 +15,7 @@ if(player == _unit) exitWith {};
 if (side player == civilian) then {
 	if(life_inv_zipties < 1) exitWith { hint "You do not have zipties"; };
 	life_inv_zipties = life_inv_zipties - 1;
-	hint "Du hast den Zivilisten festgenommen...";
+hint "You have ziptied the citizen";
 };
 if(!isPlayer _unit) exitWith {};
 

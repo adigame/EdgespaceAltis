@@ -81,7 +81,7 @@
 					if(D41_WMod == 1)	then {D41_Vorschau = 0.2;	D41_Wind = [0, 10, true];};
 					if(D41_WMod == 2)	then {D41_Vorschau = 0.1;	D41_Wind = [0, 0, true];};				
 				};
-				Diag_log format ["::::::::: WETTER SYSTEM ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
+				Diag_log format ["::::::::: Weather System ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
 				publicVariable "D41_Nebel";
 				publicVariable "D41_Wellen";
 				publicVariable "D41_Vorschau";
@@ -115,7 +115,7 @@
 			0 setOvercast (D41_Vorschau);
 			setWind (D41_Wind);
 			60 setWaves (D41_Wellen);
-			//hint format ["::::::::: WETTER SYSTEM ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
+			//hint format ["::::::::: Weather System ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
 			uiSleep 120;
 		};
 	}; 

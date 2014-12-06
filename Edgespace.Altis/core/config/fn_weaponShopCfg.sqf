@@ -188,7 +188,7 @@ switch(_shop) do
 						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
 						["30Rnd_9x21_Mag",nil,10],
 						["30Rnd_556x45_Stanag",nil,10],
-						["SmokeShellOrange","Orange Smoke Grenade",10],
+						["SmokeShellOrange","Orange Smoke Grenade",10]
 					]
 				];
 			};
@@ -283,7 +283,7 @@ switch(_shop) do
 						["16Rnd_9x21_Mag",nil,150],
 						["SmokeShellGreen",nil,2500],
 						["muzzle_snds_M","6,5mm Silencer",10000],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10]
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10],
 						["30Rnd_45ACP_Mag_SMG_01",nil,500],
 						["20Rnd_762x51_Mag","MK18 Magazine",500],
 						["11Rnd_45ACP_Mag",nil,1000],

@@ -133,7 +133,9 @@ class Life_Client_Core
 		class pulloutAction {};
 		class putInCar {};
 		class stopEscorting {};
+		// Civilian Restrain Action Called From civInteractionMenu
 		class restrainAction {};
+		// Police Search Action copInteractionMenu
 		class searchAction {};
 		class searchVehAction {};
 		class unrestrain {};

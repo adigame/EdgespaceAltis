@@ -74,46 +74,46 @@ life_pInact_curTarget = _curTarget;
 
 //Set Unrestrain Button
 _Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
-_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
+_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;"; // Unrestrain the player
 
 //Set Check Licenses Button
 _Btn2 ctrlSetText localize "STR_pInAct_checkLicenses";
-_Btn2 buttonSetAction "[[player],""life_fnc_licenseCheck"",life_pInact_curTarget,FALSE] spawn life_fnc_MP";
+_Btn2 buttonSetAction "[[player],""life_fnc_licenseCheck"",life_pInact_curTarget,FALSE] spawn life_fnc_MP"; // See what licenses the player has
 
 //Set Search Button
 _Btn3 ctrlSetText localize "STR_pInAct_SearchPlayer";
-_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_searchAction;";
+_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_searchAction;"; // Search Player for illegal items
 
 //Set Escort Button
 if((_curTarget getVariable["Escorting",false])) then {
 	_Btn4 ctrlSetText localize "STR_pInAct_StopEscort";
-	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;";
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;"; // Stop Escourting the player
 } else {
 	_Btn4 ctrlSetText localize "STR_pInAct_Escort";
-	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;"; // Escourt the player
 };
 
 //Set Ticket Button
 _Btn5 ctrlSetText localize "STR_pInAct_TicketBtn";
-_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;";
+_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;"; // Give the player a ticket
 
 _Btn6 ctrlSetText localize "STR_pInAct_Arrest";
-_Btn6 buttonSetAction "closeDialog 0; [] call life_fnc_showArrestDialog;";
+_Btn6 buttonSetAction "closeDialog 0; [] call life_fnc_showArrestDialog;"; // Show the arrest dialog
 
 _Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
-_Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDialog 0;";
+_Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDialog 0;"; // Put the player into a vehicle
 
 //Remove Weapons
-_Btn8 ctrlSetText localize "STR_pInAct_RemoveWeapons";
-_Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0;";
+_Btn8 ctrlSetText localize "STR_pInAct_RemoveWeapons"; 
+_Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0;"; // Remove Player Weapons
 
 _Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
-_Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
+_Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0"; // Give the player a breathalyzer
 
 _Btn10 ctrlSetText localize "STR_pInAct_RevokeLicense";
-_Btn10 buttonSetAction "[life_pInact_curTarget] call life_fnc_revokeLicense;";
+_Btn10 buttonSetAction "[life_pInact_curTarget] call life_fnc_revokeLicense;"; // Remove Player Licenses Vehicle(s) or Gun License
 
-//Check that you are near a place to jail them.
+//Check that you are near a marker to jail the player
 if(!((player distance (getMarkerPos "cop_spawn_1") < 50) OR  (player distance (getMarkerPos "cop_spawn_2") < 50) OR (player distance (getMarkerPos "cop_spawn_3") < 50) OR (player distance (getMarkerPos "cop_spawn_bane") < 50))) then 
 {
 	_Btn6 ctrlEnable false;

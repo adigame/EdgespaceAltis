@@ -534,24 +534,23 @@ player createDiaryRecord["changelog",
 		[
 			"",
 				"
-				Z: Players <br/> menu
+				Y: Players Menu <br/>
 				U: Vehicles Lock / Unlock <br/>
 				U: House Lock / Unlock <br/>
-				Q: Police Siren <br/>
+				F: Police Siren / SHIFT + F: Yelp Siren <br/>
 				T: Vehicle Trunk / House Storage <br/>
-				Ö: Police Siren <br/>
-				M: Open Cop Barriers <br/>
-				O: Cops Place Spike Strips <br/>
-				^: Use Pickaxe <br/>
-				Left Shift + 1: Phone <br/>
-				Left Shift + 2: Wanted List <br/>
-				Left Shift + 3: Display  <br/>
-				Left Shift + R: <br/>
-				Left Shift + G: <br/>
+				H: Cops Place Spike Strips <br/>
+				N: Cops Open Gates <br/>
+				Q: Use Pickaxe <br/>
+				L: Vehicle Lights Cops <br />
+				K: EMS Console <br />
+					Left Shift + 1: Phone <br/>
+				Left Shift + R: Restrain Cops<br/>
 				Left Shift + V: Knockout <br/>
-				Left Shift + O: Civ Restrain <br/>
-				Left Shift + Space: Jump <br/>
+				Left Shift + G: Surrender <br/>
+				Left Shift + O: Rebels Use Ziptie <br/>
 				Left Shift + H: Holster Gun <br/>
+				Left Shift + Space: Jump <br/>
 				Left Windows: Housing Options <br/>
 				Left Windows: Farming Collecting<br/>
 				Left Windows: Player Interaction Menu <br/>
