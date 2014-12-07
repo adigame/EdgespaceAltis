@@ -70,11 +70,14 @@ switch (playerSide) do
 // Init automatically saving gear
 [] spawn life_fnc_autoSave;
 
+//sets variables to false on start
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
-player setVariable["missingOrgan",false,true];//sets variables to false on start
+player setVariable["missingOrgan",false,true];
 player setVariable["hasOrgan",false,true];
+player setVariable["ziptied",false,true];
+
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";
 diag_log "Executing client.fsm";

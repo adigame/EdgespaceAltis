@@ -133,12 +133,15 @@ class Life_Client_Core
 		class pulloutAction {};
 		class putInCar {};
 		class stopEscorting {};
-		// Civilian Restrain Action Called From civInteractionMenu
+		// Restrain Action Called From copInteractionMenu
 		class restrainAction {};
 		// Police Search Action copInteractionMenu
 		class searchAction {};
 		class searchVehAction {};
+		
+		// Unrestrain for Cops
 		class unrestrain {};
+
 		class pickupItem {};
 		class pickupMoney {};
 		class ticketAction {};
@@ -300,6 +303,7 @@ class Life_Client_Core
 		class emptyFuel {};
 		class fatigueReset {};
 		class introCam {};
+		class randomRound {};
 	};
 	
 	class Network
@@ -334,6 +338,21 @@ class Life_Client_Core
 		class civLoadout {};
 		class hasOrgan {};
 	};
+	
+		class Rebel
+	{
+		file = "core\rebel";
+		class rebelInteractionMenu {};
+		class rebelziptie {};
+		class rebelziptieaction {};
+		class rebeltortureplayer {};
+		class rebelescourtaction {};
+		class rebelstopescorting {};
+		// Unrestrain for Rebels
+		class rebelunrestrain {};
+	};
+	
+	
 	
 	class Vehicle
 	{

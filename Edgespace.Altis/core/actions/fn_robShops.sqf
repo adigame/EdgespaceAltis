@@ -18,7 +18,7 @@ if(player distance _shop > 6) exitWith {
 if (life_robbery_in_progress) exitWith {hint "Robbery already in progress"};
 if (playerSide == west) exitWith {hint "I will notify the IPID (Independent Police Investigative Directorate) if you don't leave immediately"};
 if (currentWeapon _player == "") exitWith {hint "You don't scare me"}; //This will check if the player has a weapon on him
-//if({side _x == west} count playableUnits < 1) exitWith {hint "There needs to be at least 1 Police Officer on duty to rob an Engen!"};
+if({side _x == west} count playableUnits < 1) exitWith {hint "There needs to be at least 1 Police Officer on duty to rob an Engen!"};
 
 _chance = ceil(random 3);
 if (_chance == 0) then {_funds = 16000;};
@@ -27,17 +27,17 @@ if (_chance == 2) then {_funds = 25000;};
 if (_chance == 3) then {_funds = 125000;};
 if (_funds == 0) exitWith {hint "No funds in the cash register #23!";};
 
-//_shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
+_shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
 life_robbery_in_progress = true;
-titleText["'Convincing' the cashier to open the till.","PLAIN"];
+titleText["Convincing the cashier to open the till.","PLAIN"];
 sleep 5;
-titleText["Emptying the cash register...","PLAIN"];
+titleText["Emptying the cash register","PLAIN"];
 sleep 3;
-titleText["A Civilian spotted you and dialled 911 - Police are on their way.","PLAIN"];
+titleText["A civilian spotted you and called the police","PLAIN"];
 
 [[2,"An Engen is being robbed!!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-[[0,"Anonymous witness reported the location of the robbery, you have 3 minutes to intervene"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+[[0,"Anonymous witness reported the location of the robbery, you have 10 minutes to intervene"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 [[getPlayerUID _player,name _player,"211g"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 _marker = createMarker ["_unit", _Pos]; 
@@ -106,6 +106,6 @@ switch(true) do
 };
 
 life_robbery_in_progress = false;
-//_shop switchMove "";//Reseting the shop owner
+_shop switchMove "";//Reseting the shop owner
 
 _action = _shop addAction["Rob Cash Register",life_fnc_robShops];//Adding action for the robbery

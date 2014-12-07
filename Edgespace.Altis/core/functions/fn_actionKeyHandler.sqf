@@ -47,15 +47,25 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 	};
 };
 
-
-//If target is a player then check if we can use the cop menu.
+	//If target is a player then check if we can use the interaction menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
-	if((_curTarget getVariable["restrained",false]) && !dialog && playerSide == west) then {
+	// if the current target isnt restrained or ziptied and a cop
+	if((_curTarget getVariable["restrained",false]) OR (_curTarget getVariable["ziptied",false]) && !dialog && playerSide == west) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
-	if((_curTarget getVariable["restrained",false]) && !dialog && playerSide == civilian) then {
+	// If a civilian and a rebel and the player has surrendered and not showing a dialog
+	if (playerSide == civilian && license_civ_rebel && (cursorTarget getVariable "surrender") && !dialog) then {
+		[_curTarget] call life_fnc_rebelInteractionMenu;
+	};
+	// If Civilian and not a rebel and no dialog is being shown
+	if (playerSide == civilian && !license_civ_rebel && !dialog) then {
 		[_curTarget] call life_fnc_civInteractionMenu;
 	};
+
+	if (playerSide == independent) then {
+		[_curTarget] call life_fnc_medicInteractionMenu;
+	};
+	
 } else {
 	//OK, it wasn't a player so what is it?
 	private["_isVehicle","_miscItems","_money"];

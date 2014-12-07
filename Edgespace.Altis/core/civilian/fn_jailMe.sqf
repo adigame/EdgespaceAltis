@@ -83,6 +83,10 @@ switch (true) do
 		hint localize "STR_Jail_Paid";
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
+		player setVariable["restrained",false,true];
+		player setVariable["ziptied",false,true];
+		player setVariable["Escorting",false,true];
+		player setVariable["transporting",false,true];
 		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};

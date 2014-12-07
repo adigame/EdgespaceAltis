@@ -14,9 +14,10 @@ if(life_is_arrested) exitWith {}; //Dafuq i'm already arrested
 _time = [_this,2,15,[0]] call BIS_fnc_param;
 _bad = [_this,1,false,[false]] call BIS_fnc_param;
 
-player setVariable["restrained",false,true];
-player setVariable["Escorting",false,true];
-player setVariable["transporting",false,true];
+		player setVariable["restrained",false,true];
+		player setVariable["ziptied",false,true];
+		player setVariable["Escorting",false,true];
+		player setVariable["transporting",false,true];
 
 titleText["You have been arrested, wait your time out. If you attempt to respawn or reconnect your time will increase!","PLAIN"];
 hint "For being arrested you have lost the following licenses if you own them\n\nFirearms License\nRebel Training";

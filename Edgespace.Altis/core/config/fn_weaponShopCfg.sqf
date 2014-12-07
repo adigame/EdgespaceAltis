@@ -257,7 +257,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"You are not a cop!"};
+			case (playerSide != civilian): {"You are not a civilian!"};
 			case (!license_civ_rebel): {"You do not have rebel training!"};
 			default
 			{

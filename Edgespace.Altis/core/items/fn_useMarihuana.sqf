@@ -20,7 +20,7 @@ _hndl_chrom ppEffectEnable true;
 _hndl_chrom ppEffectAdjust [0.027,0.027,true];
 _hndl_chrom ppEffectCommit 90;
 
-titleText["Du rauchst etwas Grass! Du könntest durstig werden!","PLAIN"];
+titleText["You just smoked a huge blunt","PLAIN"];
 player say3D "mari";
 
 _count = 0;

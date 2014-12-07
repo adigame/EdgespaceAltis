@@ -8,8 +8,6 @@ player setDamage (0.05 + (damage player));
 for "_i" from 0 to 180 do
 
 		{
-		
-
 		"colorCorrections" ppEffectEnable true;
 		"colorCorrections" ppEffectAdjust [1, 1, 0, [0,0,0,0.5], [random 5 - random 5,random 5 - random 5,random 5 - random 5,random 1], [random 5 - random 5,random 5 - random 5,random 5 - random 5, random 1]];
 		"colorCorrections" ppEffectCommit 1;

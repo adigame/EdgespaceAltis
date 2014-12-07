@@ -26,37 +26,13 @@ _display = findDisplay 37400;
 _Btn1 = _display displayCtrl Btn1;
 _Btn2 = _display displayCtrl Btn2;
 _Btn3 = _display displayCtrl Btn3;
-_Btn4 = _display displayCtrl Btn3;
+_Btn4 = _display displayCtrl Btn4;
+_Btn5 = _display displayCtrl Btn5;
 
 life_pInact_curTarget = _curTarget;
 
-/*
+_Btn1 ctrlShow false;
+_Btn2 ctrlShow false;
+_Btn3 ctrlShow false;
 _Btn4 ctrlShow false;
 _Btn5 ctrlShow false;
-_Btn6 ctrlShow false;
-_Btn7 ctrlShow false;
-_Btn8 ctrlShow false;
-_Btn9 ctrlShow false;
-_Btn10 ctrlShow false;
-*/
-
-//Set Unrestrain Button
-_Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
-_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;"; // Unrestrain the player
-
-//Set Robber Button
-_Btn2 ctrlSetText localize "STR_pInAct_rob";
-_Btn2 buttonSetAction "[life_pInact_curTarget] call life_fnc_robAction; closeDialog 0;";
-
-//Set Escort Button
-if((_curTarget getVariable["Escorting",false])) then {
-	_Btn3 ctrlSetText localize "STR_pInAct_StopEscort";
-	_Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_civInteractionMenu;";
-} else {
-	_Btn4 ctrlSetText localize "STR_pInAct_Escort";
-	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
-};
-
-//Set PutInCar Button
-_Btn5 ctrlSetText localize "STR_pInAct_PutInCar";
-_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDialog 0;";

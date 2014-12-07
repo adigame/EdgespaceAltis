@@ -35,7 +35,10 @@ switch (_side) do
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			// Only Allow Rebel to Spawn at the Rebel HQ
+			if (license_civ_rebel) then {
 			["reb_spawn_1","Rebel HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			}
 			["civ_spawn_training","Shooting Range","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		

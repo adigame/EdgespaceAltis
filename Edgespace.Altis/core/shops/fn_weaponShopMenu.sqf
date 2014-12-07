@@ -1,7 +1,6 @@
 /*
 	File: fn_weaponShopMenu.sqf
 	Description:
-
 */
 private["_config","_itemInfo","_itemList"];
 uiNamespace setVariable ["Weapon_Shop",_this select 3];

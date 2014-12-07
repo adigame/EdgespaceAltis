@@ -206,7 +206,7 @@
 				sleep 5;
 			}else
 			{
-				hint "!!! ENTERING RADIO ACTIVE AREA !!! The Radiation will kill you if you aren't protected!";
+				hint "!!! ENTERING RADIO ACTIVE AREA !!! The radiation will kill you if you aren't protected!";
 				_damage = damage player;
 				_damage = _damage + 0.1;
 				player setDamage (_damage);
