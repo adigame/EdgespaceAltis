@@ -48321,7 +48321,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=336;
+		items=337;
 		class Item0
 		{
 			position[]={8471.8662,106.60769,25129.486};
@@ -51014,6 +51014,15 @@ class Mission
 			fillName="Grid";
 			a=50;
 			b=50;
+		};
+		class Item336
+		{
+			position[]={3644.0969,10.189927,13117.19};
+			name="jail_release";
+			type="Empty";
+			colorName="ColorWhite";
+			fillName="Border";
+			drawBorder=1;
 		};
 	};
 	class Sensors

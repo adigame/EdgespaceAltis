@@ -304,6 +304,8 @@ class Life_Client_Core
 		class fatigueReset {};
 		class introCam {};
 		class randomRound {};
+		class globalsound {};
+		class globalsoundclient {};
 	};
 	
 	class Network

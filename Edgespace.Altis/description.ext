@@ -154,6 +154,26 @@ class CfgSounds
 		sound[] = {"sounds\caralarm.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	class punch {
+	name = "punch";
+	sound[] = {"\sounds\punch.ogg", 1.0, 1};
+	titles[] = {};
+	}; 
+    class punch_break {
+	name = "punch_break";
+	sound[] = {"\sounds\punch_break.ogg", 1.0, 1};
+	titles[] = {};
+	}; 
+    class punch_balls {
+	name = "punch_balls";
+	sound[] = {"\sounds\punch_balls.ogg", 1.0, 1};
+	titles[] = {};
+	}; 
+	class ziptie {
+	name = "ziptie";
+	sound[] = {"\sounds\ziptie.ogg", 1.0, 1};
+	titles[] = {};
+	}; 
 };
 
 class CfgDebriefing

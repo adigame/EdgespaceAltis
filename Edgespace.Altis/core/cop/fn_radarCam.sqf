@@ -45,7 +45,7 @@ if (_speed > _limit) then {
 					systemChat format["This is ticket number %1 for you",life_speedTicket];
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Fahrer: %3<br/><t color='#ffffff'><t align='center'><t size='1'>You are a habitual speeder and will be stripped of your vehicle licenses and are now wanted",round _speed,_limit,name _driver];
 					[[4],"life_fnc_removeLicenses",_driver,FALSE] spawn life_fnc_MP;
-					[[getPlayerUID _driver,name _driver,"120H"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+					//[[getPlayerUID _driver,name _driver,"120H"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 					[2] call SOCK_fnc_updatePartial;
 			};
 			if(life_speedTicket > 8) exitWith {

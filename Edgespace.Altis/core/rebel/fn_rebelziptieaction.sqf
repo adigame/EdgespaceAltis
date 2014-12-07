@@ -16,7 +16,7 @@
 	life_inv_zipties = life_inv_zipties - 1;
 
 	// Play a sound that the player is zip tied
-	//[player,"cuff"] call life_fnc_globalSound;
+	[player,"ziptie"] call life_fnc_globalSound;
 	
 	// Set the player as zip tied
 	_unit setVariable["ziptied",true,true];

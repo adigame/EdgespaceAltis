@@ -28,7 +28,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 2; //Scaled in minutes
+life_respawn_timer = 1; //Scaled in minutes
 life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
@@ -37,7 +37,7 @@ life_action_gathering = false;
 life_smartphoneTarget = ObjNull;
 life_action_gather = false;
 life_drink = 0;
-life_fatigue = 0.2; //Set the max fatigue limit (50%)
+life_fatigue = 0.5; //Set the max fatigue limit (50%)
 life_kw_athira = false; 
 life_kw_kavala = false; 
 life_kw_sofia = false; 
@@ -92,8 +92,8 @@ life_delivery_in_progress = false;
 life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
-life_battery = 50;
-__CONST__(life_paycheck_period,10); //Five minutes
+life_battery = 75;
+__CONST__(life_paycheck_period,5); //Five minutes
 life_cash = 0;
 __CONST__(life_impound_car,2500);
 __CONST__(life_impound_boat,1000);
@@ -101,9 +101,9 @@ __CONST__(life_impound_air,7500);
 life_istazed = false;
 life_my_gang = ObjNull;
 life_drugged_cocaine = -1;
-life_drugged_cocaine_duration = 10; 
+life_drugged_cocaine_duration = 1; 
 life_drugged_weed = -1;
-life_drugged_weed_duration = 3;
+life_drugged_weed_duration = 1;
 
 life_vehicles = [];
 bank_robber = [];

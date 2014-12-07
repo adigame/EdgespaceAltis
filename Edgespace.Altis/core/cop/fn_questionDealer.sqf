@@ -2,8 +2,7 @@
 	File: fn_questionDealer.sqf
 	Author: Bryan "Tonic" Boardwine
 	
-	Description:
-	Questions the drug dealer and sets the sellers wanted.
+	Description: Questions the drug dealer and sets the sellers wanted.
 */
 private["_sellers","_names"];
 _sellers = (_this select 0) getVariable["sellers",[]];

@@ -39,7 +39,7 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You aren't the owner!";_
 			};						
 			sleep 0.29;
 			player say3D "spraycan";
-			//[player,"spraycan"] call life_fnc_globalSound; //Just if you have global sounds!
+			[player,"spraycan"] call life_fnc_globalSound; //Just if you have global sounds!
 
 			_cP = _cP + 0.01;
 			_progress progressSetPosition _cP;

@@ -5,7 +5,7 @@ player setDamage (0.05 + (damage player));
 [] call life_fnc_hudUpdate;		
 		
 		
-for "_i" from 0 to 180 do
+for "_i" from 0 to 60 do
 
 		{
 		"colorCorrections" ppEffectEnable true;
