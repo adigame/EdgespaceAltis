@@ -54,11 +54,11 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
 	// If a civilian and a rebel and the player has surrendered and not showing a dialog
-	if (playerSide == civilian && license_civ_rebel && (cursorTarget getVariable "surrender") && !dialog) then {
+	if (playerSide == civilian && license_civ_rebel && (cursorTarget getVariable "ziptied")) then {
 		[_curTarget] call life_fnc_rebelInteractionMenu;
 	};
 	// If Civilian and not a rebel and no dialog is being shown
-	if (playerSide == civilian && !license_civ_rebel && !dialog) then {
+	if (playerSide == civilian && !license_civ_rebel) then {
 		[_curTarget] call life_fnc_civInteractionMenu;
 	};
 

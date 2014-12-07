@@ -11,9 +11,10 @@
 #define Btn7 37456
 #define Btn8 37457
 #define Btn9 37458
+#define Btn10 37459
 #define Title 37401
 
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9","Btn10"];
 if(!dialog) then {
 	createDialog "pInteraction_Menu";
 };
@@ -36,6 +37,7 @@ _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
 _Btn9 = _display displayCtrl Btn9;
+_Btn10 = _display displayCtrl Btn10;
 life_pInact_curTarget = _curTarget;
 
 if(playerSide == civilian) then {
@@ -48,7 +50,7 @@ if(playerSide == civilian) then {
 	} else {
 	_Btn2 ctrlSetText "Cable Tie Players Hands";
 	_Btn2 buttonSetAction "[life_pInact_curTarget] call life_fnc_rebelziptieaction; closeDialog 0;";
-	}
+	};
 	_Btn3 ctrlSetText "Torture Player";
 	_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_rebeltortureplayer; closeDialog 0;";
 
@@ -68,4 +70,5 @@ if(playerSide == civilian) then {
 	_Btn7 ctrlShow false;
 	_Btn8 ctrlShow false;
 	_Btn9 ctrlShow false;
+	_Btn10 ctrlShow false;
 };

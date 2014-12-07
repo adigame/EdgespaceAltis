@@ -264,10 +264,10 @@ switch (_code) do
 		{
 			if([false,"zipties",1] call life_fnc_handleInv) then
 			{
-				[] call life_fnc_restrainAction;
+				[] call life_fnc_rebelziptieaction;
 				hint "You restrained him, use your interaction menu for more options";
 			} else {
-				hint "You have no zipties!";
+				hint "You have no cable ties!";
 			};
 		};
 	};
