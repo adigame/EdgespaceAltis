@@ -48,6 +48,38 @@ switch (_shop) do
 			["C_Hatchback_01_sport_F",13000]
 		];
 	}; 
+<<<<<<< HEAD
+
+	case "civ_servt_1":
+	{
+		_return =
+		[
+			["C_Offroad_01_F",25000] //Service Truck
+		];
+	};
+	
+	case "civ_truck_1":
+	{
+		_return =
+		[
+			["C_Van_01_transport_F",50000], // Std
+			["C_Van_01_box_F",60000], // Boxer
+			["O_Truck_03_fuel_F",100000], // Tempest Fuel
+			["O_Truck_02_transport_F",175000], // Transport
+			["O_Truck_03_transport_F",185000], // Tempest Transport
+			["O_Truck_03_device_F",1000000], // Tempest Device
+			["B_Truck_01_mover_F",300000],
+			["B_Truck_01_covered_F",605000],
+			["B_Truck_01_transport_F",600000],
+			["B_Truck_01_box_F",1000000]
+		];	
+	};
+
+	case "reb_v_1":
+	{
+		_return =
+		[
+=======
 
 	case "civ_servt_1":
 	{
@@ -87,6 +119,38 @@ switch (_shop) do
 			_return set[count _return,
 			["B_G_Offroad_01_armed_F",750000]];
 			_return set[count _return,
+			["O_MRAP_02_F",1000000]];
+			_return set[count _return,
+			["B_MRAP_01_F",2000000]];
+			_return set[count _return,
+			["B_MRAP_01_hmg_F",3500000]];
+			_return set[count _return,
+			["I_MRAP_03_F",2500000]];
+			_return set[count _return,
+			["B_Heli_Light_01_F",625000]];
+			_return set[count _return,
+			["I_Heli_Transport_02_F",2000000]];
+			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",1750000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_box_F",2250000]];
+		};
+	};
+
+	case "reb_car":
+	{
+		_return =
+		[
+>>>>>>> parent of 13b36d2... Wanted System
+			["B_Quadbike_01_F",8000],
+			["C_Offroad_01_F",25000]
+		];
+		
+		if(license_civ_rebel) then
+		{
+			_return set[count _return,
+			["B_G_Offroad_01_armed_F",750000]];
+			_return set[count _return,
 			["O_MRAP_02_F",2000000]];
 			_return set[count _return,
 			["B_MRAP_01_F",3000000]];
@@ -100,6 +164,7 @@ switch (_shop) do
 			["O_Heli_Transport_04_box_F",2250000]];
 		};
 	};
+<<<<<<< HEAD
 
 	case "reb_car":
 	{
@@ -126,6 +191,25 @@ switch (_shop) do
 		["I_MRAP_03_F",2500000]];
 	};
 	
+=======
+	
+	case "reb_car2":
+	{
+		_return set[count _return,
+		["B_Quadbike_01_F",8000]];
+		_return set[count _return,
+		["C_Offroad_01_F",25000]];
+		_return set[count _return,
+		["O_MRAP_02_F",1000000]];
+		_return set[count _return,
+		["B_MRAP_01_F",2000000]];
+		_return set[count _return,
+		["B_MRAP_01_hmg_F",3500000]];
+		_return set[count _return,
+		["I_MRAP_03_F",2500000]];
+	};
+	
+>>>>>>> parent of 13b36d2... Wanted System
 	case "reb_air":
 	{
 		_return set[count _return,
