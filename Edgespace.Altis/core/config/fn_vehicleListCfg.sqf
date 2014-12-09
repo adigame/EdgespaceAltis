@@ -121,8 +121,6 @@ switch (_shop) do
 		_return set[count _return,
 		["B_MRAP_01_F",2000000]];
 		_return set[count _return,
-		["B_MRAP_01_hmg_F",3500000]];
-		_return set[count _return,
 		["I_MRAP_03_F",2500000]];
 	};
 	
