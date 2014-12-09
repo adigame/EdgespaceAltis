@@ -128,7 +128,7 @@ class Life_my_smartphone {
 			idc = 887892;
 			text = "$STR_SMARTPHONE_SCHREIBEN";
 			onButtonClick = "createDialog ""Life_smartphone_schreiben"";";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
+			colorBackground[] = {0.584, 0.086, 0.086,1.0};
 			x = 0.11;
 			y = 0.25 + (1 / 25) + 0.51;
 			w = 0.2;
