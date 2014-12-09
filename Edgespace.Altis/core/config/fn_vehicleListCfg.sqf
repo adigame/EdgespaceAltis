@@ -152,8 +152,12 @@ switch (_shop) do
 			_return set[count _return,
 			["B_G_Offroad_01_armed_F",750000]];
 			_return set[count _return,
+<<<<<<< HEAD
 			["O_MRAP_02_F",2000000]];
 =======
+>>>>>>> parent of 515b733... Revert "Revert "Removed OP Vehicles""
+=======
+			["O_MRAP_02_F",1000000]];
 >>>>>>> parent of 515b733... Revert "Revert "Removed OP Vehicles""
 			_return set[count _return,
 			["B_MRAP_01_F",2000000]];
