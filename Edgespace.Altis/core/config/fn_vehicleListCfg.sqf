@@ -87,13 +87,9 @@ switch (_shop) do
 			_return set[count _return,
 			["B_G_Offroad_01_armed_F",750000]];
 			_return set[count _return,
-			["O_MRAP_02_F",1000000]];
+			["O_MRAP_02_F",2000000]];
 			_return set[count _return,
-			["B_MRAP_01_F",2000000]];
-			_return set[count _return,
-			["B_MRAP_01_hmg_F",3500000]];
-			_return set[count _return,
-			["I_MRAP_03_F",2500000]];
+			["B_MRAP_01_F",3000000]];
 			_return set[count _return,
 			["B_Heli_Light_01_F",625000]];
 			_return set[count _return,
