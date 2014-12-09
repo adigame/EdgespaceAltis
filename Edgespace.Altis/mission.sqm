@@ -11918,7 +11918,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this allowdamage false;";
+			init="this allowDamage false;";
 		};
 		class Item586
 		{
@@ -11928,6 +11928,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
+			init="this allowDamage false;";
 		};
 		class Item587
 		{
@@ -11937,7 +11938,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this allowdamage false;";
+			init="this allowDamage false;";
 		};
 		class Item588
 		{
@@ -11948,7 +11949,7 @@ class Mission
 			vehicle="Land_BagBunker_Tower_F";
 			isUAV=1;
 			skill=0.60000002;
-			init="this allowdamage false;";
+			init="this allowDamage false;";
 		};
 		class Item589
 		{
@@ -13379,7 +13380,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this allowdamage false;";
+			init="this allowDamage false;";
 		};
 		class Item737
 		{
@@ -13389,7 +13390,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this allowdamage false;";
+			init="this allowDamage false;";
 		};
 		class Item738
 		{
@@ -13399,7 +13400,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this allowdamage false;";
+			init="this allowDamage false;";
 		};
 		class Item739
 		{
@@ -22027,6 +22028,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
+			init="this allowDamage false;";
 		};
 		class Item1576
 		{
@@ -22036,7 +22038,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Cargo_Patrol_V1_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false;";
+			init="; this allowDamage false";
 		};
 		class Item1577
 		{
@@ -24284,7 +24286,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init=" this allowDamage false; this enableSimulation false;";
+			init="this allowDamage false;";
 		};
 		class Item1795
 		{
@@ -27810,6 +27812,7 @@ class Mission
 			vehicle="Land_BarGate_F";
 			leader=1;
 			skill=1;
+			init="this allowDamage false;";
 		};
 		class Item2171
 		{
@@ -27901,6 +27904,7 @@ class Mission
 			vehicle="Land_BarGate_F";
 			leader=1;
 			skill=1;
+			init="this allowDamage false;";
 		};
 		class Item2181
 		{
@@ -40710,7 +40714,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncWall4_F";
 			skill=0.40000001;
-			init="this allowDamage false; this enableSimulation false;";
+			init="this allowDamage false;";
 		};
 		class Item3501
 		{
@@ -47392,7 +47396,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="; this allowDamage false";
+			init="this allowDamage false;";
 		};
 		class Item4192
 		{

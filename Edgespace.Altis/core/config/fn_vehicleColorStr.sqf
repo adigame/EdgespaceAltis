@@ -48,7 +48,7 @@ switch (_vehicle) do
 			case 5: {_color = "White"};
 			case 6: {_color = "Grey"};
 			case 7: {_color = "Black"};
-			case 8: {_color = "Polizei"};
+			case 8: {_color = "Police"};
 		};
 	};
 	
@@ -74,8 +74,8 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "SealDrop";};
-			case 1: {_color = "Polizei";};
+			case 0: {_color = "Default";};
+			case 1: {_color = "Police";};
 			case 2: {_color = "Silver";};
 			case 3: {_color = "Orange";};
 			case 4: {_color = "SEK/GSG9";};
@@ -140,7 +140,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Polizei"};
+			case 0: {_color = "Police"};
 			case 1: {_color = "Black"};
 			case 2: {_color = "Civ Blue"};
 			case 3: {_color = "Civ Red"};
@@ -179,7 +179,6 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "SEK"};
 			case 1: {_color = "Donator"};
-			case 2: {_color = "Polizei"};
 		};
 	};
 
@@ -227,7 +226,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Polizei"};
+			case 0: {_color = "Police"};
 			case 1: {_color = "ADAC"};
 			case 2: {_color = "SEK"};
 		};
@@ -237,7 +236,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Polizei"};
+			case 0: {_color = "Police"};
 		};
 	};
 	

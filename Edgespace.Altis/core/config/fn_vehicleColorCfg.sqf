@@ -200,7 +200,6 @@ switch (_vehicle) do
 		[
 			[_path + "sek_hunter_1.paa","cop",_path + "sek_hunter_2.paa"],
 			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"],
-			[_path + "hunterpol_1.jpg","cop",_path + "hunterpol_2.jpg"]
 		];
 	};
 	
