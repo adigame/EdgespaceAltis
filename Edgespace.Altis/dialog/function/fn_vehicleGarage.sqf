@@ -1,8 +1,7 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 	
-	Description:
-	Vehicle Garage, why did I spawn this in an action its self?
+	Description: Vehicle Garage, why did I spawn this in an action its self?
 */
 private["_spawnPos","_dir","_type"];
 _type = [_this,1,"",[""]] call BIS_fnc_param;

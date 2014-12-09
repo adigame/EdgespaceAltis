@@ -45,15 +45,15 @@ if (_speed > _limit) then {
 					systemChat format["This is ticket number %1 for you",life_speedTicket];
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Fahrer: %3<br/><t color='#ffffff'><t align='center'><t size='1'>You are a habitual speeder and will be stripped of your vehicle licenses and are now wanted",round _speed,_limit,name _driver];
 					[[4],"life_fnc_removeLicenses",_driver,FALSE] spawn life_fnc_MP;
-					//[[getPlayerUID _driver,name _driver,"120H"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+					[[getPlayerUID _driver,name _driver,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 					[2] call SOCK_fnc_updatePartial;
 			};
 			if(life_speedTicket > 8) exitWith {
 					
-					vehicle _driver setFuel 0.1;
-					systemChat format["THIS IS YOUR %1th TICKET --- STAHP!!!",life_speedTicket];
+					//vehicle _driver setFuel 0.1;
+					systemChat format["THIS IS YOUR %1th TICKET --- STOP!!!",life_speedTicket];
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Fahrer: %3<br/>You are now wanted for Felony Speeding and are arrest-on-site",round _speed,_limit,name _driver];
-					[[getPlayerUID _driver,name _driver,"120FS"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+					[[getPlayerUID _driver,name _driver,"53"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 					[[4],"life_fnc_removeLicenses",_driver,FALSE] spawn life_fnc_MP;
 					[2] call SOCK_fnc_updatePartial;
 			};
@@ -62,7 +62,7 @@ if (_speed > _limit) then {
 				if(life_atmcash <= _ticket) exitWith 
 				{
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4<br/>Since you are broke and cannot pay, you now have a warrant out for you instead",round _speed,_limit,name _driver,[_ticket] call life_fnc_numberText];
-					[[getPlayerUID _driver,name _driver,"120S"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+					[[getPlayerUID _driver,name _driver,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 				};
 				life_atmcash = life_atmcash - _ticket;
 				hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4",round _speed,_limit,name _driver,[_ticket] call life_fnc_numberText];
@@ -86,17 +86,17 @@ if (_speed > _limit) then {
 							vehicle _driver setFuel 0.1;
 							systemChat format["THIS IS YOUR %1th TICKET!!!",life_speedCaught];
 							hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/>You are now wanted for Felony Speeding and are arrest-on-site",round _speed,_limit,name _driver];
-							[[getPlayerUID _driver,name _driver,"120FSWL"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+							[[getPlayerUID _driver,name _driver,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 							
 					};
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>You are now wanted for driving without a license and are subject for arrest",round _speed,_limit,name _driver];
-					[[getPlayerUID _driver,name _driver,"120WL"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+					[[getPlayerUID _driver,name _driver,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 					if(life_cash <= _ticketWL) then
 					{
 						if(life_atmcash <= _ticketWL) exitWith 
 						{
 							hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4<br/>Since you are broke and cannot pay, you now have a warrant out for you instead",round _speed,_limit,name _driver,[_ticketWL] call life_fnc_numberText];
-							[[getPlayerUID _driver,name _driver,"120S"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+							[[getPlayerUID _driver,name _driver,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 						};
 						life_atmcash = life_atmcash - _ticketWL;
 						hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4",round _speed,_limit,name _driver,[_ticketWL] call life_fnc_numberText];

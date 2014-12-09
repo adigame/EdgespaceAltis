@@ -4,6 +4,11 @@
 	
 	Description:
 	Master configuration for vehicle colors.
+	
+	Vehicle Classes:
+
+	
+	
 */
 private["_vehicle","_ret","_path","_path2"];
 _vehicle = [_this,0,"",[""]] call BIS_fnc_param;
@@ -12,7 +17,7 @@ _ret = [];
 
 switch (_vehicle) do
 {
-	case "I_Heli_Transport_02_F":
+	case "I_Heli_Transport_02_F": // Mohawk
 	{
 		_path = "\a3\air_f_beta\Heli_Transport_02\Data\Skins\";
 		_path2 = "skins\air\";
@@ -25,7 +30,7 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "C_Hatchback_01_sport_F":
+	case "C_Hatchback_01_sport_F": // Hatchback sport
 	{
 		_path = "\a3\soft_f_gamma\Hatchback_01\data\";
 		_path2 = "skins\car\";
@@ -44,7 +49,7 @@ switch (_vehicle) do
 		];
 	};
 		
-	case "C_Offroad_01_F":
+	case "C_Offroad_01_F": // Off-road
 	{
 		_path = "skins\car\";
 		_ret = 
@@ -69,7 +74,7 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "C_Offroad_01_repair_F":
+	case "C_Offroad_01_repair_F": // Medic Off-road
 	{
 		_path = "skins\car\";
 		_ret =
@@ -95,7 +100,7 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "C_SUV_01_F":
+	case "C_SUV_01_F": // Suv
 	{
 		_path = "skins\car\";
 		_ret =
@@ -118,7 +123,7 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "C_Van_01_box_F":
+	case "C_Van_01_box_F": // Truck Box
 	{
 		_path = "skins\car\";
 		_ret = 
@@ -138,7 +143,7 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "B_Quadbike_01_F":
+	case "B_Quadbike_01_F": // Quadbike
 	{
 		_ret = 
 		[
@@ -193,17 +198,17 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "B_MRAP_01_F":
+	case "B_MRAP_01_F": // Hunter
 	{
 		_path = "skins\car\";
 		_ret = 
 		[
 			[_path + "sek_hunter_1.paa","cop",_path + "sek_hunter_2.paa"],
-			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"],
+			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"]
 		];
 	};
 	
-	case "I_Truck_02_covered_F":
+	case "I_Truck_02_covered_F": // Hemit Covered
 	{
 		_path = "skins\car\";
 		_ret = 

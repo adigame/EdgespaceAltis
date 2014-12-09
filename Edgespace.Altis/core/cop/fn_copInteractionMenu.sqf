@@ -103,7 +103,6 @@ _Btn6 buttonSetAction "closeDialog 0; [] call life_fnc_showArrestDialog;"; // Sh
 _Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDialog 0;"; // Put the player into a vehicle
 
-//Remove Weapons
 _Btn8 ctrlSetText localize "STR_pInAct_RemoveWeapons"; 
 _Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0;"; // Remove Player Weapons
 
@@ -114,7 +113,7 @@ _Btn10 ctrlSetText localize "STR_pInAct_RevokeLicense";
 _Btn10 buttonSetAction "[life_pInact_curTarget] call life_fnc_revokeLicense;"; // Remove Player Licenses Vehicle(s) or Gun License
 
 //Check that you are near a marker to jail the player
-if(!((player distance (getMarkerPos "cop_spawn_1") < 50) OR  (player distance (getMarkerPos "cop_spawn_2") < 50) OR (player distance (getMarkerPos "cop_spawn_3") < 50) OR (player distance (getMarkerPos "cop_spawn_bane") < 50))) then 
+if(!((player distance (getMarkerPos "cop_spawn_1") < 50) OR  (player distance (getMarkerPos "cop_spawn_2") < 50) OR (player distance (getMarkerPos "cop_spawn_3") < 50) OR (player distance (getMarkerPos "cop_spawn_bane") < 50) OR (player distance (getMarkerPos "cop_spawn_kilo") < 50) OR (player distance (getMarkerPos "cop_spawn_zulu") < 50) OR (player distance (getMarkerPos "cop_spawn_gsg9") < 50))) then 
 {
 	_Btn6 ctrlEnable false;
 };

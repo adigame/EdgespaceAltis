@@ -96,7 +96,7 @@ switch (true) do
 		life_is_arrested = false;
 		hint localize "STR_Jail_EscapeSelf";
 		[[0,format["%1 has escaped from jail!",profileName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-		//[[getPlayerUID player,profileName,"901"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[getPlayerUID player,profileName,"36"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};
 	

@@ -38,7 +38,7 @@ titleText["A civilian spotted you and called the police","PLAIN"];
 
 [[2,"An Engen is being robbed!!!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 [[0,"Anonymous witness reported the location of the robbery, you have 10 minutes to intervene"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-//[[getPlayerUID _player,name _player,"211g"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+[getPlayerUID _robber,_robber getVariable["realname",name _robber],"49"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 _marker = createMarker ["_unit", _Pos]; 
 "_unit" setMarkerColor "ColorRed";

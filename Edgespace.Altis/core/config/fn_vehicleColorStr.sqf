@@ -4,6 +4,12 @@
 	
 	Description:
 	Master configuration for color strings depending on their index location.
+	
+	Vehicle Classes:
+
+	
+	
+	
 */
 private["_vehicle","_color","_index"];
 _vehicle = [_this,0,"",[""]] call BIS_fnc_param;

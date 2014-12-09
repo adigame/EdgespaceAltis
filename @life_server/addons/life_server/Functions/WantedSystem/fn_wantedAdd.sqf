@@ -1,9 +1,6 @@
 /*
 	File: fn_wantedAdd.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Adds or appends a unit to the wanted list.
+	Description: Adds or appends a unit to the wanted list.
 */
 private["_uid","_type","_index","_data","_crimes","_val","_customBounty","_name"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
@@ -19,7 +16,7 @@ switch(_type) do
 case "2": {_type = ["Attempted theft of civilian vehicle", 2000]};
 case "3": {_type = ["Theft of civilian vehicle", 5000]};
 case "4": {_type = ["Driving without lights", 500]};
-case "5": {_type = ["Multiple Speeding Violations", 3000]};
+case "5": {_type = ["Multiple Speeding Violations", 20000]};
 case "6": {_type = ["Dangerous driving", 5000]};
 case "7": {_type = ["Attempted theft police vehicle", 7500]};
 case "8": {_type = ["Theft of police vehicle", 20000]};
@@ -62,7 +59,12 @@ case "44": {_type = ["Attempting Suicide", 5000]};
 case "45": {_type = ["Illegally crossing the border", 6000]};
 case "46": {_type = ["Illegal Parking in Kavala", 1000]};
 case "47": {_type = ["Harassing Civilians", 2000]};
-
+case "48": {_type = ["Torture", 10000]};
+case "49": {_type = ["Robbing a store", 5000]};
+case "50": {_type = ["Robbing a person", 5000]};
+case "51": {_type = ["Organ Theft", 5000]};
+case "52": {_type = ["Possession of an illegal item", 5000]};
+case "53": {_type = ["Multiple speeding violations and defeating the ends of justice", 50000]};
 	default {_type = [];};
 };
 

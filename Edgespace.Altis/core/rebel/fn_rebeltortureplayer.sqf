@@ -123,4 +123,4 @@ switch(_rand) do
 
 life_action_inUse = false;
 
-[[getPlayerUID player,name player,"",["Torture",38]],"life_fnc_wantedAdd2",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,name player,"",["Torture",48]],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
