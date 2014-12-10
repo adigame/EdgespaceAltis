@@ -26,7 +26,7 @@ if (player getVariable "restrained") exitWith {closeDialog 0;}; // Restrain chec
 
 if (player getVariable "ziptied") exitWith {closeDialog 0;}; // ziptie check 
 
-if (player distance _curTarget > 2) exitwith {closeDialog 0;};
+if (player distance _curTarget > 5) exitwith {closeDialog 0;};
 _display = findDisplay 37400;
 _Btn1 = _display displayCtrl Btn1;
 _Btn2 = _display displayCtrl Btn2;

@@ -16,9 +16,10 @@ life_versionInfo = "Edgespace Altis Life RPG";
 [] execVM "script\welcome.sqf"; //Load Welcome Intro
 [] execVM "script\teargas.sqf"; //Load Teargas 
 [] execVM "script\gasmask.sqf";  // Load Gas Mask for Cops
-[] execVM "script\savezone.sqf"; //Load the Savezones
+[] execVM "script\safezones.sqf"; //Load the Savezones
 [] execVM "script\fn_statusBar.sqf"; //Load the Statusbar
 [] execVM "script\dynamicweather.sqf"; // Load Dynamic Weather
+[] execVM "script\nosidechat.sqf"; // Warning for Side Channel Voice
 StartProgress = true;
 
 // Fog

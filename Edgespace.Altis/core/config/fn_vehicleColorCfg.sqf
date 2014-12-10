@@ -101,7 +101,7 @@ switch (_vehicle) do
 		_ret =
 		[
 			[_path + "suv_sealdrop.jpg","civ"],
-			[_path + "police_suv.paa","cop"],
+			["textures\cops\vehicle\suv.jpg","cop"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
@@ -198,7 +198,7 @@ switch (_vehicle) do
 		_path = "skins\car\";
 		_ret = 
 		[
-			[_path + "sek_hunter_1.paa","cop",_path + "sek_hunter_2.paa"],
+			["textures\cops\vehicle\hunter.jpg","cop","textures\cops\vehicle\hunter2.jpg"],
 			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"]
 		];
 	};

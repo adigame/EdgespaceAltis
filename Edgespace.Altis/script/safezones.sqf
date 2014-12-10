@@ -7,8 +7,7 @@
     CONFIGURATION:
     Edit the #defines below.
 */
-
-#define SAFETY_ZONES    [["Safe_Kav", 100], ["Save_Reb", 750], ["Save_Sohq", 500], ["Save_Jail", 50]]
+#define SAFETY_ZONES    [["Safe_Kav", 100], ["Save_Reb", 750], ["Save_Jail", 500]]
 
      if (isDedicated) exitWith {};
      waitUntil {!isNull player};

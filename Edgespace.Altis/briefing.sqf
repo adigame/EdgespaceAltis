@@ -12,7 +12,8 @@ player createDiarySubject ["controls","Controls"];
 player createDiaryRecord["changelog",
 		[
 			"Official Change Log",
-				"10/12/2014 - Added Earplugs"
+				"10/12/2014 - Added Earplugs",
+				"10/12/2014 - Fixed some more stuff"
 		]
 	];
 
