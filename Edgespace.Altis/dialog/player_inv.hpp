@@ -261,7 +261,7 @@ class playerSettings {
 		
 		class ButtonGangList : Life_RscButtonMenu {
 			idc = 2012;
-			text = "$STR_PM_WantedList";
+			text = "Wanted List";
 			onButtonClick = "[] call life_fnc_wantedMenu";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
@@ -322,7 +322,7 @@ class playerSettings {
 		class ButtonWantedAdd : life_RscButtonMenu {
 			idc = 9800;
 			//shortcuts[] = {0x00050000 + 2};
-			text = "Wanted Add";
+			text = "Add Wanted";
 			onButtonClick = "createDialog ""life_wantedadd2"";";
 			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;
