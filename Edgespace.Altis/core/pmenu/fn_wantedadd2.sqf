@@ -50,7 +50,7 @@ _data = "5";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "reckless driving $7500";
+_text = "Reckless driving $7500";
 _data = "6";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -86,12 +86,12 @@ _data = "12";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "VDM $1234567";
+_text = "VDM $150000";
 _data = "13";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Illegale Strassensperren $15000";
+_text = "Illegal roadblocks $15000";
 _data = "14";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -111,7 +111,7 @@ _data = "17";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Harassment of a police officer $14000";
+_text = "Harassment of a police officer $30000";
 _data = "18";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -121,22 +121,22 @@ _data = "19";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Killing a police officer $1234567";
+_text = "Killing a police officer $100000";
 _data = "20";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Firing at a police officer $1234567";
+_text = "Firing at a police officer $50000";
 _data = "21";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Destruction of police propery $15000";
+_text = "Destruction of police property $15000";
 _data = "22";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Drogendelikte $123456";
+_text = "Being under the influence of drugs $10000";
 _data = "23";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -146,7 +146,7 @@ _data = "24";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Mit gez. Waffe durch Stadt $50000";
+_text = "Carrying a weapon within city limits $50000";
 _data = "25";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -161,7 +161,7 @@ _data = "27";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Hostage Taking $1234567";
+_text = "Hostage Taking $60000";
 _data = "28";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -171,17 +171,17 @@ _data = "29";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Robbing First National Bank $1234567";
+_text = "Bank Robbery $120000";
 _data = "30";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Murder $1234567";
+_text = "Murder $60000";
 _data = "31";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Aufstand $75000";
+_text = "Civil disobedience $75000";
 _data = "32";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -191,7 +191,7 @@ _data = "33";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Attacking an outpost or checkpoint $1234567";
+_text = "Attacking an outpost or checkpoint $120000";
 _data = "34";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -201,12 +201,12 @@ _data = "35";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Flying below 150m in a city $2000";
+_text = "Flying below 300m in a city $20000";
 _data = "36";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Escaping from prision $1234567";
+_text = "Escaping from prison $100000";
 _data = "37";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
