@@ -97,7 +97,7 @@ LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObje
 [] call life_fnc_settingsInit;
 player setVariable["steam64ID",getPlayerUID player];
 player setVariable["realname",profileName,true];
-switch_fnc_moveIn = compileFinal
+life_fnc_moveIn = compileFinal
 "
 	player moveInCargo (_this select 0);
 ";

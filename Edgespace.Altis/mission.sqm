@@ -2920,13 +2920,13 @@ class Mission
 				class Item1
 				{
 					position[]={9209.3867,14.473426,21686.107};
-					azimut=196.49274;
+					azimut=196.493;
 					special="NONE";
 					id=179;
 					side="EAST";
 					vehicle="o_soldier_unarmed_f";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""Pharmacy"",life_fnc_virt_menu,""pharmacy""]; this setVariable[""realname"",""Pharmacy""]; this addAction[""<t color='#FF0000'>Rob Store</t>"",life_fnc_robShops,"""",0,FALSE,FALSE,"""",' license_civ_rebel && playerSide == civilian '];";
+					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""Pharmacy"",life_fnc_virt_menu,""pharmacy""]; this setVariable[""realname"",""Pharmacy""];";
 				};
 			};
 		};
@@ -2952,7 +2952,7 @@ class Mission
 				class Item1
 				{
 					position[]={9204.1904,14.459965,21684.496};
-					azimut=157.46088;
+					azimut=157.461;
 					special="NONE";
 					id=181;
 					side="EAST";
@@ -2963,24 +2963,24 @@ class Mission
 				class Item2
 				{
 					position[]={9202.0146,14.460394,21682.873};
-					azimut=145.97357;
+					azimut=145.974;
 					special="NONE";
 					id=182;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""Market"",life_fnc_virt_menu,""market""]; this setVariable[""realname"",""Market""]; this addAction[""<t color='#FF0000'>Rob Store</t>"",life_fnc_robShops,"""",0,FALSE,FALSE,"""",' license_civ_rebel && playerSide == civilian '];";
+					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""Market"",life_fnc_virt_menu,""market""]; this setVariable[""realname"",""Market""];";
 				};
 				class Item3
 				{
 					position[]={9206.4072,14.459565,21685.92};
-					azimut=176.58214;
+					azimut=176.582;
 					special="NONE";
 					id=183;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this setVariable[""realname"",""General Store""]; this addAction[""<t color='#FF0000'>Rob Store</t>"",life_fnc_robShops,"""",0,FALSE,FALSE,"""",' license_civ_rebel && playerSide == civilian '];";
+					init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this setVariable[""realname"",""General Store""];";
 				};
 			};
 		};

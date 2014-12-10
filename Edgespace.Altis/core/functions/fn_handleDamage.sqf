@@ -40,7 +40,7 @@ if(!isNull _source) then {
 						};
 					};
 				};
-			};
+			
 			
 			if(playerSide == independent && side _source == independent) then {
 				_damage = false;

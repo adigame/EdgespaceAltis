@@ -12,8 +12,11 @@ player createDiarySubject ["controls","Controls"];
 player createDiaryRecord["changelog",
 		[
 			"Official Change Log",
-				"10/12/2014 - Added Earplugs",
-				"10/12/2014 - Fixed some more stuff"
+				"10/12/2014 - Added Earplugs <br/>
+				 10/12/2014 - More Fixes
+				
+				",
+				
 		]
 	];
 
@@ -28,16 +31,16 @@ player createDiaryRecord["changelog",
     player createDiaryRecord["info",
 		[
 			"Donator Perks",
-				"We have 4 main donation packages, they are:<br/><br/>Tier 1 [R100/month] - 10% Discount, Donator Clothing, Extra Houses(2), Debit Card<br/>Tier 2 [R150/month] - 15% Discount, Donator Clothing, Extra Houses(3), Debit Card<br/>Tier 3 [R200/month] - 20% Discount, Donator Clothing, Extra Houses(4), Debit Card<br/>Tier 4 [R250/month] - 25% Discount, Donator Clothing, Extra Houses(5), Debit Card<br/>Tier 5 [R300/months] - 30% Discount, Donator Clothing, Extra Houses(5), Debit Card<br/><br/>*Donators Packages will receive reserved slots on the server!<br/><br/>Go to ts.edgespace.co.za:9987 to donate and receive your rewards for supporting the server!<br/><br/>"
+				"NOT AVAILABLE YET<br/>STILL WORK IN PROGRESS<br/>We have 4 main donation packages, they are:<br/><br/>Tier 1 [R100/month] - 10% Discount, Donator Clothing, Extra Houses(2), Debit Card<br/>Tier 2 [R150/month] - 15% Discount, Donator Clothing, Extra Houses(3), Debit Card<br/>Tier 3 [R200/month] - 20% Discount, Donator Clothing, Extra Houses(4), Debit Card<br/>Tier 4 [R250/month] - 25% Discount, Donator Clothing, Extra Houses(5), Debit Card<br/>Tier 5 [R300/months] - 30% Discount, Donator Clothing, Extra Houses(5), Debit Card<br/><br/>*Donators Packages will receive reserved slots on the server!<br/><br/>Go to ts.edgespace.co.za:9987 to donate and receive your rewards for supporting the server!<br/><br/>"
 		]
 	];
     
-    /*player createDiaryRecord["syosaltis",
+    player createDiaryRecord["info",
 		[
 			"Applications",
-				"If you want to apply to be a COP or a MEDIC. Go to www.edgespace.co.za to fill out the application and we will get back to you.<br/>Being on teamspeak greatly increases your chances on being accepted!<br/><br/>"
+				"If you want to apply to be a COP, Get onto teamspeak and speak to Wolf <br/> Being on teamspeak greatly increases your chances on being accepted!<br/><br/>"
 		]
-	];*/
+	];
 
 	player createDiaryRecord ["serverrules",
 		[

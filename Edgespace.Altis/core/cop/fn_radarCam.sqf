@@ -21,7 +21,7 @@ if (_speed > _limit) then {
 			"colorCorrections" ppEffectEnable true;   
 			"colorCorrections" ppEffectAdjust [1, 15, 0, [0.5, 0.5, 0.5, 0], [0.0, 0.5, 0.0, 1],[0.3, 0.3, 0.3, 0.05]];    
 			"colorCorrections" ppEffectCommit 0;  
-			sleep 0;   
+			sleep 0;
 			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];    
 			"colorCorrections" ppEffectCommit 0.05;   
 			sleep 0.05;   
