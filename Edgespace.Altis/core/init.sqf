@@ -119,7 +119,7 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-
+[] execVM "script\earplugInit.sqf"; // Earplugs
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
 [] spawn {

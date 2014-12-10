@@ -90,7 +90,7 @@ if((_curTarget getVariable["Escorting",false])) then {
 	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;"; // Stop Escourting the player
 } else {
 	_Btn4 ctrlSetText localize "STR_pInAct_Escort";
-	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;"; // Escourt the player
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;"; // Escort the player
 };
 
 //Set Ticket Button
@@ -114,7 +114,7 @@ _Btn10 ctrlSetText localize "STR_pInAct_RevokeLicense";
 _Btn10 buttonSetAction "[life_pInact_curTarget] call life_fnc_revokeLicense;"; // Remove Player Licenses Vehicle(s) or Gun License
 
 //Check that you are near a marker to jail the player
-if(!((player distance (getMarkerPos "cop_spawn_1") < 50) OR  (player distance (getMarkerPos "cop_spawn_2") < 50) OR (player distance (getMarkerPos "cop_spawn_3") < 50) OR (player distance (getMarkerPos "cop_spawn_bane") < 50))) then 
+if(!((player distance (getMarkerPos "cop_spawn_1") < 50) OR  (player distance (getMarkerPos "cop_spawn_2") < 50) OR (player distance (getMarkerPos "cop_spawn_3") < 50) OR (player distance (getMarkerPos "cop_spawn_bane") < 50) OR (player distance (getMarkerPos "cop_spawn_gsg9") < 50) OR (player distance (getMarkerPos "cop_spawn_kilo") < 50) OR (player distance (getMarkerPos "cop_spawn_zulu") < 50))) then 
 {
 	_Btn6 ctrlEnable false;
 };

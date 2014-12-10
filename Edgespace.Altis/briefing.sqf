@@ -12,7 +12,7 @@ player createDiarySubject ["controls","Controls"];
 player createDiaryRecord["changelog",
 		[
 			"Official Change Log",
-				"...."
+				"10/12/2014 - Added Earplugs"
 		]
 	];
 
@@ -540,11 +540,11 @@ player createDiaryRecord["changelog",
 				F: Police Siren / SHIFT + F: Yelp Siren <br/>
 				T: Vehicle Trunk / House Storage <br/>
 				H: Cops Place Spike Strips <br/>
-				N: Cops Open Gates <br/>
+				O: Cops Open Gates <br/>
 				Q: Use Pickaxe <br/>
 				L: Vehicle Lights Cops <br />
 				K: EMS Console <br />
-					Left Shift + 1: Phone <br/>
+				Left Shift + 1: Phone <br/>
 				Left Shift + R: Restrain Cops<br/>
 				Left Shift + V: Knockout <br/>
 				Left Shift + G: Surrender <br/>
