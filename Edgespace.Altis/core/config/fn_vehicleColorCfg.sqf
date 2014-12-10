@@ -199,7 +199,7 @@ switch (_vehicle) do
 		_ret = 
 		[
 			[_path + "sek_hunter_1.paa","cop",_path + "sek_hunter_2.paa"],
-			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"],
+			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"]
 		];
 	};
 	
