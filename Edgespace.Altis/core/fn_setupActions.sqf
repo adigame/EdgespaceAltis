@@ -36,6 +36,9 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["Stand Up", life_fnc_sitDown,cursorTarget,10,false,false,"",'life_sitting']];
 		// Heal your self
 		life_actions = life_actions + [player addAction["<t color='#FF0000'>Heal Self</t>",life_fnc_heal,"",99,false,false,"",' vehicle player == player && (damage player) > 0.25 && ("FirstAidKit" in (items player)) && (currentWeapon player == "")']];
+		//Suicide Bomb Vest
+		life_actions = life_actions + [player addAction["Activate Suicide Vest",life_fnc_suicideBomb,"",0,false,false,"",'vest player == "V_HarnessOGL_brn" && alive player && playerSide == civilian && !life_istazed && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];
+	
 	};
 };
 
