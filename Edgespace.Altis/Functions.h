@@ -127,6 +127,7 @@ class Life_Client_Core
 		class processAction {};
 		class sellOil {};
 		class suicideBomb {};
+		class robATM {};  // Rob ATM's
 		class arrestAction {};
 		class escortAction {};
 		class impoundAction {};

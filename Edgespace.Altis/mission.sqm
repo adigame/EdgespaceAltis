@@ -6406,7 +6406,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item16
 		{
@@ -6416,7 +6416,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item17
 		{
@@ -6426,7 +6426,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item18
 		{
@@ -6438,7 +6438,7 @@ class Mission
 			vehicle="Land_Atm_01_F";
 			skill=0.60000002;
 			text="a1";
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item19
 		{
@@ -6448,7 +6448,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item20
 		{
@@ -6458,7 +6458,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item21
 		{
@@ -6468,7 +6468,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item22
 		{
@@ -6478,7 +6478,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item23
 		{
@@ -6488,7 +6488,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item24
 		{
@@ -6498,7 +6498,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item25
 		{
@@ -6508,7 +6508,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item26
 		{
@@ -6518,7 +6518,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item27
 		{
@@ -6528,7 +6528,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item28
 		{
@@ -10192,7 +10192,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; removeAllWeapons this; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 		class Item413
 		{
@@ -48320,7 +48320,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""<t color='#FF0000'>Rob ATM</t>"",life_fnc_robATM,"",0,FALSE,FALSE,"",' vehicle player == player && player distance _target < 4 && license_civ_rebel && playerSide == civilian ']";
 		};
 	};
 	class Markers
