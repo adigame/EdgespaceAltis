@@ -38,7 +38,7 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
-			[_path2 + "police_hatchback.paa","cop"],
+			[_path2 + "police_hatchback.jpg","cop"],
 			[_path2 + "civ_hatchback_metallica.jpg","civ"],
 			[_path2 + "hatchback_sport_ken_block.jpg","civ"]
 		];
@@ -56,7 +56,7 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa","civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
-			[_path + "police_offroad.paa","cop"],
+			[_path + "police_offroad.jpg","cop"],
 			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
 			[_path + "medic_offroad.jpg","med"],
 			[_path + "civ_offroad_rockstargelb.jpg","civ"],
@@ -100,7 +100,7 @@ switch (_vehicle) do
 		_path = "skins\car\";
 		_ret =
 		[
-			[_path + "suv_sealdrop.jpg","civ"],
+			[_path + "suv_civ.jpg","civ"],
 			["textures\cops\vehicle\suv.jpg","cop"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
@@ -241,7 +241,7 @@ switch (_vehicle) do
 		_ret =
 		[
 			[_path + "strider.jpg","civ"],
-			[_path + "strider_sek.paa","cop"]
+			[_path + "strider_sek.jpg","cop"]
 		];
 	};
 

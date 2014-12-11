@@ -74,7 +74,7 @@ while {true} do
 while {true} do
     {
         waitUntil {uniform player == "U_B_CombatUniform_mcam_worn"};
-        player setObjectTextureGlobal [0,"skins\human\cop\gsg9.paa"];
+        player setObjectTextureGlobal [0,"skins\human\cop\gsg9.jpg"];
         waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
 	};
 };
