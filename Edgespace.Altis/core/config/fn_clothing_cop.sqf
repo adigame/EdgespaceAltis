@@ -36,7 +36,11 @@ switch (_filter) do
         };
 		if(__GETC__(life_coplevel) > 5) then
         {
-			_ret set[count _ret,["U_B_CombatUniform_mcam_worn","SWAT Uniform 2",1750]];		
+			_ret set[count _ret,["U_B_CombatUniform_mcam_worn","SWAT Uniform",1750]];		
+			_ret set[count _ret,["U_B_Protagonist_VR","Virtual Reality Suit Blue",1750]];
+			_ret set[count _ret,["U_O_Protagonist_VR","Virtual Reality Suit Red",1750]];
+			_ret set[count _ret,["U_I_Protagonist_VR","Virtual Reality Suit Green",1750]];
+			
         };
     };
 	
@@ -95,6 +99,15 @@ switch (_filter) do
 			_ret set[count _ret,["G_Combat",nil,55]];
 			_ret set[count _ret,["G_Balaclava_blk",nil,500]];
 		};
+		
+		if(__GETC__(life_coplevel) > 5) then
+		{
+			_ret set[count _ret,["_Goggles_VR","Virtual reality Goggles",10]];
+			_ret set[count _ret,["G_Lowprofile",nil,30]];
+			_ret set[count _ret,["G_Combat",nil,55]];
+			_ret set[count _ret,["G_Balaclava_blk",nil,500]];
+		};
+		
 	};
 	
 	//Vest
