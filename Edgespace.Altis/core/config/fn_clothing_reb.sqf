@@ -39,6 +39,7 @@ switch (_filter) do
 			["H_ShemagOpen_tan","Shemag Mask Tan",3000], // Mask to hide player identity
 			["H_Shemag_olive","Shemag Mask Olive",3000], // Mask to hide player identity
 			["H_ShemagOpen_khk","Shemag Mask Khaki",3000], // Mask to hide player identity
+			["G_Balaclava_blk","Mask Black",500],
 			["H_HelmetO_ocamo",nil,2500],
 			["H_MilCap_oucamo",nil,1200],
 			["H_Bandanna_camo",nil,650],

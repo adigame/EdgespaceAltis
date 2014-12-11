@@ -97,15 +97,14 @@ switch (_filter) do
 			_ret set[count _ret,["G_Squares",nil,10]];
 			_ret set[count _ret,["G_Lowprofile",nil,30]];
 			_ret set[count _ret,["G_Combat",nil,55]];
-			_ret set[count _ret,["G_Balaclava_blk",nil,500]];
+			//_ret set[count _ret,["G_Balaclava_blk",nil,500]];
 		};
 		
 		if(__GETC__(life_coplevel) > 5) then
 		{
-			_ret set[count _ret,["_Goggles_VR","Virtual reality Goggles",10]];
+			_ret set[count _ret,["G_Goggles_VR","Virtual reality Goggles",10]];
 			_ret set[count _ret,["G_Lowprofile",nil,30]];
 			_ret set[count _ret,["G_Combat",nil,55]];
-			_ret set[count _ret,["G_Balaclava_blk",nil,500]];
 		};
 		
 	};

@@ -10,8 +10,8 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Market",["water","rabbit","apple","storagebig","storagesmall","bottledbeer","bottledwhiskey","redgull","battery","tbacon","lockpick","pickaxe","zipties","peach","boltcutter","blastingcharge","GPSTracker"]]};
-	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","GPSTracker"]]]};
+	case "market": {["Market",["water","rabbit","apple","storagebig","storagesmall","bottledbeer","bottledwhiskey","redgull","battery","tbacon","lockpick","pickaxe","zipties","peach","boltcutter","blastingcharge","gpstracker"]]};
+	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","gpstracker"]]};
 	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
 	case "wongs": {["Wong's Food Cart",["turtlesoup","turtle","moonshine"]]};
 	case "coffee": {["Stratis Coffee Club",["coffee","donuts"]]};
@@ -21,7 +21,7 @@ switch (_shop) do
 	case "iron": {["Altis Industrial Trader",["iron_r","copper_r"]]};
 	case "diamond": {["Diamond Dealer",["diamond","diamondc"]]};
 	case "salt": {["Salt Dealer",["salt_r"]]};
-	case "cop": {["Police Item Store",["donuts","coffee","spikeStrip","mauer","battery","painkillers","redgull","defusekit","GPSTracker"]]]};
+	case "cop": {["Police Item Store",["donuts","coffee","spikeStrip","mauer","battery","painkillers","redgull","defusekit","gpstracker"]]};
 	case "cement": {["Cement Dealer",["cement"]]};
 	case "beer": {["Schnaps Laden",["wine"]]};
 	case "pharmacy": {["Dis-Chem Pharmacy",["painkillers","morphium","scalpel","kidney"]]};

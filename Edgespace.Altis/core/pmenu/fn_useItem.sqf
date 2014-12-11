@@ -12,6 +12,10 @@ _item = lbData[2005,(lbCurSel 2005)];
 
 switch (true) do
 {
+	case (_item == "gpstracker"): {
+		[cursorTarget] spawn life_fnc_gpsTracker;
+	};
+	
 	case (_item == "water" or _item == "coffee"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -223,11 +227,7 @@ switch (true) do
 			[] spawn life_fnc_weed;
 		};
 	};
-	case (_item == "GPSTracker"): 
-    {
-        [Cursor target] spawn life_fnc_gpsTracker;
-    };
-	
+
 	default
 	{
 		hint "You can not use that item.";

@@ -31,6 +31,6 @@ switch ( _coplevel ) do
 	default {_rank =  "Error";};
 };
 
-_message = format["<img size='10' color='#FFFFFF' image='textures\cops\badge\badge.paa.paa'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.8'>%2</t><br/><t size='1'>SAPS Altis</t>", name player, _rang];
+_message = format["<img size='10' color='#FFFFFF' image='textures\cops\badge\badge.paa'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.8'>%2</t><br/><t size='1'>SAPS Altis</t>", name player, _rang];
 
 [[player, _message],"life_fnc_copLicenseShown",_target,false] spawn life_fnc_MP;

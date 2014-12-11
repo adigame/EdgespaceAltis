@@ -48,7 +48,7 @@ h = 0.4;
 class MyLicenses : Life_RscText
 {
 idc = 55130;
-text = "Verfügbar";
+text = "Buy Licenses";
 x = 0.1875;
 y = 0.24;
 w = 0.1375;
@@ -57,7 +57,7 @@ h = 0.04;
 class ShowLicenses : Life_RscText
 {
 idc = 55129;
-text = "Meine Lizenzen";
+text = "My Licenses";
 x = 0.65;
 y = 0.24;
 w = 0.1480;

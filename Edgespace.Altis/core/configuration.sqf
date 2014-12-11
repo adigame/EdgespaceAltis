@@ -327,7 +327,7 @@ sell_array =
 	["bottles",50],
 	["uranium",10000],
 	["kidney",9000],
-	["GPSTracker", 1000],
+	["gpstracker",2500],
 	["scalpel",1000]
 ];
 __CONST__(sell_array,sell_array);
@@ -379,7 +379,7 @@ buy_array =
 	["puranium",1000],
 	["ipuranium",9000],
 	["kidney",15000],
-	["GPSTracker", 2000],
+	["gpstracker",3000],
 	["scalpel",7500]
 ];
 __CONST__(buy_array,buy_array);

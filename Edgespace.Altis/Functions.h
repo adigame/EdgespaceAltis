@@ -474,7 +474,7 @@ class Life_Client_Core
 		class useMarihuana {};
 		class useMeth {};
 		class weedSmoke {};
-		class GPSTracker {};
+		class gpsTracker {};
 	};
 	
 	class Dialog_Controls

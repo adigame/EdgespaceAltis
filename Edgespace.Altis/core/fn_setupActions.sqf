@@ -19,7 +19,7 @@ switch (playerSide) do
 		//Aufstehen
 		life_actions = life_actions + [player addAction["Stand Up", life_fnc_sitDown,cursorTarget,10,false,false,"",'life_sitting']];
 		// Show police badge to player
-		life_actions = life_actions + [player addAction["<t color='#00FF00'>Show Police Badge</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
+		life_actions = life_actions + [player addAction["<t color='#00FF00'>Show Police Badge</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5']];
 		// Heal yourself
 		life_actions = life_actions + [player addAction["<t color='#FF0000'>Heal Self</t>",life_fnc_heal,"",99,false,false,"",' vehicle player == player && (damage player) > 0.25 && ("FirstAidKit" in (items player)) && (currentWeapon player == "")']];
 	
