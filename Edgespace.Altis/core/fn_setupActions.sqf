@@ -18,6 +18,9 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["Sit Down",life_fnc_sitDown,cursorTarget,10,false,false,"",' !isNull cursorTarget && (player distance cursorTarget) < 3 && (cursorTarget isKindOf "Land_CampingChair_V1_F" || cursorTarget isKindOf "Land_ChairWood_F" || cursorTarget isKindOf "Land_ChairPlastic_F")']];
 		//Aufstehen
 		life_actions = life_actions + [player addAction["Stand Up", life_fnc_sitDown,cursorTarget,10,false,false,"",'life_sitting']];
+		// Show police badge to player
+		life_actions = life_actions + [player addAction["<t color='#00FF00'>Show Police Badge</t>",life_fnc_copShowLicense,"",1,false,true,"",' playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
+	
 	};
 	
 	case civilian:

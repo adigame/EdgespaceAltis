@@ -405,6 +405,8 @@ class Life_Client_Core
 		class radarCam {};
 		class showArrestDialog {};
 		class arrestDialog_Arrest {};
+		class copShowLicense {};
+        class copLicenseShown {};
 	};
 	
 	class Gangs
