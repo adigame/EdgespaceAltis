@@ -13,8 +13,14 @@ player createDiaryRecord["changelog",
 		[
 			"Official Change Log",
 				"10/12/2014 - Added Earplugs <br/>
-				 10/12/2014 - More Fixes"
-				
+				 10/12/2014 - Various Fixes<br/>
+				 10/12/2014 - Added Speed Camera's<br/>
+				 10/12/2014 - Added Masked Player's<br/>
+				 11/12/2014 - Added ATM Robbery<br/>
+				 11/12/2014 - Added Police Badges<br/>
+				 11/12/2014 - Added Suicide Vests<br/>
+				 11/12/2014 - Added GPS Tracker<br/>
+				 "
 		]
 	];
 
