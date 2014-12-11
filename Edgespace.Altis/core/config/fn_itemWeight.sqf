@@ -86,6 +86,7 @@ switch (_item) do
     case "uranium": {100};
 	case "kidney": {20};
 	case "scalpel": {5};
+	case "GPSTracker": {2};
 	case "peach": {2};
 	default {1};
 };

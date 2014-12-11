@@ -9,7 +9,7 @@ private["_handle","_timeStamp"];
 0 cutFadeOut 9999999;
 _timeStamp = diag_tickTime;
 diag_log "------------------------------------------------------------------------------------------------------";
-diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
+diag_log "--------------------------------- Starting Altis Edgespace Life Client Init --------------------------";
 diag_log "------------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
 [] call compile PreprocessFileLineNumbers "core\clientValidator.sqf";
@@ -119,7 +119,12 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
+[] execVM "core\fn_addKey.sqf";/// Add vehicle keys back to player if they disconnect
 [] execVM "script\earplugInit.sqf"; // Earplugs
+
+
+[] Call life_fnc_fatigueReset; // Reset Fatigue
+
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
 [] spawn {

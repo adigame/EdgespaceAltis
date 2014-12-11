@@ -13,7 +13,7 @@ for [{_i=0},{_i < (count _types)},{_i=_i+1}] do
 if(playerSide == civilian) then
 {
 	life_kw_kavala = true;
-	hint "You have initiated initiated load shedding in Kavala";
+	hint "You have initiated initiated load shedding in Kavala"; 
 	[[getPlayerUID player,profileName,"42"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	[[0,format["!!! %1 from ESKOM has started load shedding Kavala !!!", name player]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	sleep 600;

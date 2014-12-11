@@ -3,7 +3,7 @@
     Author: Itsyuka
     
     Description:
-    Stop the fatigue from going higher than what ever you set it to (Fucking BI Devs, shouldn't be doing this).
+    Stop the fatigue from going higher than what ever you set it to in configuration.sqf
 */
 
 [] spawn {

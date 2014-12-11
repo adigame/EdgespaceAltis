@@ -37,7 +37,7 @@ life_action_gathering = false;
 life_smartphoneTarget = ObjNull;
 life_action_gather = false;
 life_drink = 0;
-life_fatigue = 0.3; //Set the max fatigue limit (50%)
+life_fatigue = 0.5; //Set the max fatigue limit (50%)
 life_kw_athira = false; 
 life_kw_kavala = false; 
 life_kw_sofia = false; 
@@ -211,6 +211,7 @@ life_inv_items =
 	"life_inv_uranium4",
 	"life_inv_uranium",
 	"life_inv_kidney",
+	"Life_inv_gpstracker",
 	"life_inv_scalpel"
 ];
 
@@ -326,6 +327,7 @@ sell_array =
 	["bottles",50],
 	["uranium",10000],
 	["kidney",9000],
+	["GPSTracker", 1000],
 	["scalpel",1000]
 ];
 __CONST__(sell_array,sell_array);
@@ -377,6 +379,7 @@ buy_array =
 	["puranium",1000],
 	["ipuranium",9000],
 	["kidney",15000],
+	["GPSTracker", 2000],
 	["scalpel",7500]
 ];
 __CONST__(buy_array,buy_array);

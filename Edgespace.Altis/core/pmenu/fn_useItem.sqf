@@ -223,6 +223,10 @@ switch (true) do
 			[] spawn life_fnc_weed;
 		};
 	};
+	case (_item == "GPSTracker"): 
+    {
+        [Cursor target] spawn life_fnc_gpsTracker;
+    };
 	
 	default
 	{
