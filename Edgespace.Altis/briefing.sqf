@@ -13,9 +13,7 @@ player createDiaryRecord["changelog",
 		[
 			"Official Change Log",
 				"10/12/2014 - Added Earplugs <br/>
-				 10/12/2014 - More Fixes
-				
-				",
+				 10/12/2014 - More Fixes"
 				
 		]
 	];

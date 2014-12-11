@@ -49,8 +49,8 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 
 	//If target is a player then check if we can use the interaction menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
-	// if the current target isnt restrained and a cop
-	if((_curTarget getVariable["restrained",false]) && playerSide == west) then {
+// if the current target isnt restrained or ziptied and a cop
+	if((_curTarget getVariable["restrained",false]) OR (_curTarget getVariable["ziptied",false]) && !dialog && playerSide == west) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
 	// If a civilian and a rebel and the player has surrendered and not showing a dialog
