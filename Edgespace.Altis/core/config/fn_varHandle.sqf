@@ -95,7 +95,7 @@ switch (_mode) do
             case "uranium4": {"life_inv_uranium4"}; // Add This
             case "uranium": {"life_inv_uranium"}; // Add This
 			case "kidney": {"life_inv_kidney"};
-			case "gpstracker": {"Life_inv_gpstracker"};
+			case "gpstracker": {"life_inv_gpstracker"};
 			case "scalpel": {"life_inv_scalpel"};
 		};
 	};

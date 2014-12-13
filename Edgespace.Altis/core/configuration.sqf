@@ -211,7 +211,7 @@ life_inv_items =
 	"life_inv_uranium4",
 	"life_inv_uranium",
 	"life_inv_kidney",
-	"Life_inv_gpstracker",
+	"life_inv_gpstracker",
 	"life_inv_scalpel"
 ];
 

@@ -91,7 +91,7 @@ switch (_var) do
     case "life_inv_uranium4": {"Enriched Uranium"}; // Add This
     case "life_inv_uranium": {"Weapons Grade Uranium"}; // Add This
 	case "life_inv_kidney": {"Kidney"}; 
-	case "Life_inv_gpstracker": {"GPS Tracker"};
+	case "life_inv_gpstracker": {"GPS Tracker"};
 	case "life_inv_scalpel": {"Scalpel"};
 	
 	//License Block
