@@ -11,10 +11,10 @@ private["_val"];
 
 _val = life_inv_oilp;
 
-if(life_inv_oilp < 10) exitWith { hint "Du benötigst mindestens 10 Liter Euro Diesel";};
+if(life_inv_oilp < 10) exitWith { hint "You need atleast 10 litres of oil to sell";};
 if(([false,"oilp",_val] call life_fnc_handleInv)) then
 {
-	titleText[format["Du hast erfolgreich 10 Liter Euro-Diesel in Benzinkanister umgefüllt"],"PLAIN"];
+	titleText[format["You have sold oil for fuel cans"],"PLAIN"];
 	life_inv_oilp = life_inv_oilp - 10;
 	life_inv_fuelF = life_inv_fuelF + 10;
 	life_carryWeight = life_carryWeight + 50;

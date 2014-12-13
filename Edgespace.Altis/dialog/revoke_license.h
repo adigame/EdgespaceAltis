@@ -118,10 +118,10 @@ class revokeLicense_Menu
 		{
 			idc = 41007;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Taxi License";
+			text = "All Vehicle Licenses";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
-			y = BGY + 0.32;
+			y = BGY + 0.37;
 			w = 0.24;
 			h = 0.038;
 		};
@@ -130,18 +130,6 @@ class revokeLicense_Menu
 		{
 			idc = 41008;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "All Licenses";
-			sizeEx = 0.025;
-			x = BGX + 0.03;
-			y = BGY + 0.37;
-			w = 0.24;
-			h = 0.038;
-		};
-
-		class ButtonEight : life_RscButtonMenu
-		{
-			idc = 41009;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			text = "Firearms License";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
@@ -149,5 +137,6 @@ class revokeLicense_Menu
 			w = 0.24;
 			h = 0.038;
 		};
+
 	};
 };

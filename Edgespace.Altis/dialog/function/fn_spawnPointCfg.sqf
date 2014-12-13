@@ -24,7 +24,9 @@ switch (_side) do
 			["cop_spawn_gsg9","SAPS Alpha","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_kilo","SAPS Beta","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_zulu","SAPS Echo","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_bane","SAPS Delta","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			["cop_spawn_bane","SAPS Delta","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["cop_spawn_10","SAPS Training","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			
 		];
 	};
 	

@@ -186,6 +186,7 @@
 			"dynamicBlur" ppEffectAdjust [2];
 			"dynamicBlur" ppEffectCommit 1;
 			sleep 5;
+			hint "You will need to find a replacement organ..";
 		};
 		"dynamicBlur" ppEffectEnable false;
 		life_max_health = 1;

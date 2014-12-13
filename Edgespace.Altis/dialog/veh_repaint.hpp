@@ -31,7 +31,7 @@ class Life_vehicle_repaint {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2301;
-			text = "Fahrzeug Lackiererei (Preis: 20.000€)";
+			text = "Vehicle Painting (Price: $20.000)";
 			x = 0.1;
 			y = 0.2;
 			w = 0.8;
@@ -69,7 +69,7 @@ class Life_vehicle_repaint {
 	
 		class RepaintCar : life_RscButtonMenu {
 			idc = -1;
-			text = "Lackieren";
+			text = "Paint";
 			onButtonClick = "[] spawn life_fnc_RepaintVehicle;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);

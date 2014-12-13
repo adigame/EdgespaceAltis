@@ -10,10 +10,10 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Market",["water","rabbit","apple","storagebig","storagesmall","bottledbeer","bottledwhiskey","redgull","battery","tbacon","lockpick","pickaxe","zipties","peach","boltcutter","blastingcharge","gpstracker"]]};
+	case "market": {["Market",["water","rabbit","apple","storagebig","storagesmall","redgull","battery","tbacon","lockpick","pickaxe","zipties","peach","boltcutter","blastingcharge","gpstracker"]]};
 	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","gpstracker"]]};
 	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
-	case "wongs": {["Wong's Food Cart",["turtlesoup","turtle","moonshine"]]};
+	case "turtledealer": {["Wong's Food Cart",["turtlesoup","turtle"]]};
 	case "coffee": {["Stratis Coffee Club",["coffee","donuts"]]};
 	case "heroin": {["Drug Dealer",["cocainep","heroinp","marijuana","methp"]]};
 	case "fishmarket": {["CTFM Fish Market",["salema","ornate","mackerel","mullet","tuna","catshark"]]};
@@ -23,10 +23,12 @@ switch (_shop) do
 	case "salt": {["Salt Dealer",["salt_r"]]};
 	case "cop": {["Police Item Store",["donuts","coffee","spikeStrip","mauer","battery","painkillers","redgull","defusekit","gpstracker"]]};
 	case "cement": {["Cement Dealer",["cement"]]};
-	case "beer": {["Schnaps Laden",["wine"]]};
-	case "pharmacy": {["Dis-Chem Pharmacy",["painkillers","morphium","scalpel","kidney"]]};
+	case "liquorstore": {["Liquior Store",["wine","bottledbeer","bottledwhiskey"]]};
+	case "pharmacy": {["Dis-Chem Pharmacy",["painkillers","morphium","scalpel"]]};
 	case "medic": {["Medic Store",["apple","donuts","coffee","battery","redgull","fuelF"]]};
-	case "speakeasy": {["Speakeasy's",["bottledbeer","bottledwhiskey","bottledshine"]]};
-	case "bar": {["The Lounge",["bottles","cornmeal"]]};
+	case "bootlegger": {["Boot Legger's",["bottledshine","bottledbeer"]]};
+	case "bar": {["The Lounge",["bottles","cornmeal","wine","bottledwhiskey","bottledbeer"]]};
 	case "uranium": {["Uranium",["uranium","puranium"]]};
+	case "organ": {["Organ Dealer",["kidney"]]};
+	
 };

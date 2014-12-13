@@ -8,7 +8,7 @@
 private["_robber"];
 _robber = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _robber) exitWith {}; //No one to return it to?
-if (currentWeapon _player == "") exitWith {hint "You dont have a weapon"}; //This will check if the player has a weapon on him
+
 if(life_cash > 0) then
 {
 	[[life_cash],"life_fnc_robReceive",_robber,false] spawn life_fnc_MP;

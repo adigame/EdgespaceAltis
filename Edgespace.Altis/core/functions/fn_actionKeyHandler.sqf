@@ -1,26 +1,30 @@
 #include <macro.h>
 /*
 	File: fn_actionKeyHandler.sqf
-	Description:Master action key handler, handles requests for picking up various items and
-	interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
+	Description: Master action key handler, handles requests for picking up various items and interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
 */
 private["_curTarget","_isWater"];
 _curTarget = cursorTarget;
 if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
+
 if(life_interrupted) exitWith {life_interrupted = false;};
 _isWater = surfaceIsWater (getPosASL player);
-if(isNull _curTarget) exitWith {
-	if(_isWater) then {
+if(isNull _curTarget) exitWith 
+{
+	if(_isWater) then 
+	{
 		private["_fish"];
 		_fish = (nearestObjects[getPos player,["Fish_Base_F"],3]) select 0;
-		if(!isNil "_fish") then {
+		if(!isNil "_fish") then 
+		{
 			[_fish] call life_fnc_catchFish;
 		};
-	} else {
-		if(playerSide == civilian) then {
+	} 
+	else 
+	{
+		if(playerSide == civilian) then 
+		{
 			[] call life_fnc_gather;
-
-
 		};
 	};
 };
@@ -48,67 +52,126 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 };
 
 	//If target is a player then check if we can use the interaction menu.
-if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
-// if the current target isnt restrained or ziptied and a cop
-	if((_curTarget getVariable["restrained",false]) OR (_curTarget getVariable["ziptied",false]) && !dialog && playerSide == west) then {
-		[_curTarget] call life_fnc_copInteractionMenu;
-	};
-	// If a civilian and a rebel and the player has surrendered and not showing a dialog
-	if (playerSide == civilian && license_civ_rebel && (cursorTarget getVariable "ziptied")) then {
-		[_curTarget] call life_fnc_rebelInteractionMenu;
-	};
-	// If Civilian and not a rebel and no dialog is being shown
-	if (playerSide == civilian && !license_civ_rebel) then {
-		[_curTarget] call life_fnc_civInteractionMenu;
-	};
-
-	if (playerSide == independent) then {
-		[_curTarget] call life_fnc_medicInteractionMenu;
-	};
-	
-} else {
-	//OK, it wasn't a player so what is it?
-	private["_isVehicle","_miscItems","_money"];
-	_isVehicle = if((_curTarget isKindOf "landVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
-	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
-	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
-	_money = "Land_Money_F";
-	
-	//It's a vehicle! open the vehicle interaction key!
-	if(_isVehicle) then {
-		if(!dialog) then {
-			if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0) + 5) then {
-				[_curTarget] call life_fnc_vInteractionMenu;
+	if(isPlayer _curTarget && _curTarget isKindOf "Man") then 
+	{
+		if(playerSide == west) then 
+		{
+				if((_curTarget getVariable["restrained",false]) OR (_curTarget getVariable["ziptied",false])) then
+					{
+						if(!dialog) then
+							{
+								[_curTarget] call life_fnc_copInteractionMenu;
+							}
+							else 
+							{
+								hint "Please close all dialogs before using the interaction menu";
+							};
+					} 
+					else	
+					{
+						hint "The player is not restrained.";
+						sleep 3;
+						hint "Press Shift-R to restrain the player.";
+					};
+					
+		} 
+		else
+		{
+			// Civilian
+			if(playerSide == civilian && license_civ_rebel) then 
+			{
+					if(_curTarget getVariable["ziptied",false]) then
+					{
+						if(!dialog) then
+						{
+							[_curTarget] call life_fnc_rebelInteractionMenu;
+						} 
+						else 
+						{
+							hint "Please close all dialogs before using the interaction menu";
+						};
+						
+					} 
+					else 
+					{
+						hint "The player must be cable tied";
+						sleep 3;
+						hint "Press Shift-O to cable tie the player";
+					};
 			};
-		};
-	} else {
-		//Is it a animal type?
-		if((typeOf _curTarget) in _animalTypes) then {
-			if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchTurtle;
-				waitUntil {scriptDone _handle};
-			} else {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchFish;
-				waitUntil {scriptDone _handle};
+
+				
+			if (playerSide == independent) then 
+			{
+				if(!dialog) then
+				{
+					[_curTarget] call life_fnc_medicInteractionMenu;
+				} else 
+				{
+					hint "Please close all dialogs before using the interaction menu";
+				};
+				
+			};
+			
+			if ((playerSide == civilian) && !license_civ_rebel) then 
+			{
+			
+				if(!dialog) then 
+				{
+					[_curTarget] call life_fnc_civInteractionMenu;
+				} 
+				else	
+				{
+					hint "Please close all dialogs before using the interaction menu";
+				};
+			};	
+		};	
+	}
+	else 
+	{
+
+		//OK, it wasn't a player so what is it?
+		private["_isVehicle","_miscItems","_money"];
+		_isVehicle = if((_curTarget isKindOf "landVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
+		_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
+		_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
+		_money = "Land_Money_F";
+		
+		//It's a vehicle! open the vehicle interaction key!
+		if(_isVehicle) then {
+			if(!dialog) then {
+				if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0) + 5) then {
+					[_curTarget] call life_fnc_vInteractionMenu;
+				};
 			};
 		} else {
-			//OK, it wasn't a vehicle so let's see what else it could be?
-			if((typeOf _curTarget) in _miscItems) then {
-				//OK, it was a misc item (food,water,etc).
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_pickupItem;
-				waitUntil {scriptDone _handle};
-			} else {
-				//It wasn't a misc item so is it money?
-				if((typeOf _curTarget) == _money && {!(_curTarget getVariable["inUse",false])}) then {
+			//Is it a animal type?
+			if((typeOf _curTarget) in _animalTypes) then {
+				if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
 					private["_handle"];
-					_curTarget setVariable["inUse",TRUE,TRUE];
-					_handle = [_curTarget] spawn life_fnc_pickupMoney;
+					_handle = [_curTarget] spawn life_fnc_catchTurtle;
 					waitUntil {scriptDone _handle};
+				} else {
+					private["_handle"];
+					_handle = [_curTarget] spawn life_fnc_catchFish;
+					waitUntil {scriptDone _handle};
+				};
+			} else {
+				//OK, it wasn't a vehicle so let's see what else it could be?
+				if((typeOf _curTarget) in _miscItems) then {
+					//OK, it was a misc item (food,water,etc).
+					private["_handle"];
+					_handle = [_curTarget] spawn life_fnc_pickupItem;
+					waitUntil {scriptDone _handle};
+				} else {
+					//It wasn't a misc item so is it money?
+					if((typeOf _curTarget) == _money && {!(_curTarget getVariable["inUse",false])}) then {
+						private["_handle"];
+						_curTarget setVariable["inUse",TRUE,TRUE];
+						_handle = [_curTarget] spawn life_fnc_pickupMoney;
+						waitUntil {scriptDone _handle};
+					};
 				};
 			};
 		};
 	};
-};

@@ -10,6 +10,13 @@ _state = [_this,0,1,[0]] call BIS_fnc_param;
 
 switch (_state) do
 {
+	//Jail licenses
+	case 1:
+	{
+		license_civ_gun = false;
+		license_civ_rebel = false;
+	};
+
 	// Drivers License
 	case 10:
 	{
@@ -44,12 +51,6 @@ switch (_state) do
 	case 15:
 	{
 		license_civ_driver = false;
-		hint localize "STR_Civ_RevokeLicense_Taxi";
-	};
-	// All Motor Vehicle
-	case 16:
-	{
-		license_civ_driver = false;
 		license_civ_truck = false;
 		license_civ_air = false;
 		license_civ_boat = false;
@@ -58,9 +59,10 @@ switch (_state) do
 		hint localize "STR_Civ_RevokeLicense_AllMotor";
 	};
 	// Firearms License
-	case 17:
+	case 16:
 	{
 		license_civ_gun = false;
 		hint localize "STR_Civ_RevokeLicense_Firearm";
 	};
+
 };
