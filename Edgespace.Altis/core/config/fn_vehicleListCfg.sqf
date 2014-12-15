@@ -267,5 +267,17 @@ switch (_shop) do
 			["C_Kart_01_Vrana_F",10000]
 		];
 	};
+	
+	case "admin":
+	{
+		_return = 
+		[
+			["C_Kart_01_Blu_F",1],
+			["C_Kart_01_Fuel_F",1],
+			["C_Kart_01_Red_F",1],
+			["C_Kart_01_Vrana_F",1]
+		];
+	};
+	
 };
 _return;

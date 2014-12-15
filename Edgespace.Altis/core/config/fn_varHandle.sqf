@@ -105,6 +105,7 @@ switch (_mode) do
 			case "kidney": {"life_inv_kidney"};
 			case "gpstracker": {"life_inv_gpstracker"};
 			case "scalpel": {"life_inv_scalpel"};
+			case "offroadammo": {"life_inv_offroadammo"};
 		};
 	};
 	
@@ -200,6 +201,7 @@ switch (_mode) do
 			case "life_inv_kidney": {"kidney"};
 			case "life_inv_gpstracker": {"gpstracker"};
 			case "life_inv_scalpel": {"scalpel"};
+			case "life_inv_offroadammo": {"offroadammo"};
 		};
 	};
 };

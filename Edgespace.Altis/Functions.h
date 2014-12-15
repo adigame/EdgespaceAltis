@@ -487,6 +487,7 @@ class Life_Client_Core
 		class useMeth {};
 		class weedSmoke {};
 		class gpsTracker {};
+		class offroadammo{};
 	};
 	
 	class Dialog_Controls

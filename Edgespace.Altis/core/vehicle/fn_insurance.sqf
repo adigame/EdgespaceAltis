@@ -3,7 +3,7 @@
 Filename: fn_insurance.sqf
 Description: Simple way of insuring the vehicle. Will be modified in the future.
 */
-private["_nearVehicles","_vehicle","_price"];
+private["_nearVehicles","_vehicle","_price","_action"];
 if(vehicle player != player) then
 {
 	_vehicle = vehicle player;
@@ -35,8 +35,8 @@ if(!(_vehicle in life_vehicles)) exitWith {hint "The target vehicle doesn't seem
 _price = switch(typeOf _vehicle) do
 {
 case "B_Heli_Light_01_F": { 25000 };
-case "C_SUV_01_F": { 11000};
-case "C_Offroad_01_F": { 4000};
+case "C_SUV_01_F": { 5000};
+case "C_Offroad_01_F": { 5000};
 case "C_Hatchback_01_sport_F": { 22500};
 case "O_Heli_Light_02_unarmed_F": { 50000};
 case "B_Quadbike_01_F": { 700};
@@ -84,22 +84,20 @@ if(_price == -1) exitWith { hint "You can not insure this type of vehicle"; };
 _veh_name = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 closeDialog 0;
 _action = [
-format["Insure %1 for $%2", _veh_name,[_price] call life_fnc_numberText ],
-"Are you sure you want to continue?",
-"Yes",
-"No"
-] call BIS_fnc_guiMessage;
+	format["Insure %1 for $%2", _veh_name,[_price] call life_fnc_numberText ],
+	"Are you sure you want to continue?",
+	"Yes",
+	"No"
+	] call BIS_fnc_guiMessage;
  
 if(_action) then {
  if(life_atmcash < _price) exitWith { hint format["You do not have enough money in your bank account to complete this transaction, it requires $%1",_price]; };
-hint format["You have been charged $%1 to insure this vehicle. If it explodes, it will be placed back inside your garage.",_price];
+hint format["You have been charged $%1 to insure this vehicle. If it explodes, it will be placed back inside your garage. insurance will only last until the next server restart",_price];
 life_atmcash = life_atmcash - _price;
  
 _vehicle setVariable["isInsured",true,true];
 [[_vehicle],"TON_fnc_vehicleInsurance",false,false] spawn life_fnc_MP; 
 };
-
-
 
 if(_price == -1) exitWith { hint "You can not insure this type of vehicle"; };
 if(life_atmcash < _price) exitWith { hint format["You do not have enough money in your bank account to complete this transaction, it requires $%1",_price]; };

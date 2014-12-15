@@ -20,7 +20,7 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			life_thirst = 100;
+			life_thirst = life_thirst + 50;
 			player setFatigue 0;
 		};
 	};
@@ -54,12 +54,12 @@ switch (true) do
 			player setDamage 0;
 			if(isNil "life_drink") then {life_drink = 0;};
 			life_drink = life_drink + 0.1;
-			life_thirst = life_thirst - 65;
-			life_hunger = life_hunger - 75;
+			life_thirst = life_thirst - 35;
+			life_hunger = life_hunger - 35;
 			if (life_drink < 0.08) exitWith {};
 			[] spawn life_fnc_drinkwhiskey;
 			closeDialog 0;
-			hint "You are suddenly feeling much better";
+			hint "You are suddenly feeling much better although dehydrated and hungry";
 		};
 	};
 	
@@ -82,7 +82,7 @@ switch (true) do
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			life_battery = 100;
-			hint "Your battery is now full 100%.";
+			hint "Your battery is now at 100%.";
 		};
 	};
 	
@@ -226,6 +226,14 @@ switch (true) do
 		{
 			[] spawn life_fnc_weed;
 		};
+	};
+	
+	case (_item == "offroadammo"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_offroadammo;
+		}
 	};
 
 	default

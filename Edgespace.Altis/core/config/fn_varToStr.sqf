@@ -101,6 +101,7 @@ switch (_var) do
 	case "life_inv_kidney": {"Kidney"}; 
 	case "life_inv_gpstracker": {"GPS Tracker"};
 	case "life_inv_scalpel": {"Scalpel"};
+	case "life_inv_offroadammo": {"Offroad Ammo"}; 
 	
 	//License Block
 	case "license_civ_driver": {"Drivers License"};

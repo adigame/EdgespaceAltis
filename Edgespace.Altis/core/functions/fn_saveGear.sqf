@@ -179,7 +179,8 @@ if(count (handGunItems player) > 0) then
 	["life_inv_coins", life_inv_coins],
 	["life_inv_stonetablet", life_inv_stonetablet],
 	["life_inv_carvedstone", life_inv_carvedstone],
-	["life_inv_valuablecoins", life_inv_valuablecoins]
+	["life_inv_valuablecoins", life_inv_valuablecoins],
+	["life_inv_offroadammo", life_inv_offroadammo]
 	
 ];
 

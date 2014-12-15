@@ -223,7 +223,8 @@ life_inv_items =
 	"life_inv_uranium",
 	"life_inv_kidney",
 	"life_inv_gpstracker",
-	"life_inv_scalpel"
+	"life_inv_scalpel",
+	"life_inv_offroadammo"
 ];
 
 //Setup variable inv vars.

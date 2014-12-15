@@ -132,7 +132,8 @@ class Life_impound_menu
 			idc = 2811;
 			text = "Querying Database please wait...";
 			sizeEx = 0.06;
-			x = 0.24; y = 0.5;
+			x = 0.24; 
+			y = 0.5;
 			w = 0.6;
 			h = (1 / 15);
 		};
@@ -142,10 +143,10 @@ class Life_impound_menu
 			idc = -1;
 			text = "Vehicle Insurance";
 			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
-			onButtonClick = "[] call life_fnc_insurance;";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.95 - (1 / 25);
-			w = (13 / 40);
+			onButtonClick = "[] spawn life_fnc_insurance;";
+			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9 - (1 / 25);
+			w = (9.25 / 40);
 			h = (1 / 25);
 		};
 		

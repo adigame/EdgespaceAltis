@@ -52,5 +52,23 @@ if(!isNull _source) then {
 	};
 };
 
+//THIS IS WHERE THE NEW VDM STOPPER IS ADDED - REMOVE IF BUGGED
+if (vehicle _unit == _unit) then
+{
+if ( _source isKindOf "Air" OR _source isKindOf "Car" OR _source isKindOf "Boat" ) then
+{
+diag_log "_Source is Vehicle, Not a player driving a vehicle"
+}
+else
+{
+_isVehicle = vehicle _source;
+if (_isVehicle isKindOf "Air" OR _isVehicle isKindOf "Car" OR _isVehicle isKindOf "Boat") then 
+{
+_damage = 0.001;
+[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+};
+};
+};
+
 [] call life_fnc_hudUpdate;
 _damage;

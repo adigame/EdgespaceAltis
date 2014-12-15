@@ -96,5 +96,6 @@ switch (_item) do
 	case "scalpel": {5};
 	case "gpstracker": {4};
 	case "peach": {2};
+	case "offroadammo": {30};
 	default {1};
 };
