@@ -111,6 +111,7 @@ class CfgFunctions
 			class setObjVar {};
 			class getPrices {};
 			class ajustprices {};
+			class vehicleInsurance {};
 		};
 		
 		class Smartphone

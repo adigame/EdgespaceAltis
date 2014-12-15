@@ -325,7 +325,7 @@ class Life_Client_Core
 		class say3D {};
 	};
 	
-		class TreasureHunting
+	class TreasureHunting
 	{
 		file ="core\jobs\treasure_hunting";
 		class Appraise {};
@@ -353,7 +353,7 @@ class Life_Client_Core
 		class hasOrgan {};
 	};
 	
-		class Rebel
+	class Rebel
 	{
 		file = "core\rebel";
 		class rebelInteractionMenu {};
@@ -382,6 +382,7 @@ class Life_Client_Core
 		class vehicleWeight {};
 		class deviceMine {};
 		class addVehicle2Chain {};
+		class insurance {};
 	};
 	
 	class Cop

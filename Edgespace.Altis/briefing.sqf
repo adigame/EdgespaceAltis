@@ -24,6 +24,7 @@ player createDiaryRecord["changelog",
 				 14/12/2014 - Added Treasure Hunting<br/>
 				 15/12/2014 - Dynamic Economy<br/>
 				 15/12/2014 - Various Fixes<br/>
+				 15/12/2014 - Added Vehicle Insurance<br/>
 				 "
 		]
 	];
