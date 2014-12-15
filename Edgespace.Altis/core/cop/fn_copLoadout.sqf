@@ -12,6 +12,7 @@ waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
 player addUniform "U_Rangemaster";
+player addVest "V_Rangemaster_belt";
 
 /* ITEMS */
 player addItem "ItemMap";

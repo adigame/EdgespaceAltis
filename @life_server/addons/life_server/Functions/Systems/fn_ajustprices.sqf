@@ -2,6 +2,7 @@
 File: fn_Ajustprices.sqf
 Author: worldtrade1101
 
+
 Description:
 Sends a request to update and adjust the price of stuff in the DB.
 */

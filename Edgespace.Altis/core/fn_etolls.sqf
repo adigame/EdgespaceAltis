@@ -71,6 +71,7 @@ if (_speed > _limit) then {
 			} else {
 						
 				life_cash = life_cash - _ticket;
+				playSound "buy";
 				hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4",round _speed,_limit,name _driver,[_ticket] call life_fnc_numberText];	
 				diag_log "Ticket paid from player cash";
 				[0] call SOCK_fnc_updatePartial;

@@ -53,6 +53,7 @@ case "medic" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE
 case "liquorstore" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "bootlegger" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "organ": { format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
+case "artifact": { format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 default {"Error"};
 };
 

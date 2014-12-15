@@ -210,7 +210,7 @@ if (pb_running==1) then {
         case 3: { hint "You are not a member of the paintball lobby space remaining: 3";pb_player3 = player;publicVariable "pb_player3";wohin=3; };
         case 4: { hint "You are not a member of the paintball lobby space remaining: 4";pb_player4 = player;publicVariable "pb_player4";wohin=4; };
         case 5: { hint "You are not a member of the paintball lobby space remaining: 5";pb_player5 = player;publicVariable "pb_player5";wohin=5; };
-        case 6: { hint "You are not a member of the paintball lobby space remainingz: 6";pb_player6 = player;publicVariable "pb_player6";wohin=6; };
+        case 6: { hint "You are not a member of the paintball lobby space remaining: 6";pb_player6 = player;publicVariable "pb_player6";wohin=6; };
         case 7: { hint "You are not a member of the paintball lobby space remaining: 7";pb_player7 = player;publicVariable "pb_player7";wohin=7; };
         case 8: { hint "You are not a member of the paintball lobby space remaining: 8";pb_player8 = player;publicVariable "pb_player8";wohin=8; };
         case 9: { hint "You are not a member of the paintball lobby space remaining: 9";pb_player9 = player;publicVariable "pb_player9";wohin=9; };

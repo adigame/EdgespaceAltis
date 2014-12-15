@@ -26,9 +26,9 @@ switch (_item) do
 	case "tuna": {6};
 	case "mullet": {4};
 	case "catshark": {6};
-	case "turtle": {8};
+	case "turtle": {6};
 	case "fishing": {2};
-	case "turtlesoup": {4};
+	case "turtlesoup": {2};
 	case "donuts": {1};
 	case "coffee": {1};
 	case "fuelE": {2};
@@ -62,6 +62,14 @@ switch (_item) do
 	case "painkillers": {5};
 	case "morphium": {6};
 	case "zipties": {1};
+	case "artifact": {15}; //TREASURE HUNTING ITEMS
+ 	case "roundobject": {17};
+	case "squareobject": {17};
+	case "pottery": {19};
+	case "coins": {10};
+	case "stonetablet": {17};//TREASURE HUNTING ITEMS AFTER APPRAISAL
+	case "carvedstone": {17};
+	case "valuablecoins": {10};
 	case "storagesmall": {10};
 	case "storagebig": {20};
 	case "mauer": {15};
@@ -78,12 +86,12 @@ switch (_item) do
 	case "bottledshine": {4};
 	case "bottles": {1};
 	case "puranium": {3};
-    case "ipuranium": {3};
-    case "uranium1": {100};
-    case "uranium2": {100};
-    case "uranium3": {100};
-    case "uranium4": {100};
-    case "uranium": {100};
+    	case "ipuranium": {3};
+    	case "uranium1": {100};
+    	case "uranium2": {100};
+   	 case "uranium3": {100};
+    	case "uranium4": {100};
+    	case "uranium": {100};
 	case "kidney": {20};
 	case "scalpel": {5};
 	case "gpstracker": {4};

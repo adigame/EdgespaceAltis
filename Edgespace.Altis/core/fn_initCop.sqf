@@ -32,7 +32,7 @@ waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done
 //Introcam
 [] spawn life_fnc_IntroCam;
 
-//Skins und Backpacks für Cops
+//Skins und Backpacks for Cops
 [] spawn
 {
 while {true} do

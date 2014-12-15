@@ -97,7 +97,8 @@ if(_hasLicense) then
     if(!([false,_oldItem2,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem1,_oldVal] call life_fnc_handleInv; [true,_oldItem2,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
     5 cutText ["","PLAIN"];
-    titleText[format["You have %1 %2 at a cost of $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+    titleText[format["You have processed %1 into %2 at a cost of $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
     life_cash = life_cash - _cost;
+	playSound "buy";
     life_is_processing = false;
 }; 

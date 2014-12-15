@@ -12,6 +12,7 @@ _search = nearestObjects[getPos air_sp, ["Air"],5];
 if(count _search == 0) exitWith {hint localize "STR_Service_Chopper_NoAir"};
 if(life_cash < 1000) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
 life_cash = life_cash - 1000;
+playSound "buy";
 life_action_inUse = true;
 _title = "Repairing and refueling helicopter";
 5 cutRsc ["life_progress","PLAIN"];

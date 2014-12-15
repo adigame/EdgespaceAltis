@@ -20,87 +20,6 @@ if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.
 
 switch(_shop) do
 {
-	case "cop_basic":
-	{
-		switch(true) do
-		{
-			case (playerSide !=west): {"You are not a police officer!"};
-			default
-			{
-				["Police Const Store",
-					[
-						["Rangefinder",nil,10]
-					]
-				];
-			};
-		};
-	};
-
-	case "cop_visier":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 1): {"Police officers may only access this!"};
-			default
-			{
-				["Other",
-					[
-						["ItemMap",nil,10],
-						["ItemWatch",nil,10],
-						["ItemCompass",nil,10],
-						["ItemGPS",nil,10],
-						["ToolKit",nil,10],
-						["Medikit",nil,10],
-						["NVGoggles_OPFOR",nil,10],
-						["Chemlight_red",nil,10],
-						["Chemlight_yellow",nil,10],
-						["Chemlight_green",nil,10],
-						["Chemlight_blue",nil,10],
-						["acc_flashlight",nil,10],
-						["acc_pointer_IR",nil,10],
-						["B_UavTerminal",nil,10],
-						["Rangefinder",nil,10],
-						["optic_Holosight",nil,10],
-						["optic_ACO_smg",nil,10],
-						["optic_MRCO",nil,10],
-						["optic_LRPS",nil,10],
-						["optic_DMS",nil,10],
-						["optic_NVS",nil,10],
-						["optic_Arco",nil,10],
-						["muzzle_snds_L",nil,10],
-						["muzzle_snds_M",nil,10],
-						["muzzle_snds_H",nil,10]
-					]
-				];
-			};
-		};
-	};
-	
-	case "adac_basic":
-	{
-		switch (true) do 
-		{
-			case (playerSide != independent): {"You are not a pharamedic/EMS"};
-			case (__GETC__(life_mediclevel) < 2): {"Only pharamedics/EMS can access this!"}; 
-			default {
-				["Medic Shop",
-					[
-						["ItemGPS",nil,10],
-						["Binocular",nil,10],
-						["ToolKit",nil,10],
-						["FirstAidKit",nil,10],
-						["Medikit",nil,10],
-						["NVGoggles",nil,10],
-						["Chemlight_red",nil,20],
-						["Chemlight_yellow",nil,20],
-						["Chemlight_green",nil,20],
-						["Chemlight_blue",nil,20]
-					]
-				];
-			};
-		};
-	};
 	
 	case "med_basic":
 	{
@@ -127,130 +46,434 @@ switch(_shop) do
 		};
 	};
 	
-	case "cop_patrol":
+	case "adac_basic":
+	{
+		switch (true) do 
+		{
+			case (playerSide != independent): {"You are not a pharamedic"};
+			case (__GETC__(life_mediclevel) < 2): {"Only pharamedics can access this!"}; 
+			default {
+				["Medic Shop",
+					[
+						["ItemGPS",nil,10],
+						["Binocular",nil,10],
+						["ToolKit",nil,10],
+						["FirstAidKit",nil,10],
+						["Medikit",nil,10],
+						["NVGoggles",nil,10],
+						["Chemlight_red",nil,20],
+						["Chemlight_yellow",nil,20],
+						["Chemlight_green",nil,20],
+						["Chemlight_blue",nil,20]
+					]
+				];
+			};
+		};
+	};
+	
+	case "cop_basic":
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"You are not a police officer"};
-			case (__GETC__(life_coplevel) < 2): {"You are not a sargent!"};
+			case (playerSide != west): {"You are not a police officer!"};
 			default
 			{
-				["Police Sgt Store",
+				["Police Equipment Store",
 					[
-						["arifle_sdar_F","Taser Rifle",10],
-						["hgun_Rook40_F","Taser Pistol",10],
-						["hgun_Rook40_snds_F","Taser Pistol Silenced",10],
-						["16Rnd_9x21_Mag","Tazer Pistol Magazine",10],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10]
+						["Chemlight_red",nil,20],
+						["Chemlight_yellow",nil,20],
+						["Chemlight_green",nil,20],
+						["Chemlight_blue",nil,20],
+						["SmokeShellRed","Red Smoke",500],
+						["SmokeShellOrange","Orange Smoke",10],
+						["SmokeShellBlue","Tear Gas",10],
+						["HandGrenade_Stone","Flashbang",10],
+						["1Rnd_SmokeRed_Grenade_shell",nil,500],
+						["1Rnd_SmokeBlue_Grenade_shell",nil,500],
+						["UGL_FlareRed_F","Red Flare",1000],
+						["UGL_FlareCIR_F","IR Flare",1000],
+						["3Rnd_SmokeRed_Grenade_shell",nil,1000],
+						["3Rnd_SmokeBlue_Grenade_shell",nil,1000],
+						["muzzle_snds_H",nil,100],
+						["muzzle_snds_L",nil,100],
+						["muzzle_snds_M",nil,100],
+						["muzzle_snds_B",nil,100],
+						["muzzle_snds_H_MG",nil,100],
+						["muzzle_snds_acp",nil,100],
+						["optic_Arco",nil,200],
+						["optic_Hamr",nil,300],
+						["optic_Aco",nil,100],
+						["optic_ACO_grn",nil,100],
+						["optic_Aco_smg",nil,100],
+						["optic_ACO_grn_smg",nil,100],
+						["optic_Holosight",nil,300],
+						["optic_Holosight_smg",nil,350],
+						["optic_SOS",nil,1000],
+						["acc_flashlight",nil,200],
+						["acc_pointer_IR",nil,200],
+						["optic_MRCO",nil,300],
+						["optic_DMS",nil,1000],
+						["optic_Yorris",nil,250],
+						["optic_MRD",nil,250],
+						["optic_LRPS",nil,750]
 					]
 				];
 			};
 		};
 	};
 
-	case "cop_sergeant":
+	case "cop_const":
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 3): {"You are not a lieutenant"};
+			case (playerSide != west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) == 1): {"Police officers may only access this!"};
 			default
 			{
-				["Police Lt Store",
+				["Police Const Store",
 					[
-						["arifle_MXC_F",nil,10],
-						["arifle_MX_F",nil,10],
-						["arifle_sdar_F","Taser Rifle",10],
-						["SMG_02_F",nil,10],
-						["30Rnd_65x39_caseless_mag","6,5mm Magazine",10],
-						["30Rnd_9x21_Mag","9mm-Gummi",10],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",10]
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemMap","Altis Tourist Map",10],
+						["ItemRadio",nil,10],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Rangefinder",nil,450],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200]	
 					]
 				];
 			};
 		};
 	};
 	
-	case "cop_kommisar":
+	case "cop_sgt":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"You are not a police officer"};
+			case (__GETC__(life_coplevel) == 2): {"You are not a sargent!"};
+			default
+			{
+				["Police Sgt Store",
+					[
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_lt":
 	{
 		switch(true) do
 		{
 			case (playerSide !=west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 4): {"You are not a captain"};
+			case (__GETC__(life_coplevel) == 3): {"You are not a lieutenant"};
+			default
+			{
+				["Police Lt Store",
+					[
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50],
+						["arifle_Mk20_GL_F","Mk20 Grenade Launcher",10000],
+						["30Rnd_556x45_Stanag","Mk20 Mag",50],
+						["arifle_MX_SW_F",nil,10000],
+						["30Rnd_65x39_caseless_mag","MX Mag",50],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,50],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["100Rnd_65x39_caseless_mag_Tracer","MX-SW Mag",50]
+					]
+				];
+			};
+		};
+	};
+	
+	case "cop_cpt":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) == 4): {"You are not a captain"};
 			default
 			{
 				["Police CPT Store",
 					[
-						["SMG_02_F",nil,10],
-						["arifle_TRG20_F",nil,10],
-						["arifle_MX_F",nil,10],
-						["arifle_MXC_F",nil,10],
-						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
-						["30Rnd_9x21_Mag",nil,10],
-						["30Rnd_556x45_Stanag",nil,10],
-						["SmokeShellOrange","Orange Smoke Grenade",10]
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50],
+						["arifle_Mk20_GL_F","Mk20 Grenade Launcher",10000],
+						["30Rnd_556x45_Stanag","Mk20 Mag",50],
+						["arifle_MX_SW_F",nil,10000],
+						["30Rnd_65x39_caseless_mag","MX Mag",50],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,50],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["100Rnd_65x39_caseless_mag_Tracer","MX-SW Mag",50],
+						["srifle_EBR_F",nil,15000],
+						["20Rnd_762x51_Mag","EBR Mag",50],
+						["arifle_TRG20_ACO_F",nil,15000],
+						["30Rnd_556x45_Stanag","TRG20 Mag",50],
+						["LMG_Mk200_F",nil,20000],
+						["200Rnd_65x39_cased_Box_Tracer","Mk200 Box",100]
 					]
 				];
 			};
 		};
 	};	
 	
-	case "cop_sek":
+	case "cop_maj":
 	{
 		switch(true) do
 		{
 			case (playerSide !=west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 5): {"You are not a major"};
+			case (__GETC__(life_coplevel) == 5): {"You are not a major"};
 			default
 			{
 				["Police Maj Store",
 					[
-						["arifle_MXM_Black_F",nil,10],
-						["arifle_MX_Black_F",nil,10],
-						["arifle_MXC_Black_F",nil,10],
-						["SMG_02_F",nil,10],
-						["arifle_TRG21_F",nil,10],
-						["SmokeShellBlue","Tear Gas",10],
-						["HandGrenade_Stone","Flash Bang",10],
-						["SmokeShellOrange","Orange Smoke Grenade",10],
-						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
-						["30Rnd_9x21_Mag",nil,10],
-						["30Rnd_556x45_Stanag",nil,10]
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50],
+						["arifle_Mk20_GL_F","Mk20 Grenade Launcher",10000],
+						["30Rnd_556x45_Stanag","Mk20 Mag",50],
+						["arifle_MX_SW_F",nil,10000],
+						["30Rnd_65x39_caseless_mag","MX Mag",50],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,50],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["100Rnd_65x39_caseless_mag_Tracer","MX-SW Mag",50],
+						["srifle_EBR_F",nil,15000],
+						["20Rnd_762x51_Mag","EBR Mag",50],
+						["arifle_TRG20_ACO_F",nil,15000],
+						["30Rnd_556x45_Stanag","TRG20 Mag",50],
+						["LMG_Mk200_F",nil,20000],
+						["200Rnd_65x39_cased_Box_Tracer","Mk200 Box",100],
+						["arifle_MXM_Black_F","MXM Black",20000],
+						["30Rnd_65x39_caseless_mag","MXM Mag",50],
+						["arifle_MXC_Holo_pointer_snds_F",nil,20000],
+						["30Rnd_65x39_caseless_mag","MXC Mag",50]
 					]
 				];
 			};
 		};
 	};
 	
-	case "cop_gsg":
+	case "cop_ltcol":
 	{
 		switch(true) do
 		{
 			case (playerSide !=west): {"You are not a police officer!"};
-			case (__GETC__(life_coplevel) < 6): {"You are not a lieutenant colonel"};
+			case (__GETC__(life_coplevel) == 6): {"You are not a lieutenant colonel"};
 			default
 			{
 				["Police Lt Col Store",
 					[
-						["arifle_MXM_Black_F",nil,10],
-						["arifle_MX_Black_F",nil,10],
-						["arifle_MXC_Black_F",nil,10],
-						["arifle_MX_SW_Black_F",nil,10],
-						["srifle_GM6_F","GM6 Lynx 12.7 mm",80000],
-						["5Rnd_127x108_Mag","Lynx Magazine",750],
-						["SMG_02_F",nil,10],
-						["srifle_EBR_F",nil,10],
-						["arifle_TRG21_F",nil,10],
-						["arifle_TRG20_F",nil,10],
-						["optic_LRPS",nil,30000],
-						["optic_NVS","Night Vision Scope",3000],
-						["SmokeShellBlue","Tear Gas",10],
-						["HandGrenade_Stone","Flash Bang",10],
-						["SmokeShellOrange","Orange Smoke Grenade",10],
-						["30Rnd_65x39_caseless_mag","6,5mm Scharf",10],
-						["20Rnd_762x51_Mag",nil,10],
-						["30Rnd_9x21_Mag",nil,10],
-						["100Rnd_65x39_caseless_mag",nil,10]
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50],
+						["arifle_Mk20_GL_F","Mk20 Grenade Launcher",10000],
+						["30Rnd_556x45_Stanag","Mk20 Mag",50],
+						["arifle_MX_SW_F",nil,10000],
+						["30Rnd_65x39_caseless_mag","MX Mag",50],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["100Rnd_65x39_caseless_mag_Tracer","MX-SW Mag",50],
+						["srifle_EBR_F",nil,15000],
+						["20Rnd_762x51_Mag","EBR Mag",50],
+						["arifle_TRG20_ACO_F",nil,15000],
+						["30Rnd_556x45_Stanag","TRG20 Mag",50],
+						["LMG_Mk200_F",nil,20000],
+						["200Rnd_65x39_cased_Box_Tracer","Mk200 Box",100],
+						["arifle_MXM_Black_F","MXM Black",20000],
+						["30Rnd_65x39_caseless_mag","MXM Mag",50],
+						["arifle_MXC_Holo_pointer_snds_F",nil,20000],
+						["30Rnd_65x39_caseless_mag","MXC Mag",50],
+						["srifle_GM6_F",nil,50000],
+						["5Rnd_127x108_Mag","GM6 Magazine",100],
+						["5Rnd_127x108_APDS_Mag","GM6 Armor Piercing",100]
+					]
+				];
+			};
+		};
+	};
+	
+	case "cop_swat":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"You are not a police officer!"};
+			case (__GETC__(life_coplevel) == 6): {"You are not a lieutenant colonel"};
+			case (!license_cop_swat): {"You are not a swat member!"};
+
+			default
+			{
+				["SWAT Store",
+					[
+						["arifle_sdar_F","Taser Rifle",5000],
+						["hgun_Rook40_F","Taser Pistol",2500],
+						["hgun_Rook40_snds_F","Taser Pistol Silenced",3000],
+						["16Rnd_9x21_Mag","Tazer Pistol Magazine",25],
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",50],
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemCompass",nil,10],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemWatch",nil,20],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["Laserdesignator",nil,600],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["MineDetector",nil,1000],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50],
+						["arifle_Mk20_GL_F","Mk20 Grenade Launcher",10000],
+						["30Rnd_556x45_Stanag","Mk20 Mag",50],
+						["arifle_MX_SW_F",nil,10000],
+						["30Rnd_65x39_caseless_mag","MX Mag",50],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["100Rnd_65x39_caseless_mag_Tracer","MX-SW Mag",50],
+						["srifle_EBR_F",nil,15000],
+						["20Rnd_762x51_Mag","EBR Mag",50],
+						["arifle_TRG20_ACO_F",nil,15000],
+						["30Rnd_556x45_Stanag","TRG20 Mag",50],
+						["LMG_Mk200_F",nil,20000],
+						["200Rnd_65x39_cased_Box_Tracer","Mk200 Box",100],
+						["arifle_MXM_Black_F","MXM Black",20000],
+						["30Rnd_65x39_caseless_mag","MXM Mag",50],
+						["arifle_MXC_Holo_pointer_snds_F",nil,20000],
+						["30Rnd_65x39_caseless_mag","MXC Mag",50],
+						["launch_RPG32_F","RPG",50000],
+						["RPG32_F",nil,5000],
+						["RPG32_HE_F",nil,5000],
+						["srifle_GM6_F","Lynx",50000],
+						["5Rnd_127x108_Mag","GM6 Magazine",100],
+						["5Rnd_127x108_APDS_Mag","GM6 Armor Piercing",100],
+						["optic_Nightstalker",nil,40000]
 					]
 				];
 			};
@@ -312,15 +535,16 @@ switch(_shop) do
 			{
 				["Joe's Firearms",
 					[
-						["hgun_P07_F",nil,15000],
-						["hgun_Pistol_heavy_02_F",nil,20000],
-						["hgun_ACPC2_F",nil,17500],
-						["hgun_PDW2000_F",nil,30000],
-						["optic_ACO_grn_smg",nil,2500],
-						["16Rnd_9x21_Mag",nil,25],
-						["9Rnd_45ACP_Mag",nil,45],
-						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
+						["arifle_SDAR_F","Underwater Gun",30000],
+						["30Rnd_556x45_Stanag","SDAR Mag",250],
+						["hgun_Rook40_F",nil,7500],
+						["16Rnd_9x21_Mag",nil,250],
+						["hgun_ACPC2_F",nil,12000],
+						["9Rnd_45ACP_Mag","ACPC2 Mag",250],
+						["hgun_Pistol_heavy_01_F",nil,15000],
+						["11Rnd_45ACP_Mag","4-five .45 Mag",500],
+						["hgun_Pistol_heavy_02_F",nil,15000],
+						["6Rnd_45ACP_Cylinder","Zubr Mag",500]
 					]
 				];
 			};
@@ -368,7 +592,7 @@ switch(_shop) do
 						["ToolKit",nil,100],
 						["itemGPS",nil,100],
 						["FirstAidKit",nil,25],
-						["Rangefinder",nil,5000],
+						["Rangefinder",nil,3000],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
 						["11Rnd_45ACP_Mag",nil,85],
@@ -396,7 +620,7 @@ switch(_shop) do
 						["optic_MRCO",nil,10000],
 						["optic_LRPS",nil,50000],
 						["optic_DMS",nil,25000],
-						["Rangefinder",nil,15000],
+						["Rangefinder",nil,3000],
 						["SmokeShellGreen",nil,2500],
 						["1Rnd_SmokeGreen_Grenade_shell",nil,5000],
 						["muzzle_snds_L",nil,5000],
@@ -423,6 +647,7 @@ switch(_shop) do
 		["Dion Wired",
 			[
 				["Binocular",nil,150],
+				["Rangefinder",nil,3000],
 				["ItemGPS",nil,100],
 				["ItemMap",nil,50],
 				["ItemCompass",nil,50],
@@ -457,59 +682,3 @@ switch(_shop) do
         };
     }; 
 };
-
-/*
-
-		"srifle_LRR_F",
-		"srifle_DMR_01_F",
-		"srifle_EBR_F",
-		"arifle_MX_F",
-		"arifle_MXC_F",
-		"arifle_MXM_F",
-		"arifle_Katiba_F",
-		"arifle_Katiba_C_F",
-		"arifle_sdar_F",
-		"arifle_Mk20_F",
-		"LMG_Mk200_F",
-		"hgun_P07_snds_F",
-		"optic_Holosight",
-		"acc_flashlight",
-		"optic_Arco",
-		"optic_MRCO",
-		"optic_Holosight",
-		"optic_Arco",
-		"optic_Hamr",
-		"optic_MRCO",
-		"optic_Aco",
-		"optic_DMS",
-		"optic_LRPS",
-		"optic_SOS",
-		"arifle_Mk20C_F",
-		"arifle_MX_Black_F",
-		"arifle_MX_GL_Black_F",
-		"arifle_MX_SW_Black_F",
-		"arifle_MXC_Black_F",
-		"arifle_MX_SW_F",
-		"arifle_TRG20_F",
-		"arifle_TRG21_F",
-		"acc_flashlight",
-		"acc_pointer_IR",
-		"muzzle_snds_acp",
-		"muzzle_snds_B",
-		"muzzle_snds_H",
-		"muzzle_snds_H_MG",
-		"muzzle_snds_L",
-		"muzzle_snds_M",
-		"optic_Aco",
-		"optic_ACO_grn",
-		"optic_ACO_grn_smg",
-		"optic_Aco_smg",
-		"optic_Arco",
-		"optic_DMS",
-		"optic_Hamr",
-		"optic_MRCO",
-		"optic_SOS",
-		"optic_LRPS"
-
-
-*/

@@ -114,6 +114,7 @@ class Life_Client_Core
 		class heal {};
 		class gather {};
 		class healHospital {};
+		class transplantHospital {};
 		class pushVehicle {};
 		class repairTruck {};
 		class serviceChopper {};
@@ -142,7 +143,7 @@ class Life_Client_Core
 		
 		// Unrestrain for Cops
 		class unrestrain {};
-
+		class relinquishLicense {};
 		class pickupItem {};
 		class pickupMoney {};
 		class ticketAction {};
@@ -323,6 +324,16 @@ class Life_Client_Core
 		class setTexture {};
 		class say3D {};
 	};
+	
+		class TreasureHunting
+	{
+		file ="core\jobs\treasure_hunting";
+		class Appraise {};
+		class SearchWreck {};
+		class TreasureHunt {};
+		class TreasureHuntInit {};
+	};
+	
 	
 	class Civilian
 	{

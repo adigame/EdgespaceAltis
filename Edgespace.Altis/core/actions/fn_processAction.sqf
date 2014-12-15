@@ -114,6 +114,7 @@ if(_hasLicense) then
 	5 cutText ["","PLAIN"];
 	titleText[format["You have processed %1 into %2 at a cost of $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash - _cost;
+	playSound "buy";
 	life_is_processing = false;
 	_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];
 };	

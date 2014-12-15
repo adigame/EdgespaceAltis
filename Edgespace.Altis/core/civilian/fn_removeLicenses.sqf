@@ -64,5 +64,43 @@ switch (_state) do
 		license_civ_gun = false;
 		hint localize "STR_Civ_RevokeLicense_Firearm";
 	};
+	//Remove Corp licenses when becoming Rebel
+	case 20:
+	{
+		if(license_civ_corporation) then //OR license_civ_packaging OR license_civ_export) then {
+		{
+			license_civ_corporation = false;
+			license_civ_gold = false;
+		    license_civ_platinum = false;
+			if (_state == 6) then
+			{
+				hint "Your Corporate licenses have been revoked for joining the rebels.";
+			}
+			else
+			{
+				hint "You have relinquished all your Corporate licenses.";
+			};
+		};
+	};
+	//Remove Rebel Licenses when joining corp
+	case 21:
+	{
+		if(license_civ_rebel OR license_civ_heroin OR license_civ_marijuana OR license_civ_coke) then 
+		{
+			license_civ_rebel = false;
+			license_civ_meth = false;
+			if (_state == 4) then
+			{
+				license_civ_heroin = false;
+				license_civ_marijuana = false;
+				license_civ_coke = false;
+				hint "You forfeit your rebel licenses by joining the Corporation.";
+			}
+			else
+			{
+				hint "You have relinquished all your Rebel licenses.";
+			};
+		};
+	};
 
 };

@@ -65,6 +65,14 @@ switch (_mode) do
 			case "methu": {"life_inv_methu"};
 			case "methp": {"life_inv_methp"};
 			case "methu": {"life_inv_methu"};
+			case "artifact": {"life_inv_artifact"}; //TREASURE HUNTING ITEMS
+			case "roundobject" : {"life_inv_roundobject"};
+			case "squareobject" : {"life_inv_squareobject"};
+			case "pottery" : {"life_inv_pottery"}; //POTTERY DOESNT NEED
+			case "coins": {"life_inv_coins"};
+			case "stonetablet": {"life_inv_stonetablet"}; //TREASURE HUNTING ITEMS AFTER APPRAISAL
+			case "carvedstone": {"life_inv_carvedstone"};
+			case "valuablecoins": {"life_inv_valuablecoins"};
 			case "battery": {"life_inv_battery"};
 			case "blastingcharge": {"life_inv_blastingcharge"};
 			case "boltcutter": {"life_inv_boltcutter"};
@@ -159,6 +167,14 @@ switch (_mode) do
 			case "life_inv_painkillers": {"painkillers"};
 			case "life_inv_morphium": {"morphium"};
 			case "life_inv_zipties": {"zipties"};
+			case "life_inv_artifact": {"artifact"}; //TREASURE HUNTING ITEMS
+			case "life_inv_roundobject" : {"roundobject"};
+			case "life_inv_squareobject" : {"squareobject"};
+			case "life_inv_pottery" : {"pottery"};
+			case "life_inv_coins" : {"coins"};
+			case "life_inv_stonetablet": {"stonetablet"}; //TREASURE HUNTING ITEMS AFTER APPRAISAL
+			case "life_inv_carvedstone": {"carvedstone"};
+			case "life_inv_valuablecoins": {"valuablecoins"};
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_mauer": {"mauer"};
@@ -182,7 +198,7 @@ switch (_mode) do
             case "life_inv_uranium4": {"uranium4"}; // Add This
             case "life_inv_uranium": {"uranium"}; // Add This 
 			case "life_inv_kidney": {"kidney"};
-			case "Life_inv_gpstracker": {"gpstracker"};
+			case "life_inv_gpstracker": {"gpstracker"};
 			case "life_inv_scalpel": {"scalpel"};
 		};
 	};

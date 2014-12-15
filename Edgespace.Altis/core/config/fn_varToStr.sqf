@@ -60,6 +60,14 @@ switch (_var) do
 	case "life_inv_methu": {"Unproccessed Methamphetamine"};
 	case "life_inv_methp": {"Pure Methamphetamine"};
 	case "life_inv_storage1": {"Strorage Crate (Small)"};
+	case "life_inv_artifact": {"Rare Artifact"};
+	case "life_inv_roundobject" : {"Unidentifiable Round Object"};
+	case "life_inv_squareobject" : {"Unidentifiable Square Object"};
+	case "life_inv_pottery" : {"Ancient Pottery"};
+	case "life_inv_coins" : {"Unknown Coins"};
+	case "life_inv_stonetablet": {"Ancient Stone Tablet"}; //TREASURE HUNTING ITEMS AFTER APPRAISAL
+	case "life_inv_carvedstone": {"Ancient Carved Stone"};
+	case "life_inv_valuablecoins": {"Valuable Coins"};
 	case "life_inv_storage2": {"Strorage Crate (Large)"};
 	case "life_inv_battery": {"Battery"};
 	case "life_inv_blastingcharge": {"C4"};

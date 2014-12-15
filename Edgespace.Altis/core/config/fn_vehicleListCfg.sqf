@@ -67,7 +67,6 @@ switch (_shop) do
 			["O_Truck_02_transport_F",175000], // Transport
 			["O_Truck_03_transport_F",185000], // Tempest Transport
 			["O_Truck_03_device_F",1000000], // Tempest Device
-			["B_Truck_01_mover_F",300000],
 			["B_Truck_01_covered_F",605000],
 			["B_Truck_01_transport_F",600000],
 			["B_Truck_01_box_F",1000000]
@@ -84,20 +83,9 @@ switch (_shop) do
 		
 		if(license_civ_rebel) then
 		{
-			_return set[count _return,
-			["B_G_Offroad_01_armed_F",875000]];
-			_return set[count _return,
-			["O_MRAP_02_F",2000000]];
-			_return set[count _return,
-			["B_MRAP_01_F",3000000]];
-			_return set[count _return,
-			["B_Heli_Light_01_F",625000]];
-			_return set[count _return,
-			["I_Heli_Transport_02_F",2000000]];
-			_return set[count _return,
-			["O_Heli_Light_02_unarmed_F",1750000]];
-			_return set[count _return,
-			["O_Heli_Transport_04_box_F",2250000]];
+			_return set[count _return,["B_G_Offroad_01_armed_F",875000]];
+			_return set[count _return,["O_MRAP_02_F",2000000]];
+			_return set[count _return,["B_MRAP_01_F",3000000]];
 		};
 	};
 
@@ -126,12 +114,13 @@ switch (_shop) do
 	
 	case "reb_air":
 	{
-		_return set[count _return,
-		["B_Heli_Light_01_F",625000]];
-		_return set[count _return,
-		["O_Heli_Light_02_unarmed_F",1750000]];
-		_return set[count _return,
-		["O_Heli_Transport_04_F",1550000]];
+		_return set[count _return,["B_Heli_Light_01_F",625000]];
+		_return set[count _return,["O_Heli_Light_02_unarmed_F",1750000]];
+		_return set[count _return,["C_Heli_Light_01_civil_F",625000]];
+		_return set[count _return,["O_Heli_Transport_04_F",1550000]];
+		_return set[count _return,["O_Heli_Transport_04_box_F",2250000]];
+		_return set[count _return,["B_Heli_Transport_03_F",2250000]];
+		_return set[count _return,["B_Heli_Transport_03_unarmed_F",2250000]];
 	};
 	
 	case "cop_car_1":
@@ -170,7 +159,12 @@ switch (_shop) do
 		_return =
 		[
 			["B_Heli_Light_01_F",1255000],
-			["O_Heli_Light_02_unarmed_F",1750000]
+			["C_Heli_Light_01_civil_F",625000],
+			["O_Heli_Light_02_unarmed_F",1750000],
+			["O_Heli_Transport_04_box_F",2250000], // Cargo
+			["O_Heli_Transport_04_F",750000], // No Cargo
+			["B_Heli_Transport_03_F",2250000],
+			["B_Heli_Transport_03_unarmed_F",2250000]
 		];
 	};
 	

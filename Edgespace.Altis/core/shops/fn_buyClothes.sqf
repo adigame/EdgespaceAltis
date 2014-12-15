@@ -18,6 +18,6 @@ _price = 0;
 
 if(_price > life_cash) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
 life_cash = life_cash - _price;
-
+playSound "buy";
 life_clothesPurchased = true;
 closeDialog 0;

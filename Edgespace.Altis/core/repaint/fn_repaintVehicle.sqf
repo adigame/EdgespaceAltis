@@ -57,6 +57,7 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You aren't the owner!";_
 		if(player != vehicle player) exitWith {titleText["You must get out of the vehicle in order to paint it!","PLAIN"];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 	
 		life_cash = life_cash - _basePrice;
+		playSound "buy";
 		//Send toDB
 		[[_veh,_color_index],"TON_fnc_vehicleRepaint",false,false] spawn life_fnc_MP;
 		

@@ -104,25 +104,26 @@ life_drugged_cocaine = -1;
 life_drugged_cocaine_duration = 1; 
 life_drugged_weed = -1;
 life_drugged_weed_duration = 1;
-
+life_explorer_wrecks = objNull;
+life_wreck_searched = false;
 life_vehicles = [];
 bank_robber = [];
 switch (playerSide) do
 {
 	case west: 
 	{
-		life_atmcash = 10000; //Starting Bank Money
+		life_atmcash = 15000; //Starting Bank Money
 		life_paycheck = 2000; //Paycheck Amount
 	};
 	case civilian: 
 	{
-		life_atmcash = 10000; //Starting Bank Money
-		life_paycheck = 850; //Paycheck Amount
+		life_atmcash = 15000; //Starting Bank Money
+		life_paycheck = 1000; //Paycheck Amount
 	};
 	
 	case independent: {
-		life_atmcash = 10000;
-		life_paycheck = 1750;
+		life_atmcash = 15000;
+		life_paycheck = 2000;
 	};
 };
 
@@ -193,6 +194,16 @@ life_inv_items =
 	"life_inv_mauer",
 	"life_inv_cornmeal",
 	"life_inv_beerp",
+	//Treasure Hunting Items
+	"life_inv_artifact",
+	"life_inv_roundobject",
+	"life_inv_squareobject",
+	"life_inv_pottery", //Doesnt need another item after appraisal 
+	"life_inv_coins",
+	//Items After Appraisal
+	"life_inv_stonetablet",
+	"life_inv_carvedstone",
+	"life_inv_valuablecoins",
 	"life_inv_whiskey",
 	"life_inv_rye",
 	"life_inv_hops",
@@ -322,6 +333,10 @@ sell_array =
 	["wine",1000],
 	["grapes",70],
 	["methu",1875],
+	["stonetablet",78000],
+	["carvedstone",87750],
+	["pottery",100750],
+	["valuablecoins",62500],
 	["methp",3750],
 	["battery",50],
 	["defusekit",0],
