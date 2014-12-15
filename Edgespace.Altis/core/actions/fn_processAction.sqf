@@ -11,7 +11,7 @@ _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
 if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 
-//unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
+//unprocessed item,processed item, cost if no license, Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do
 {
 	case "oil": {["oilu","oilp",1200,"Processing Oil"];};
@@ -26,16 +26,16 @@ _itemInfo = switch (_type) do
 	case "heroin": {["heroinu","heroinp",1720,"Processing Heroin"]};
 	case "cement": {["rock","cement",350,"Mixing Cement"]};
 	case "grapes": {["grapes","wine",250,"Processing Grapes into Wine"]};
-	case "moonshine": {["yeast","moonshine",250,"Moonshining",true,"mash"]};//new
+	case "moonshine": {["yeast","moonshine",2000,"Moonshining",true,"mash"]};//new
 	case "meth": {["methu","methp",5000,"Cooking Meth"]};
-	case "bottledshine": {["moonshine","bottledshine",500,"Bootle Moonshine",true,"bottles"]};//new
-	case "whiskey": {["yeast","whiskey",1000,"Fermenting Whiskey",true,"rye"]};//new
+	case "bottledshine": {["moonshine","bottledshine",5000,"Bootle Moonshine",true,"bottles"]};//new
+	case "whiskey": {["yeast","whiskey",4000,"Fermenting Whiskey",true,"rye"]};//new
 	case "beer": {["yeast","beerp",1500,"Brewing Beer",true,"hops"]};//new
-	case "bottledbeer": {["beerp","bottledbeer",500,"Bottle Beer",true,"bottles"]};//new
-	case "bottledwhiskey": {["whiskey","bottledwhiskey",500,"Bottle Whiskey",true,"bottles"]};//new
-	case "mash": {["water","mash",100,"Mixing Grain Mash",true,"cornmeal"]};//new
-    case "uranium1": {["uranium1","uranium2",5000,"Chemically Cleaning Uranium Waste into Raw Uranium"]}; // Add this
-    case "uranium4": {["uranium4","uranium",15000,"Enriching Uranium"]}; // Add this
+	case "bottledbeer": {["beerp","bottledbeer",2000,"Bottle Beer",true,"bottles"]};//new
+	case "bottledwhiskey": {["whiskey","bottledwhiskey",2000,"Bottle Whiskey",true,"bottles"]};//new
+	case "mash": {["water","mash",2000,"Mixing Grain Mash",true,"cornmeal"]};//new
+    case "uranium1": {["uranium1","uranium2",50000,"Chemically Cleaning Uranium Waste into Raw Uranium"]}; // Add this
+    case "uranium4": {["uranium4","uranium",80000,"Enriching Uranium"]}; // Add this
 	default {[]};
 };
 

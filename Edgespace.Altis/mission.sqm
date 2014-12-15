@@ -71245,21 +71245,21 @@ class Mission
 		class Item29
 		{
 			position[]={4348.7095,36.29845,13108.439};
-			name="apple_1";
+			name="apple_gather_01";
 			text="Apple Fields";
 			type="hd_dot";
 		};
 		class Item30
 		{
 			position[]={25982.121,15.485652,20889.566};
-			name="apple_2";
+			name="apple_gather_02";
 			text="Apples";
 			type="loc_Tree";
 		};
 		class Item31
 		{
 			position[]={3671.427,33.248623,14184.073};
-			name="peaches_2";
+			name="peaches_gather_02";
 			text="Peaches Field";
 			type="mil_dot";
 			colorName="ColorGUER";
@@ -71267,7 +71267,7 @@ class Mission
 		class Item32
 		{
 			position[]={7517.1646,21.574978,11952.04};
-			name="peaches_1";
+			name="peaches_gather_01";
 			text="Peaches Field";
 			type="mil_dot";
 			colorName="ColorGUER";
@@ -71284,21 +71284,21 @@ class Mission
 		class Item34
 		{
 			position[]={10022.424,14.231085,12550.737};
-			name="apple_3";
+			name="apple_gather_03";
 			text="Apple Field";
 			type="mil_dot";
 		};
 		class Item35
 		{
 			position[]={13618,16.567661,18105.947};
-			name="apple_4";
+			name="apple_gather_04";
 			text="Apple Field";
 			type="hd_dot";
 		};
 		class Item36
 		{
 			position[]={13535.822,21.32292,19006.266};
-			name="peaches_3";
+			name="peaches_gather_03";
 			text="Peaches Field";
 			type="mil_dot";
 			colorName="ColorGUER";
@@ -71637,7 +71637,7 @@ class Mission
 		class Item77
 		{
 			position[]={11563.256,77.404358,7048.2056};
-			name="weed_2";
+			name="weed_gather_02";
 			text="Weed Field";
 			type="mil_dot";
 			colorName="ColorRed";
@@ -71851,7 +71851,7 @@ class Mission
 		class Item105
 		{
 			position[]={18414.85,15.303878,7956.3223};
-			name="cocaine_1";
+			name="cocaine_gather_01";
 			text="Cocoa Tree's";
 			type="mil_dot";
 			colorName="ColorRed";
@@ -71951,7 +71951,7 @@ class Mission
 		class Item117
 		{
 			position[]={13766.27,8.9409666,15077.516};
-			name="heroin_1";
+			name="heroin_gather_01";
 			text="Heroin";
 			type="hd_dot";
 			colorName="ColorRed";
@@ -72419,7 +72419,7 @@ class Mission
 		class Item177
 		{
 			position[]={3198.1729,23.173532,18440.301};
-			name="grape_1";
+			name="grape_gather_01";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorCIV";
@@ -72464,7 +72464,7 @@ class Mission
 		class Item182
 		{
 			position[]={21385.686,18.877121,11061.089};
-			name="meth_1";
+			name="meth_gather_01";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorRed";
@@ -72719,7 +72719,7 @@ class Mission
 		class Item217
 		{
 			position[]={15261.658,46.716908,21158.018};
-			name="rye_1";
+			name="rye_gather_01";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorWhite";
@@ -72737,7 +72737,7 @@ class Mission
 		class Item219
 		{
 			position[]={14744.462,39.446289,21547.582};
-			name="hops_1";
+			name="hops_gather_01";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorWhite";
@@ -72755,7 +72755,7 @@ class Mission
 		class Item221
 		{
 			position[]={11617.135,73.417381,18338.111};
-			name="yeast_1";
+			name="yeast_gather_01";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorWhite";
@@ -73453,7 +73453,7 @@ class Mission
 		class Item304
 		{
 			position[]={5195.7974,239.25485,21065.553};
-			name="cocaine_2";
+			name="cocaine_gather_02";
 			text="Cocoa Tree's";
 			type="mil_dot";
 			colorName="ColorRed";

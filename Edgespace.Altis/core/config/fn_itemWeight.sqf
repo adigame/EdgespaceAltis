@@ -86,12 +86,12 @@ switch (_item) do
 	case "bottledshine": {4};
 	case "bottles": {1};
 	case "puranium": {3};
-    	case "ipuranium": {3};
-    	case "uranium1": {100};
-    	case "uranium2": {100};
-   	 case "uranium3": {100};
-    	case "uranium4": {100};
-    	case "uranium": {100};
+    case "ipuranium": {3};
+    case "uranium1": {100};
+    case "uranium2": {100};
+   	case "uranium3": {100};
+    case "uranium4": {100};
+    case "uranium": {100};
 	case "kidney": {20};
 	case "scalpel": {5};
 	case "gpstracker": {4};
