@@ -11,7 +11,7 @@ life_interrupted = false;
 if(life_action_inUse) exitWith {};
 if(isNull _curTarget) exitWith {}; //Bad type
 _distance = ((boundingBox _curTarget select 1) select 0) + 2;
-if(player distance _curTarget > _distance) exitWith {}; //Too far
+if(player distance _curTarget > _distance) exitWith {hint "You are not close enough to the vehicle"}; //Too far
 _isVehicle = if((_curTarget isKindOf "LandVehicle")) then {true} else {false};
 if(!(_isVehicle && _curTarget in life_vehicles)) exitWith {hint "This is not your vehicle."};
 if (typeof _curTarget != "B_G_Offroad_01_armed_F" ) exitWith {hint "This is the wrong vehicle"};
@@ -19,7 +19,6 @@ if (typeof _curTarget != "B_G_Offroad_01_armed_F" ) exitWith {hint "This is the 
 //More error checks
 if(!_isVehicle && !isPlayer _curTarget) exitWith {};
 if(!_isVehicle && !(_curTarget getVariable["restrained",false])) exitWith {};
-if(!_isVehicle && !(_curTarget getVariable["ziptied",false])) exitWith {};
 
 _title = "Loading Ammo";
 life_action_inUse = true; //Lock out other actions
@@ -54,7 +53,6 @@ while {true} do
 	if(life_istazed) exitWith {}; //Tazed
 	if(life_interrupted) exitWith {};
 	if((player getVariable["restrained",false])) exitWith {};
-	if((player getVariable["ziptied",false])) exitWith {};
 	if(player distance _curTarget > _distance) exitWith {_badDistance = true;};
 };
 
@@ -63,7 +61,6 @@ while {true} do
 player playActionNow "stop";
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
-if((player getVariable["ziptied",false])) exitWith {life_action_inUse = false;};
 if(!isNil "_badDistance") exitWith {titleText["You got to far away from the target.","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cancelled","PLAIN"]; life_action_inUse = false;};
 if(!([false,"offroadammo",1] call life_fnc_handleInv)) exitWith {life_action_inUse = false;};
@@ -72,10 +69,9 @@ life_action_inUse = false;
 
 if(!_isVehicle) then {
 	_curTarget setVariable["restrained",false,true];
-	curTarget setVariable["ziptied",false,true];
 	_curTarget setVariable["Escorting",false,true];
 	_curTarget setVariable["transporting",false,true];
-} 
+}
 else 
 {
 	titleText["You have loaded this vehicle with ammo.","PLAIN"];

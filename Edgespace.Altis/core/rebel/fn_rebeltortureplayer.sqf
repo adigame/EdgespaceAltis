@@ -3,6 +3,13 @@
 */
 private["_unit","_rand","_damage", "_fatigue"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+
+
+    if(player distance (getMarkerPos "Safe_Kav") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Reb") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Jail") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+
+
 if(life_action_inUse) exitWith {};
 
 if(player distance _unit > 5 || !alive player || !alive _unit) exitWith {hint "You cant torture the player."};

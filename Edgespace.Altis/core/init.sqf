@@ -95,6 +95,7 @@ life_sidechat = true;
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 [] call life_fnc_settingsInit;
+[] spawn life_fnc_speaking; //Initiate the speaking loop
 player setVariable["steam64ID",getPlayerUID player];
 player setVariable["realname",profileName,true];
 life_fnc_moveIn = compileFinal
@@ -102,13 +103,6 @@ life_fnc_moveIn = compileFinal
 	player moveInCargo (_this select 0);
 ";
 
-// Get rid of the damn Fog, fast fix
-[] spawn {
-	while {true} do {
-		sleep 600;
-		60 setFog 0;
-	};
-};
 
 life_fnc_garageRefund = compileFinal
 "
@@ -131,6 +125,6 @@ player enableFatigue (__GETC__(life_enableFatigue));
     while {true} do {
         sleep 600;
         [] call SOCK_fnc_updateRequest;
-        hint "Game Autosaved.";
+        hint "Game autosaved next save 5 minutes...";
     };
 };

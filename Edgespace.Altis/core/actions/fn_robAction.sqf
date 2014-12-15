@@ -9,6 +9,10 @@ private["_target"];
 _target = cursorTarget;
 
 //Error checks
+    if(player distance (getMarkerPos "Safe_Kav") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Reb") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Jail") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+
 if(isNull _target) exitWith {};
 if(!isPlayer _target) exitWith {};
 

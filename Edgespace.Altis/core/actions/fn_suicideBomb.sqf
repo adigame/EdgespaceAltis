@@ -2,6 +2,11 @@
 	ALAH SNACKBAR!
 */
 private["_test"];
+    
+	if(player distance (getMarkerPos "Safe_Kav") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Reb") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Jail") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+	
 if(vest player != "V_HarnessOGL_brn") exitWith {};
 [[0,format["%1 has activated their suicide vest.",profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 hint "You have activated your suicide vest 30 seconds remaining.";

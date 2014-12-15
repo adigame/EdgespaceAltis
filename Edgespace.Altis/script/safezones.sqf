@@ -7,6 +7,7 @@
     CONFIGURATION:
     Edit the #defines below.
 */
+
 #define SAFETY_ZONES    [["Safe_Kav", 100], ["Save_Reb", 750], ["Save_Jail", 500]]
 #define MESSAGE "This is a safety zone please follow the server rules!"
      if (isDedicated) exitWith {};

@@ -1,92 +1,89 @@
 /*
-	File: D41_wetter.sqf
-	Author: Distrikt41.de - Dscha
-
-	Description:
-	Random Weather Script - What else can i say?
+	File: dynamicweather.sqf
+	Description: Random Weather Script
 */
-	private ["_fnc_D41_WetterWerte"];
+	private ["_UpdateWeather"];
 	//PreLoad Variablen
 	if (isDedicated) then
 	{
-		D41_Nebel = [0,0,0];
-		D41_Wellen = 0;
-		D41_Vorschau = 0.5;
-		D41_Wind = [10, 10, true];
-		D41_Regen = 0;
-		D41_RegenCounter = 1;
+		Weather_Fog = [0,0,0];
+		Weather_Waves = 0;
+		Weather_OverCast = 0.5;
+		Weather_Wind = [10, 10, true];
+		Weather_Rain = 0;
+		Weather_RainCounter = 1;
 	};
 	
-	_fnc_D41_WetterWerte =
+	_UpdateWeather =
 	{
 		if (isDedicated) then
 			{
-				D41_ChanceN = round(random 100);
-				if(D41_ChanceN <= 10) then
+				Weather_Chance = round(random 100);
+				if(Weather_Chance <= 10) then
 					{
-						D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.2; D41_Wind = [5, 5, true]; D41_Regen = 0; D41_RegenCounter = 0;
-						D41_WMod = round(random 9);
-						if(D41_WMod == 0)	then {D41_Nebel = [1, 0.1,10];		D41_Regen = 0.1;	D41_Vorschau = 0.4;}; //Dicht
-						if(D41_WMod == 1)	then {D41_Nebel = [1, 0.2,10];		D41_Regen = 0.2;	D41_Vorschau = 0.3;};
-						if(D41_WMod == 2)	then {D41_Nebel = [1, 0.3,10];		D41_Regen = 0.2;	D41_Vorschau = 0.2;}; //geht so, akzeptabler Nebel
-						if(D41_WMod == 3)	then {D41_Nebel = [0.9, 0.1,15];	D41_RegenCounter = 0;}; //Dicht
-						if(D41_WMod == 4)	then {D41_Nebel = [0.8, 0.1,15];	D41_Regen = 0.2;	D41_Vorschau = 0.4;};
-						if(D41_WMod == 5)	then {D41_Nebel = [0.7, 0.1,15];	D41_RegenCounter = 0;}; //geht so, akzeptabler Nebel
-						if(D41_WMod == 6)	then {D41_Nebel = [0.6, 0.1,30];	D41_RegenCounter = 0;};
-						if(D41_WMod == 7)	then {D41_Nebel = [0.5, 0.1,30];	D41_Regen = 0.2;	D41_Vorschau = 0.5;};
-						if(D41_WMod == 8)	then {D41_Nebel = [0.4, 0.1,30];	D41_RegenCounter = 0;}; //geht so, akzeptabler Nebel
-						if(D41_WMod == 9)	then {D41_Nebel = [0.1, 0.1,50];	D41_Regen = 0.4;	D41_Wellen = 1;	D41_Vorschau = 0.5;}; //Hoch halt
+						Weather_Fog = [0,0,0]; Weather_Waves = 0; Weather_OverCast = 0.2; Weather_Wind = [5, 5, true]; Weather_Rain = 0; Weather_RainCounter = 0;
+						Weather_RWMod = round(random 9);
+						if(Weather_RWMod == 0)	then {Weather_Fog = [1, 0.1,10];	Weather_Rain = 0.1;	Weather_OverCast = 0.4;}; //Dicht
+						if(Weather_RWMod == 1)	then {Weather_Fog = [1, 0.2,10];	Weather_Rain = 0.2;	Weather_OverCast = 0.3;};
+						if(Weather_RWMod == 2)	then {Weather_Fog = [1, 0.3,10];	Weather_Rain = 0.2;	Weather_OverCast = 0.2;}; //geht so, akzeptabler Nebel
+						if(Weather_RWMod == 3)	then {Weather_Fog = [0.9, 0.1,15];	Weather_RainCounter = 0;}; //Dicht
+						if(Weather_RWMod == 4)	then {Weather_Fog = [0.8, 0.1,15];	Weather_Rain = 0.2;	Weather_OverCast = 0.4;};
+						if(Weather_RWMod == 5)	then {Weather_Fog = [0.7, 0.1,15];	Weather_RainCounter = 0;}; //geht so, akzeptabler Nebel
+						if(Weather_RWMod == 6)	then {Weather_Fog = [0.6, 0.1,30];	Weather_RainCounter = 0;};
+						if(Weather_RWMod == 7)	then {Weather_Fog = [0.5, 0.1,30];	Weather_Rain = 0.2;	Weather_OverCast = 0.5;};
+						if(Weather_RWMod == 8)	then {Weather_Fog = [0.4, 0.1,30];	Weather_RainCounter = 0;}; //geht so, akzeptabler Nebel
+						if(Weather_RWMod == 9)	then {Weather_Fog = [0.1, 0.1,50];	Weather_Rain = 0.4;	Weather_Waves = 1;	Weather_OverCast = 0.5;}; //Hoch halt
 					};
 
-				if(D41_ChanceN >=11 && D41_ChanceN <= 30 && D41_RegenCounter == 0) then
+				if(Weather_Chance >=11 && Weather_Chance <= 30 && Weather_RainCounter == 0) then
 					{
-						D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 1; D41_Regen = 0; D41_RegenCounter = 1;
-						D41_WMod = round(random 9);
-						if(D41_WMod == 0)	then {D41_Nebel = 0.1;	D41_Wellen = 1;		D41_Vorschau = 1; 	D41_Wind = [12, 12, true];	D41_Regen = 0.6;};
-						if(D41_WMod == 1)	then {D41_Nebel = 0.3;	D41_Wellen = 1;		D41_Vorschau = 1; 	D41_Wind = [12, 12, true];	D41_Regen = 0.6;};
-						if(D41_WMod == 2)	then {D41_Nebel = 0.1;	D41_Wellen = 1;		D41_Vorschau = 0.9; D41_Wind = [12, 12, true];	D41_Regen = 0.5;};
-						if(D41_WMod == 3)	then {D41_Nebel = 0.2;	D41_Wellen = 0.8;	D41_Vorschau = 0.8; D41_Wind = [0, 20, true];	D41_Regen = 0.5;};
-						if(D41_WMod == 4)	then {D41_Nebel = 0.1;	D41_Wellen = 0.8;	D41_Vorschau = 0.7; D41_Wind = [23, 0, true];	D41_Regen = 0.3;};
-						if(D41_WMod == 5)	then {D41_Nebel = 0.1;	D41_Wellen = 0.6;	D41_Vorschau = 0.7; D41_Wind = [0, 21, true];	D41_Regen = 0.3;};
-						if(D41_WMod == 6)	then {D41_Nebel = 0.1;	D41_Wellen = 0.4;	D41_Vorschau = 0.6; D41_Wind = [18, 0, true];	D41_Regen = 0.2;};
-						if(D41_WMod == 7)	then {D41_Nebel = 0.1;	D41_Wellen = 0.2;	D41_Vorschau = 0.5; D41_Wind = [7, 7, true];	D41_Regen = 0.2;};
-						if(D41_WMod == 8)	then {D41_Nebel = 0.1;	D41_Wellen = 0.1;	D41_Vorschau = 0.4; D41_Wind = [5, 7, true];	D41_Regen = 0.2;};
-						if(D41_WMod == 9)	then {D41_Nebel = 0.1;	D41_Wellen = 0;		D41_Vorschau = 0.4; D41_Wind = [7, 5, true];	D41_Regen = 0.1;};
+						Weather_Fog = [0,0,0]; Weather_Waves = 0; Weather_OverCast = 1; Weather_Rain = 0; Weather_RainCounter = 1;
+						Weather_RWMod = round(random 9);
+						if(Weather_RWMod == 0)	then {Weather_Fog = 0.1;	Weather_Waves = 1;		Weather_OverCast = 1; 	Weather_Wind = [12, 12, true];	Weather_Rain = 0.6;};
+						if(Weather_RWMod == 1)	then {Weather_Fog = 0.3;	Weather_Waves = 1;		Weather_OverCast = 1; 	Weather_Wind = [12, 12, true];	Weather_Rain = 0.6;};
+						if(Weather_RWMod == 2)	then {Weather_Fog = 0.1;	Weather_Waves = 1;		Weather_OverCast = 0.9; Weather_Wind = [12, 12, true];	Weather_Rain = 0.5;};
+						if(Weather_RWMod == 3)	then {Weather_Fog = 0.2;	Weather_Waves = 0.8;	Weather_OverCast = 0.8; Weather_Wind = [0, 20, true];	Weather_Rain = 0.5;};
+						if(Weather_RWMod == 4)	then {Weather_Fog = 0.1;	Weather_Waves = 0.8;	Weather_OverCast = 0.7; Weather_Wind = [23, 0, true];	Weather_Rain = 0.3;};
+						if(Weather_RWMod == 5)	then {Weather_Fog = 0.1;	Weather_Waves = 0.6;	Weather_OverCast = 0.7; Weather_Wind = [0, 21, true];	Weather_Rain = 0.3;};
+						if(Weather_RWMod == 6)	then {Weather_Fog = 0.1;	Weather_Waves = 0.4;	Weather_OverCast = 0.6; Weather_Wind = [18, 0, true];	Weather_Rain = 0.2;};
+						if(Weather_RWMod == 7)	then {Weather_Fog = 0.1;	Weather_Waves = 0.2;	Weather_OverCast = 0.5; Weather_Wind = [7, 7, true];	Weather_Rain = 0.2;};
+						if(Weather_RWMod == 8)	then {Weather_Fog = 0.1;	Weather_Waves = 0.1;	Weather_OverCast = 0.4; Weather_Wind = [5, 7, true];	Weather_Rain = 0.2;};
+						if(Weather_RWMod == 9)	then {Weather_Fog = 0.1;	Weather_Waves = 0;		Weather_OverCast = 0.4; Weather_Wind = [7, 5, true];	Weather_Rain = 0.1;};
 					};
 
-				if(D41_ChanceN >=11 && D41_ChanceN <= 30 && D41_RegenCounter == 1) then {D41_ChanceN = 31};
+				if(Weather_Chance >=11 && Weather_Chance <= 30 && Weather_RainCounter == 1) then {Weather_Chance = 31};
 
-				if(D41_ChanceN >=31 && D41_ChanceN <= 90) then
+				if(Weather_Chance >=31 && Weather_Chance <= 90) then
 				{
-					D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.2; D41_Wind = [5, 5, true]; D41_Regen = 0; D41_RegenCounter = 0;
-					D41_WMod = round(random 9);
-					if(D41_WMod == 0)	then {D41_Vorschau = 0.9;	D41_Wind = [10, 0, true];};
-					if(D41_WMod == 1)	then {D41_Vorschau = 0.9;	D41_Wind = [0, 10, true];};
-					if(D41_WMod == 2)	then {D41_Vorschau = 0.7;	D41_Wind = [5, 10, true];};
-					if(D41_WMod == 3)	then {D41_Vorschau = 0.7;	D41_Wind = [10, 5, true];};
-					if(D41_WMod == 4)	then {D41_Vorschau = 0.6;	D41_Wind = [0, 10, true];};
-					if(D41_WMod == 5)	then {D41_Vorschau = 0.6;	D41_Wind = [5, 0, true];};
-					if(D41_WMod == 6)	then {D41_Vorschau = 0.5;	D41_Wind = [5, 5, true];};
-					if(D41_WMod == 7)	then {D41_Vorschau = 0.5;	D41_Wind = [5, 0, true];};
-					if(D41_WMod == 8)	then {D41_Vorschau = 0.4;	D41_Wind = [0, 5, true];};
-					if(D41_WMod == 9)	then {D41_Vorschau = 0.4;	D41_Wind = [5, 5, true];};
+					Weather_Fog = [0,0,0]; Weather_Waves = 0; Weather_OverCast = 0.2; Weather_Wind = [5, 5, true]; Weather_Rain = 0; Weather_RainCounter = 0;
+					Weather_RWMod = round(random 9);
+					if(Weather_RWMod == 0)	then {Weather_OverCast = 0.9;	Weather_Wind = [10, 0, true];};
+					if(Weather_RWMod == 1)	then {Weather_OverCast = 0.9;	Weather_Wind = [0, 10, true];};
+					if(Weather_RWMod == 2)	then {Weather_OverCast = 0.7;	Weather_Wind = [5, 10, true];};
+					if(Weather_RWMod == 3)	then {Weather_OverCast = 0.7;	Weather_Wind = [10, 5, true];};
+					if(Weather_RWMod == 4)	then {Weather_OverCast = 0.6;	Weather_Wind = [0, 10, true];};
+					if(Weather_RWMod == 5)	then {Weather_OverCast = 0.6;	Weather_Wind = [5, 0, true];};
+					if(Weather_RWMod == 6)	then {Weather_OverCast = 0.5;	Weather_Wind = [5, 5, true];};
+					if(Weather_RWMod == 7)	then {Weather_OverCast = 0.5;	Weather_Wind = [5, 0, true];};
+					if(Weather_RWMod == 8)	then {Weather_OverCast = 0.4;	Weather_Wind = [0, 5, true];};
+					if(Weather_RWMod == 9)	then {Weather_OverCast = 0.4;	Weather_Wind = [5, 5, true];};
 					
 				};
 
-				if(D41_ChanceN >=91 && D41_ChanceN <= 100) then
+				if(Weather_Chance >=91 && Weather_Chance <= 100) then
 				{
-					D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.2; D41_Wind = [5, 5, true]; D41_Regen = 0; D41_RegenCounter = 1;
-					D41_WMod = round(random 2);
-					if(D41_WMod == 0)	then {D41_Vorschau = 0.2;	D41_Wind = [10, 0, true];};
-					if(D41_WMod == 1)	then {D41_Vorschau = 0.2;	D41_Wind = [0, 10, true];};
-					if(D41_WMod == 2)	then {D41_Vorschau = 0.1;	D41_Wind = [0, 0, true];};				
+					Weather_Fog = [0,0,0]; Weather_Waves = 0; Weather_OverCast = 0.2; Weather_Wind = [5, 5, true]; Weather_Rain = 0; Weather_RainCounter = 1;
+					Weather_RWMod = round(random 2);
+					if(Weather_RWMod == 0)	then {Weather_OverCast = 0.2;	Weather_Wind = [10, 0, true];};
+					if(Weather_RWMod == 1)	then {Weather_OverCast = 0.2;	Weather_Wind = [0, 10, true];};
+					if(Weather_RWMod == 2)	then {Weather_OverCast = 0.1;	Weather_Wind = [0, 0, true];};				
 				};
-				Diag_log format ["::::::::: Weather System ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
-				publicVariable "D41_Nebel";
-				publicVariable "D41_Wellen";
-				publicVariable "D41_Vorschau";
-				publicVariable "D41_Wind";
-				publicVariable "D41_Regen";
+				Diag_log format ["::::::::: Weather System ::::::::: Weather_Chance = %1 ::: Weather_RWMod = %2",Weather_Chance, Weather_RWMod];
+				publicVariable "Weather_Fog";
+				publicVariable "Weather_Waves";
+				publicVariable "Weather_OverCast";
+				publicVariable "Weather_Wind";
+				publicVariable "Weather_Rain";
 			};
 	};
 
@@ -94,28 +91,27 @@
 	{
 		while{true}do
 		{
-			[] call _fnc_D41_WetterWerte;
+			[] call _UpdateWeather;
 			sleep 1;
-			60 setfog (D41_Nebel);
-			60 setRain (D41_Regen);
-			0 setOvercast (D41_Vorschau);
-			setWind (D41_Wind);
-			60 setWaves (D41_Wellen);
+			60 setfog (Weather_Fog);
+			60 setRain (Weather_Rain);
+			0 setOvercast (Weather_OverCast);
+			setWind (Weather_Wind);
+			60 setWaves (Weather_Waves);
 			sleep 1200;
 		};
 	};
 
-	//JIP und sync Gedöhns
 	if (!isDedicated) then
 	{
 		while{true}do
 		{
-			60 setfog (D41_Nebel);
-			60 setRain (D41_Regen);
-			0 setOvercast (D41_Vorschau);
-			setWind (D41_Wind);
-			60 setWaves (D41_Wellen);
-			//hint format ["::::::::: Weather System ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
+			60 setfog (Weather_Fog);
+			60 setRain (Weather_Rain);
+			0 setOvercast (Weather_OverCast);
+			setWind (Weather_Wind);
+			60 setWaves (Weather_Waves);
+			//hint format ["::::::::: Weather System ::::::::: Weather_Chance = %1 ::: Weather_RWMod = %2",Weather_Chance, Weather_RWMod];
 			uiSleep 120;
 		};
 	}; 

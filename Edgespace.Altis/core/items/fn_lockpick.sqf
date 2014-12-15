@@ -10,6 +10,13 @@ _curTarget = cursorTarget;
 life_interrupted = false;
 if(life_action_inUse) exitWith {};
 if(isNull _curTarget) exitWith {}; //Bad type
+
+
+    if(player distance (getMarkerPos "Safe_Kav") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Reb") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Jail") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+
+
 _distance = ((boundingBox _curTarget select 1) select 0) + 2;
 if(player distance _curTarget > _distance) exitWith {}; //Too far
 _isVehicle = if((_curTarget isKindOf "LandVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};

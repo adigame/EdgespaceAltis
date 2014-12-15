@@ -69,6 +69,7 @@ class Life_Client_Core
 		class adminPrisonUnlock {};
 		class adminRevive {};
 		class adminmarkers {};
+		class adminGear {};
 	};
 	
 	class anstrich
@@ -299,6 +300,7 @@ class Life_Client_Core
 		class UnlockCarSound {};
 		class LockCarSound {};
 		class stripDownPlayer {};
+		class speaking {};
 		class saveGear {};
 		class loadGear {};
 		class autoSave {};

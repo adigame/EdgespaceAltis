@@ -7,6 +7,12 @@
 	private["_unit"];
 	_unit = cursorTarget;
 	if(isNull _unit) exitWith {}; //Not valid
+	
+	if(player distance (getMarkerPos "Safe_Kav") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Reb") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Jail") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+	
+	
 	if((_unit getVariable "ziptied")) exitWith {};
 	if(life_inv_zipties < 1) exitWith {hint "You have no cable ties."};
 	if(player == _unit) exitWith {};

@@ -16,3 +16,4 @@ _containers = nearestObjects[_unit,["WeaponHolderSimulated"],5];
 deleteVehicle _unit;
 
 _uid spawn TON_fnc_houseCleanup;
+

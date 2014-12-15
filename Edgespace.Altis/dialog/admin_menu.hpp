@@ -218,5 +218,15 @@ class life_admin_menu {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		class EquipAdminGear : Life_RscButtonMenu {
+			idc = -1;
+			text = "AdminGear";
+			onButtonClick = "[] spawn life_fnc_adminGear;";
+			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.975;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
 	};
 };

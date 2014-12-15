@@ -23,6 +23,7 @@ life_versionInfo = "Edgespace Altis Life RPG";
 StartProgress = true;
 
 // Fog
+/*
 [] spawn {
 	while{true} do {
 		sleep 10;
@@ -30,6 +31,7 @@ StartProgress = true;
 		sleep 590;
 	};
 };
+*/
 
 MAC_fnc_switchMove = {
     private["_object","_anim"];

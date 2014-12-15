@@ -230,10 +230,7 @@ switch (true) do
 	
 	case (_item == "offroadammo"):
 	{
-		if(([false,_item,1] call life_fnc_handleInv)) then
-		{
-			[] spawn life_fnc_offroadammo;
-		}
+	[] spawn life_fnc_offroadammo;
 	};
 
 	default

@@ -6,8 +6,13 @@
 */
 private["_unit"];
 _unit = cursorTarget;
+
+    if(player distance (getMarkerPos "Safe_Kav") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Reb") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+    if(player distance (getMarkerPos "Save_Jail") < 400) exitWith {titleText ["You Are In A Safe Zone!", "PLAIN", 3];};
+
 if(isNull _unit) exitWith {}; //if unit is null, than NO
-if(!([false,"scalpel",1] call life_fnc_handleInv)) exitWith {"Du besitzt kein Skalpel"};
+if(!([false,"scalpel",1] call life_fnc_handleInv)) exitWith {"You need a scalpel to operate."};
 if((_unit getVariable ["missingOrgan",FALSE])) exitWith {};//must not be missing organ already
 if((player getVariable ["hasOrgan",FALSE])) exitWith {};//thief must not have already robbed an organ within last 5 mintues
 if((animationState _unit != "Incapacitated")) exitWith {};//victim must be knocked out
