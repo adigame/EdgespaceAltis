@@ -20,6 +20,10 @@ player createDiaryRecord["changelog",
 				 11/12/2014 - Added Police Badges<br/>
 				 11/12/2014 - Added Suicide Vests<br/>
 				 11/12/2014 - Added GPS Tracker<br/>
+				 14/12/2014 - Various Fixes<br/>
+				 14/12/2014 - Added Treasure Hunting<br/>
+				 15/12/2014 - Dynamic Economy<br/>
+				 15/12/2014 - Various Fixes<br/>
 				 "
 		]
 	];
