@@ -60,6 +60,9 @@ switch (_mode) do
 			case "uranium2b": {_var = "license_civ_uranium"};
 			case "uranium3": {_var = "license_civ_uranium"};
 			case "uranium4": {_var = "license_civ_uranium"};
+			case "corp": {_var = "license_civ_corporation"};
+			case "goldingot": {_var = "license_civ_gold"};
+			case "platingot": {_var = "license_civ_platinum"};
 			default {_var = ""};
 		};
 	};
@@ -106,6 +109,9 @@ switch (_mode) do
 			case "license_civ_stiller": {_var = "stiller"};
 			case "license_civ_stiller": {_var = "liquor"};
 			case "license_civ_stiller": {_var = "beer"};
+			case "license_civ_corporation": {_var = "corp"};
+			case "license_civ_gold": {_var = "goldingot"};
+			case "license_civ_platinum": {_var = "platingot"};
 			default {_var = ""};
 		};
 	};

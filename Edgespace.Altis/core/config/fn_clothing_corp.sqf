@@ -10,7 +10,7 @@ _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price
 
 //Shop Title Name
-ctrlSetText[3103,"Mohammed's Jihadi Shop"];
+ctrlSetText[3103,"Corporate Clothing Shop"];
 
 switch (_filter) do
 {
@@ -18,12 +18,13 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			["U_IG_Guerilla1_1",nil,5000],
-			["U_BG_Guerrilla_6_1",nil,9000],
-			["U_I_G_resistanceLeader_F",nil,11500],
-			["U_IG_leader","Guerilla Leader",10000],
-			["U_O_GhillieSuit",nil,15000]
 			
+			["U_I_G_Story_Protagonist_F",nil,8000],
+			["U_O_CombatUniform_ocamo",nil,15000],
+			["U_O_CombatUniform_oucamo",nil,17500],
+			["U_O_SpecopsUniform_ocamo",nil,17500],
+			["U_O_PilotCoveralls",nil,15000],
+			["U_B_CTRG_1",nil,50000]
 		];
 	};
 	
@@ -31,14 +32,11 @@ switch (_filter) do
 	case 1:
 	{
 		[
-			["H_ShemagOpen_tan","Shemag Mask Tan",3000], // Mask to hide player identity
-			["H_Shemag_olive","Shemag Mask Olive",3000], // Mask to hide player identity
-			["H_ShemagOpen_khk","Shemag Mask Khaki",3000], // Mask to hide player identity
-			["G_Balaclava_blk","Mask Black",500],
 			["H_HelmetO_ocamo",nil,2500],
 			["H_MilCap_oucamo",nil,1200],
-			["H_Bandanna_camo",nil,650]
-
+			["H_Bandanna_camo",nil,650],
+			["H_Watchcap_blk",nil,1000],
+			["H_CrewHelmetHeli_O",nil,10000]
 		];
 	};
 	
@@ -68,7 +66,6 @@ switch (_filter) do
 			["V_PlateCarrier_Kerry",nil,12500],
 			["V_TacVest_brn",nil,15000],
 			["V_Chestrig_khk",nil,17500],
-			["V_HarnessOGL_brn","Suicide Vest",250000], // Suicide Vest
 			["V_PlateCarrierH_CTRG",nil,25000]
 		];
 	};

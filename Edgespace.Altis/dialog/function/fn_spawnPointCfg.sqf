@@ -40,14 +40,22 @@ switch (_side) do
 			["civ_spawn_training","Shooting Range","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		// Only Allow Rebel to Spawn at the Rebel HQ
-		if(license_civ_rebel && playerSide == civilian) then {
+		if(license_civ_rebel && playerSide == civilian) then 
+		{
 		_return = _return + [
-			["reb_spawn_1","Rebel HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
-		];
+			["reb_spawn_hq","Rebel HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["rebel_spawn_1","Rebel Outpost 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			];
 		};
 		
-		
-		
+		if(license_civ_corporation && playerSide == civilian) then 
+		{
+		_return = _return + [
+			["corp_spawn_hq","Corporate HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["corp_spawn_1","Corporate Outpost 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			];
+		};
+
 		if(__GETC__(life_donator) == 3) then 
 		{
 			_return = _return + [

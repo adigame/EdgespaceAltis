@@ -480,6 +480,91 @@ switch(_shop) do
 		};
 	};
 	
+	case "corp":
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are not a civilian!"};
+			case (!license_civ_corporation): {"You are not a member of the corporation!"};
+			default
+			{
+				["Gun Store",
+					[
+						["Binocular",nil,200],
+						["Rangefinder",nil,500],
+						["ItemCompass",nil,10],
+						["ItemMap",nil,10],
+						["ItemRadio",nil,10],
+						["ItemWatch",nil,20],
+						["ItemGPS",nil,500],
+						["ToolKit",nil,250],
+						["Medikit",nil,500],
+						["ItemWatch",nil,100],
+						["ItemCompass",nil,100],
+						["FirstAidKit",nil,200],
+						["NVGoggles",nil,200],
+						["arifle_MXM_F","MXM",7500],
+						["30Rnd_65x39_caseless_mag_Tracer","MXM Mag",50],
+						["SMG_02_ACO_F",nil,7500],
+						["30Rnd_9x21_Mag",nil,30],
+						["arifle_Mk20C_F",nil,7500],
+						["30Rnd_556x45_Stanag","Mk20C Mag",50],
+						["arifle_Mk20_GL_F","Mk20 Grenade Launcher",10000],
+						["30Rnd_556x45_Stanag","Mk20 Mag",50],
+						["arifle_MX_SW_F",nil,10000],
+						["30Rnd_65x39_caseless_mag","MX Mag",50],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["100Rnd_65x39_caseless_mag_Tracer","MX-SW Mag",50],
+						["srifle_EBR_F",nil,15000],
+						["20Rnd_762x51_Mag","EBR Mag",50],
+						["arifle_TRG20_ACO_F",nil,15000],
+						["30Rnd_556x45_Stanag","TRG20 Mag",50],
+						["LMG_Mk200_F",nil,20000],
+						["200Rnd_65x39_cased_Box_Tracer","Mk200 Box",100],
+						["arifle_MXM_Black_F","MXM Black",20000],
+						["30Rnd_65x39_caseless_mag","MXM Mag",50],
+						["arifle_MXC_Holo_pointer_snds_F",nil,20000],
+						["30Rnd_65x39_caseless_mag","MXC Mag",50],
+						["Chemlight_red",nil,20],
+						["Chemlight_yellow",nil,20],
+						["Chemlight_green",nil,20],
+						["Chemlight_blue",nil,20],
+						["SmokeShellRed","Red Smoke",500],
+						["SmokeShellOrange","Orange Smoke",10],
+						["1Rnd_SmokeRed_Grenade_shell",nil,500],
+						["1Rnd_SmokeBlue_Grenade_shell",nil,500],
+						["UGL_FlareRed_F","Red Flare",1000],
+						["UGL_FlareCIR_F","IR Flare",1000],
+						["3Rnd_SmokeRed_Grenade_shell",nil,1000],
+						["3Rnd_SmokeBlue_Grenade_shell",nil,1000],
+						["muzzle_snds_H",nil,100],
+						["muzzle_snds_L",nil,100],
+						["muzzle_snds_M",nil,100],
+						["muzzle_snds_B",nil,100],
+						["muzzle_snds_H_MG",nil,100],
+						["muzzle_snds_acp",nil,100],
+						["optic_Arco",nil,200],
+						["optic_Hamr",nil,300],
+						["optic_Aco",nil,100],
+						["optic_ACO_grn",nil,100],
+						["optic_Aco_smg",nil,100],
+						["optic_ACO_grn_smg",nil,100],
+						["optic_Holosight",nil,300],
+						["optic_Holosight_smg",nil,350],
+						["optic_SOS",nil,1000],
+						["acc_flashlight",nil,200],
+						["acc_pointer_IR",nil,200],
+						["optic_MRCO",nil,300],
+						["optic_DMS",nil,1000],
+						["optic_Yorris",nil,250],
+						["optic_MRD",nil,250],
+						["optic_LRPS",nil,750]
+					]
+				];
+			};
+		};
+	};
+	
 	case "rebel":
 	{
 		switch(true) do
@@ -511,7 +596,7 @@ switch(_shop) do
 						["30Rnd_9x21_Mag",nil,200],
 						["16Rnd_9x21_Mag",nil,150],
 						["SmokeShellGreen",nil,2500],
-						["muzzle_snds_M","6,5mm Silencer",10000],
+						["muzzle_snds_M","5,5mm Silencer",10000],
 						["30Rnd_45ACP_Mag_SMG_01","Vermin Magazine",500],
 						["20Rnd_762x51_Mag","MK18 Magazine",500],
 						["11Rnd_45ACP_Mag","4-five Magazine",500],
@@ -524,6 +609,9 @@ switch(_shop) do
 			};
 		};
 	};
+	
+	
+
 	
 	case "gun":
 	{

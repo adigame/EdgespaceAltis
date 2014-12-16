@@ -176,6 +176,10 @@ life_inv_items =
 	"life_inv_diamondr",
 	"life_inv_spikeStrip",
 	"life_inv_rock",
+	"life_inv_goldu",
+	"life_inv_platu",
+	"life_inv_goldingot",
+	"life_inv_platingot",
 	"life_inv_cement",
 	"life_inv_goldbar",
 	"life_inv_blastingcharge",
@@ -262,7 +266,10 @@ life_licenses =
 	["license_civ_stiller","civ"],
 	["license_civ_liquor","civ"],
 	["license_civ_bottler","civ"],
-	["license_civ_uranium","civ"]
+	["license_civ_uranium","civ"],
+	["license_civ_corporation","civ"],
+	["license_civ_platinum","civ"],
+	["license_civ_gold","civ"]
 ];
 
 //Setup License Variables

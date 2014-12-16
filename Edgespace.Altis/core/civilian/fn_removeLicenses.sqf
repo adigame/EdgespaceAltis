@@ -6,7 +6,9 @@
 	Used for stripping certain licenses off of civilians as punishment.
 */
 private["_state"];
-_state = [_this,0,1,[0]] call BIS_fnc_param;
+_state = [_this,0,-1,[0]] call BIS_fnc_param;
+
+diag_log format["Remove license - %1", _state];
 
 switch (_state) do
 {
@@ -15,6 +17,7 @@ switch (_state) do
 	{
 		license_civ_gun = false;
 		license_civ_rebel = false;
+		license_civ_corporation = false;
 	};
 
 	// Drivers License
@@ -72,6 +75,7 @@ switch (_state) do
 			license_civ_corporation = false;
 			license_civ_gold = false;
 		    license_civ_platinum = false;
+			license_civ_uranium = false;
 			if (_state == 6) then
 			{
 				hint "Your Corporate licenses have been revoked for joining the rebels.";

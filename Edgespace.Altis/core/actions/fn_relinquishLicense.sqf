@@ -11,7 +11,10 @@ _type = _this select 3;
 if( _type == "rebel") then
 {
 	_action = [
-		"Are you sure you want to relinquish your rebel license? <BR/>You will lose all Rebel related Licenses","Relinquish Rebel License","Relinquish","Cancel"
+		"Are you sure you want to relinquish your rebel license? <BR/>You will lose all Rebel related Licenses",
+		"Relinquish Rebel License",
+		"Relinquish",
+		"Cancel"
 	] call BIS_fnc_guiMessage;
 	
 	if (_action) then
@@ -21,10 +24,13 @@ if( _type == "rebel") then
 
 };
 
-if( _type == "corporation") then
+if( _type == "corp") then
 {
 	_action = [
-		"Are you sure you want to relinquish your Corporation license? <BR/>You will lose all Corporation related Licenses","Relinquish Corporation License","Relinquish","Cancel"
+		"Are you sure you want to relinquish your Corporation license? <BR/>You will lose all Corporation related Licenses",
+		"Relinquish Corporation License",
+		"Relinquish",
+		"Cancel"
 	] call BIS_fnc_guiMessage;
 	
 	if (_action) then
@@ -34,4 +40,4 @@ if( _type == "corporation") then
 	
 };
 
-player setVariable["IsRebel", license_civ_rebel,true];
+//player setVariable["IsRebel", license_civ_rebel,true];

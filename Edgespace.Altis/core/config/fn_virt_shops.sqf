@@ -31,5 +31,6 @@ switch (_shop) do
 	case "bar": {["The Lounge",["bottles","cornmeal","wine","bottledwhiskey","bottledbeer"]]};
 	case "uranium": {["Uranium",["uranium","puranium"]]};
 	case "organ": {["Organ Dealer",["kidney"]]};
-	
+	case "gold": {["Gold Trader",["goldingot"]]};
+	case "platinum": {["Platinum Trader",["platingot"]]};
 };

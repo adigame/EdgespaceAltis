@@ -58,7 +58,11 @@ switch (_mode) do
 			case "cocainep": {"life_inv_cokep"};
 			case "spikeStrip": {"life_inv_spikeStrip"};
 			case "cement": {"life_inv_cement"};
-			case "rock": {"life_inv_rock"};
+			case "rock": {"life_inv_rock"}; 
+			case "goldu": {"life_inv_goldu"}; // Unprocessed
+			case "platu": {"life_inv_platu"}; // Unprocessed
+			case "goldingot": {"life_inv_goldingot"}; // Processed
+			case "platingot": {"life_inv_platingot"}; // Processed
 			case "goldbar": {"life_inv_goldbar"};
 			case "wine": {"life_inv_wine"};
 			case "grapes": {"life_inv_grapes"};
@@ -156,6 +160,10 @@ switch (_mode) do
 			case "life_inv_spikeStrip": {"spikeStrip"};
 			case "life_inv_cement": {"cement"};
 			case "life_inv_rock": {"rock"};
+			case "life_inv_goldu": {"goldu"};
+			case "life_inv_platu": {"platu"};
+			case "life_inv_goldingot": {"goldingot"};
+			case "life_inv_platingot": {"platingot"};
 			case "life_inv_goldbar": {"goldbar"};
 			case "life_inv_wine": {"wine"};
 			case "life_inv_grapes": {"grapes"};

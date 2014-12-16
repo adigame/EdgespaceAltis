@@ -12,10 +12,10 @@ if(_var == "") exitWith {""};
 
 switch (_var) do
 {
-	case "life_inv_oilu": {"Oil Unproccessed"};
-	case "life_inv_oilp": {"Oil Proccessed"};
-	case "life_inv_heroinu": {"Unproccessed Heroin"};
-	case "life_inv_heroinp": {"Proccessed Heroin"};
+	case "life_inv_oilu": {"Oil Unprocessed"};
+	case "life_inv_oilp": {"Oil Processed"};
+	case "life_inv_heroinu": {"Unprocessed Heroin"};
+	case "life_inv_heroinp": {"Processed Heroin"};
 	case "life_inv_cannabis": {"Cannabis"};
 	case "life_inv_marijuana": {"Marijuana"};
 	case "life_inv_apple": {"Apple"};
@@ -50,14 +50,18 @@ switch (_var) do
 	case "life_inv_lockpick": {"Lockpick"};
 	case "life_inv_peach": {"Peach"};
 	case "life_inv_coke": {"Unprocessed cocoa leaf"};
-	case "life_inv_cokep": {"Proccessed Cocaine"};
+	case "life_inv_cokep": {"Processed Cocaine"};
 	case "life_inv_spikeStrip": {"Spike Strip"};
 	case "life_inv_rock": {"Rock"};
+	case "life_inv_goldu": {"Unprocessed Gold"};
+	case "life_inv_platu": {"Unprocessed Platinum"};
+	case "life_inv_goldingot": {"Gold Ingot"};
+	case "life_inv_platingot": {"Platinum Ingot"};
 	case "life_inv_cement": {"Cement Sack"};
 	case "life_inv_goldbar": {"Gold Bar"};
 	case "life_inv_wine": {"Wine"};
 	case "life_inv_grapes": {"Grapes"};
-	case "life_inv_methu": {"Unproccessed Methamphetamine"};
+	case "life_inv_methu": {"Unprocessed Methamphetamine"};
 	case "life_inv_methp": {"Pure Methamphetamine"};
 	case "life_inv_storage1": {"Strorage Crate (Small)"};
 	case "life_inv_artifact": {"Rare Artifact"};
@@ -136,4 +140,7 @@ switch (_var) do
 	case "license_civ_liquor": {"Liquor License"};
 	case "license_civ_bottler": {"Bottler License"};
 	case "license_civ_uranium": {"Uranium License"};
+	case "license_civ_corporation": {"Corporation License"};
+	case "license_civ_gold": {"Gold Processing"};
+	case "license_civ_platinum": {"Platinum Processing"};
 };

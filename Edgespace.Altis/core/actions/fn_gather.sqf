@@ -18,6 +18,7 @@ _resourceZones = [
 "weed_gather_01", // needs to be added to map
 "weed_gather_02",
 "grape_gather_01",
+"grape_gather_02",
 "rye_gather_01",
 "yeast_gather_01",
 "hops_gather_01",

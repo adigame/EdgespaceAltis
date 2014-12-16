@@ -223,7 +223,7 @@ class Life_Client_Core
 		class clothing_reb {};
 		class clothing_dive {};
 		class clothing_medic {};
-		class clothing_soldner {};
+		class clothing_corp {};
 	};
 
 	class Player_Menu

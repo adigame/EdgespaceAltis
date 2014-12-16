@@ -13,14 +13,38 @@ switch (true) do
 	case (player distance (getMarkerPos "iron_1") < 30): {_mine = "ironore"; _val = 2;};
 	case (player distance (getMarkerPos "salt_1") < 120) : {_mine = "salt"; _val = 4;};
 	case (player distance (getMarkerPos "sand_1") < 75) : {_mine = "sand"; _val = 5;};
-	case (player distance (getMarkerPos "diamond_1") < 50): {_mine = "diamond"; _val = 1;};
+	case (player distance (getMarkerPos "diamond_1") < 50): {
+	if(!license_civ_corporation) exitWith {_mine = "wrongfaction";};
+	if(license_civ_rebel) exitWith {hint "Rebels dont have the training to mine uranium";_mine = "wrongfactionrebel";};
+	_mine = "diamond"; _val = 1;
+	};
 	case (player distance (getMarkerPos "oil_1") < 40) : {_mine = "oilu"; _val = 1;};
 	case (player distance (getMarkerPos "oil_2") < 40) : {_mine = "oilu"; _val = 1;};
 	case (player distance (getMarkerPos "rock_1") < 50): {_mine = "rock"; _val = 2;};
-	case (player distance (getMarkerPos "uranium_1") < 100): {_mine = "uranium1"; _val = 1};
+	
+	case (player distance (getMarkerPos "gold_1") < 50): {
+	if(!license_civ_corporation) exitWith {_mine = "wrongfaction";};
+	if(license_civ_rebel) exitWith {hint "Rebels dont have the training to mine uranium";_mine = "wrongfactionrebel";};
+	_mine = "goldu"; _val = 2;
+	};
+	
+	case (player distance (getMarkerPos "plat_1") < 50): {
+	if(!license_civ_corporation) exitWith {_mine = "wrongfaction";};
+	if(license_civ_rebel) exitWith {hint "Rebels dont have the training to mine uranium";_mine = "wrongfactionrebel";};
+	_mine = "platinumu"; _val = 2;
+	};
+	
+	case (player distance (getMarkerPos "uranium_1") < 100): 
+	{
+	if(!license_civ_corporation) exitWith {_mine = "wrongfaction";};
+	if(license_civ_rebel) exitWith {hint "Rebels dont have the training to mine uranium";_mine = "wrongfactionrebel";};
+	_mine = "uranium1"; _val = 1
+	};
 	default {_mine = "";};
 };
 //Mine check
+if(_mine == "wrongfaction") exitWith {hint "You need to be part of the corporate faction to mine here"};
+if(_mine == "wrongfactionrebel") exitWith {hint "Rebels dont have the training to mine uranium"};
 if(_mine == "") exitWith {hint "You are not near a mine!"};
 if(vehicle player != player) exitWith {hint "You must exit your vehicle";};
 

@@ -178,7 +178,7 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Police"};
-			case 1: {_color = "Donator"};
+			case 1: {_color = "Corp"};
 		};
 	};
 
@@ -187,7 +187,7 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "FleckTarn (Rot)"};
-			case 1: {_color = "Rebellen Tarnung"};
+			case 1: {_color = "Rebel"};
 		};
 	};
 	

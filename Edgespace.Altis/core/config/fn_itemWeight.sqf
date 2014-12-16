@@ -49,6 +49,10 @@ switch (_item) do
 	case "cocainep": {3};
 	case "spikeStrip": {5};
 	case "rock": {7};
+	case "goldu": {7};
+	case "platu": {7};
+	case "goldingot": {4};
+	case "platingot": {4};
 	case "cement": {5};
 	case "goldbar": {10};
 	case "wine": {5};
