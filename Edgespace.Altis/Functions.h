@@ -28,6 +28,8 @@ class SpyGlass
 		class payLoad{};
 		class variableCheck{};
 		class initSpy {preInit=1;};
+		class profSetUp {};
+		class addExp {};
 	};
 };
 
@@ -217,6 +219,7 @@ class Life_Client_Core
 		class vehicleWeightCfg {};
 		class houseConfig {};
 		class craftCfg {};
+		class profType {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};

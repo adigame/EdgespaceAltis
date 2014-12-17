@@ -36,3 +36,4 @@
 #include "craft.hpp"
 #include "jail_time.hpp"
 #include "compensate.hpp"
+#include "prof.hpp"

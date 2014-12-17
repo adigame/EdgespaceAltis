@@ -51,17 +51,31 @@ if(vehicle player != player) exitWith {hint "You must exit your vehicle";};
 _diff = [_mine,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint "Your inventory is full."};
 life_action_inUse = true;
-for "_i" from 0 to (floor random 5) do
+ 
+_time = 0;
+_profName = [_gather] call life_fnc_profType;
+if( _profName != "" ) then 
 {
-	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-	sleep 2.5;
+_data = missionNamespace getVariable (_profName);
+_time = ( 3 - (0.25 * (_data select 0)));
 };
-
+ 
+for "_i" from 0 to 2 do
+{
+player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+sleep _time;
+};
+ 
+ 
 if(([true,_mine,_diff] call life_fnc_handleInv)) then
 {
-	_itemName = [([_mine,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format["You have mined %2 %1",_itemName,_diff],"PLAIN"];
+_itemName = [([_mine,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+titleText[format[localize "STR_ISTR_Pick_Success",_itemName,_diff],"PLAIN"];
+if( _profName != "" ) then 
+{
+[_profName,25] call life_fnc_addExp;
 };
-
+};
+ 
 life_action_inUse = false;

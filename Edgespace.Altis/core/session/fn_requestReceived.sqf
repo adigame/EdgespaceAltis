@@ -44,25 +44,30 @@ if(count (_this select 6) > 0) then {
 life_gear = _this select 8;
 [] call life_fnc_loadGear;
 
+if(count (_this select 9) > 0) then {
+{
+missionNamespace setVariable [(_x select 0),[parseNumber (_x select 1), parseNumber (_x select 2)]];
+} foreach (_this select 9);
+};
 //Parse side specific information.
 switch(playerSide) do {
-	case west: {
-		__CONST__(life_coplevel, parseNumber(_this select 7));
-		__CONST__(life_medicLevel,0);
-		life_blacklisted = _this select 9;
-	};
+case west: {
+__CONST__(life_coplevel, parseNumber(_this select 7));
+__CONST__(life_medicLevel,0);
+life_blacklisted = _this select 10;
+};
 	
 	case civilian: {
 		life_is_arrested = _this select 7;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
-		life_houses = _this select 9;
+		life_houses = _this select 10;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
-		life_gangData = _This select 10;
+		life_gangData = _This select 11;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
@@ -77,8 +82,8 @@ switch(playerSide) do {
 	};
 };
 
-if(count (_this select 12) > 0) then {
-	{life_vehicles pushBack _x;} foreach (_this select 12);
+if(count (_this select 13) > 0) then {
+{life_vehicles pushBack _x;} foreach (_this select 12);
 };
 
 life_session_completed = true;

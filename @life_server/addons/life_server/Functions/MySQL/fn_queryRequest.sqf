@@ -23,9 +23,9 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='%1'",_uid];};
-	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear FROM players WHERE playerid='%1'",_uid];};
+case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, cop_prof, blacklist FROM players WHERE playerid='%1'",_uid];};
+case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civ_prof FROM players WHERE playerid='%1'",_uid];};
+case independent: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, med_prof FROM players WHERE playerid='%1'",_uid];};
 };
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
@@ -71,10 +71,26 @@ _queryResult set[6,_old];
 _new = [(_queryResult select 8)] call DB_fnc_mresToArray;
 if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 _queryResult set[8,_new];
+//PROFICENCYS
+//Parse licenses (Always index 9)
+_new = [(_queryResult select 9)] call DB_fnc_mresToArray;
+if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
+_queryResult set[9,_new];
+ 
+//Convert string to number
+_old = _queryResult select 9;
+for "_i" from 0 to (count _old)-1 do
+{
+_data = _old select _i;
+_old set[_i,[_data select 0, ([_data select 1,1] call DB_fnc_numberSafe),([_data select 2,1] call DB_fnc_numberSafe) ]];
+};
+ 
+_queryResult set[9,_old];
+
 //Parse data for specific side.
 switch (_side) do {
 	case west: {
-		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
+		_queryResult set[10,([_queryResult select 10,1] call DB_fnc_bool)];
 	};
 	
 	case civilian: {
@@ -99,6 +115,6 @@ switch (_side) do {
 };
 
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[13,_keyArr];
+_queryResult set[14,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

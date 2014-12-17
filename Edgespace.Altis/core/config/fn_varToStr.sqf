@@ -108,6 +108,19 @@ switch (_var) do
 	case "life_inv_offroadammo": {"Offroad Ammo"}; 
 	case "life_inv_tentciv": {"Tent"};
 	
+	//Prof Block
+	case "Oil_Prof": {(localize "STR_Prof_Oil")};
+	case "Iron_Prof": {(localize "STR_Prof_Iron")};
+	case "Copper_Prof": {(localize "STR_Prof_Copper")};
+	case "Rock_Prof": {(localize "STR_Prof_Rock")};
+	case "Fruit_Prof": {(localize "STR_Prof_Fruit")};
+	case "Salt_Prof": {(localize "STR_Prof_Salt")};
+	case "Sand_Prof": {(localize "STR_Prof_Sand")};
+	case "Diamond_Prof": {(localize "STR_Prof_Diamond")};
+	case "Cocain_Prof": {(localize "STR_Prof_Cocain")};
+	case "Canabis_Prof": {(localize "STR_Prof_Canabis")};
+	case "Heroin_Prof": {(localize "STR_Prof_Heroin")};
+		
 	//License Block
 	case "license_civ_driver": {"Drivers License"};
 	case "license_civ_air": {"Pilots License"};

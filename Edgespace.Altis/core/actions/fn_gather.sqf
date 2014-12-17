@@ -59,17 +59,31 @@ if(vehicle player != player) exitWith {};
 _diff = [_gather,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint "Inventory is Full"};
 life_action_inUse = true;
+ 
+_time = 0;
+_profName = [_gather] call life_fnc_profType;
+ 
+if( _profName != "" ) then 
+{
+_data = missionNamespace getVariable (_profName);
+_time = ( 3 - (0.25 * (_data select 0)));
+};
+ 
 for "_i" from 0 to 2 do
 {
-	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-	sleep 2.5;
+player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+sleep _time;
 };
-
+ 
 if(([true,_gather,_diff] call life_fnc_handleInv)) then
 {
-	_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
+_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
+if( _profName != "" ) then 
+{
+[_profName,25] call life_fnc_addExp;
 };
-
+};
+ 
 life_action_inUse = false;

@@ -16,6 +16,17 @@ _packet pushBack _array;
 
 [] call life_fnc_saveGear;
 _packet pushBack life_gear;
+
+_profs = [];
+{
+if(_x select 1 == _flag) then
+{
+_data = missionNamespace getVariable (_x select 0);
+_profs pushBack [_x select 0,_data select 0,_data select 1];
+};
+ 
+} foreach life_prof;
+_packet pushBack _profs;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;

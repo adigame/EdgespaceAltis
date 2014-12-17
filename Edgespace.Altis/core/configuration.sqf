@@ -41,7 +41,7 @@ life_fatigue = 0.5; //Set the max fatigue limit (50%)
 life_kw_athira = false; 
 life_kw_kavala = false; 
 life_kw_sofia = false; 
-life_kw_kavala = false;
+life_kw_pyrgos = false;
 life_request_timer = false;
 life_markers = false;
 life_sitting = false;
@@ -276,6 +276,27 @@ life_licenses =
 
 //Setup License Variables
 {missionNamespace setVariable[(_x select 0),false];} foreach life_licenses;
+
+life_prof =
+[
+["Oil_Prof","civ"],
+["Iron_Prof","civ"],
+["Copper_Prof","civ"],
+["Heroin_Prof","civ"],
+["Canabis_Prof","civ"],
+["Cocain_Prof","civ"],
+["Salt_Prof","civ"],
+["Fruit_Prof","civ"],
+["Diamond_Prof","civ"],
+["Rock_Prof","civ"],
+["Sand_Prof","civ"]
+];
+ 
+ 
+//Setup License Variables
+{missionNamespace setVariable[(_x select 0),[1,0]];} foreach life_prof;
+
+
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
