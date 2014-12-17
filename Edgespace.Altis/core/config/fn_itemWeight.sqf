@@ -101,5 +101,6 @@ switch (_item) do
 	case "gpstracker": {4};
 	case "peach": {2};
 	case "offroadammo": {30};
+	case "tentciv": {30};
 	default {1};
 };

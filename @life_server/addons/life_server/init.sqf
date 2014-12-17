@@ -52,6 +52,7 @@ if (!_extDB) exitWith {
 ["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall;
 ["CALL deleteOldMessages",1] spawn DB_fnc_asyncCall;
 ["CALL deleteSelledHouses",1] spawn DB_fnc_asyncCall;
+["CALL deleteDeadTents",1] spawn DB_fnc_asyncCall;
 
 life_adminlevel = 0;
 life_medicLevel = 0;
@@ -119,7 +120,7 @@ client_session_list = [];
 } foreach allUnits;
 
 [] spawn TON_fnc_initHouses;
-
+[] spawn life_fnc_initTents;
 //Lockup the dome
 private["_dome","_rsb"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];

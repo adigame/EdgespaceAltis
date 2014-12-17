@@ -47,6 +47,7 @@ life_markers = false;
 life_sitting = false;
 life_firstSpawn = false;
 life_robbery_in_progress = false;
+life_tent = [];
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
@@ -228,7 +229,8 @@ life_inv_items =
 	"life_inv_kidney",
 	"life_inv_gpstracker",
 	"life_inv_scalpel",
-	"life_inv_offroadammo"
+	"life_inv_offroadammo",
+	"life_inv_tentciv"
 ];
 
 //Setup variable inv vars.
@@ -370,7 +372,8 @@ sell_array =
 	["uranium",10000],
 	["kidney",9000],
 	["gpstracker",2500],
-	["scalpel",1000]
+	["scalpel",1000],
+	["tentciv",50000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -422,7 +425,8 @@ buy_array =
 	["ipuranium",9000],
 	["kidney",15000],
 	["gpstracker",3000],
-	["scalpel",7500]
+	["scalpel",7500],
+	["tentciv",150000]
 ];
 __CONST__(buy_array,buy_array);
 

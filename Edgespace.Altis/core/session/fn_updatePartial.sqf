@@ -50,6 +50,16 @@ switch(_mode) do {
 		_packet set[2,life_cash];
 		_packet set[4,life_atmcash];
 	};
+	
+	case 8: {	
+		_type = [_this,1,"",[""]] call BIS_fnc_param;
+		_position = [_this,2,[],[[]]] call BIS_fnc_param;
+        
+    if(_type == "" OR count _position == 0 ) exitWith {};
+		_packet set[2,_type];
+		_packet set[4,_position];
+	};
+		
 };
 
 [_packet,"DB_fnc_updatePartial",false,false] call life_fnc_MP;

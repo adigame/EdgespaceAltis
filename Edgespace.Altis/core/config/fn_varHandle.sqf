@@ -110,6 +110,7 @@ switch (_mode) do
 			case "gpstracker": {"life_inv_gpstracker"};
 			case "scalpel": {"life_inv_scalpel"};
 			case "offroadammo": {"life_inv_offroadammo"};
+			case "tentciv": {"life_inv_tentciv"};
 		};
 	};
 	
@@ -210,6 +211,7 @@ switch (_mode) do
 			case "life_inv_gpstracker": {"gpstracker"};
 			case "life_inv_scalpel": {"scalpel"};
 			case "life_inv_offroadammo": {"offroadammo"};
+			case "life_inv_tentciv": {"tentciv"};
 		};
 	};
 };

@@ -79,16 +79,26 @@ switch (_side) do {
 	
 	case civilian: {
 		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
+		
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
 		_queryResult pushBack (missionNamespace getVariable[format["houses_%1",_uid],[]]);
+		
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
+		
+		 _tent = _uid spawn life_fnc_getTents;
+		waitUntil{scriptDone _tent};
+		_queryResult pushBack (missionNamespace getVariable[format["tent_%1",_uid],[]]);
+		missionNamespace setVariable[format["tent_%1",_uid],nil];
+		
+		
+		
 	};
 };
 
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[12,_keyArr];
+_queryResult set[13,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

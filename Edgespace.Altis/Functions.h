@@ -10,6 +10,7 @@ class Socket_Reciever
 		class updateRequest {};
 		class syncData {};
 		class updatePartial {};
+		class killTent {};
 	};
 };
 
@@ -490,6 +491,7 @@ class Life_Client_Core
 		class weedSmoke {};
 		class gpsTracker {};
 		class offroadammo{};
+		class tent {};
 	};
 	
 	class Dialog_Controls

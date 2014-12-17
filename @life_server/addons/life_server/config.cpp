@@ -70,6 +70,15 @@ class CfgFunctions
 			class wantedPunish {};
 		};
 		
+	class Tents
+	{
+		file = "\life_server\Functions\Tents";
+		class initTents {};
+		class getTents {};
+		class killTent {};
+	}
+		
+		
 		class Jail_Sys
 		{
 			file = "\life_server\Functions\Jail";

@@ -232,6 +232,11 @@ switch (true) do
 	{
 	[] spawn life_fnc_offroadammo;
 	};
+	
+	case (_item == "tentciv"):
+	{
+	[_item, "Land_TentDome_F"] spawn life_fnc_tent;
+	};
 
 	default
 	{

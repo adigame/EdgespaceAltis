@@ -32,7 +32,23 @@ switch (_side) do
 	
 	case civilian:
 	{
-		_return = [
+	
+	_return = [];
+	
+	if(count life_tent > 0) then 
+		{
+		_markerLocal = createMarkerLocal[format["civ_spawn_tent_%1",getPlayerUID player],life_tent select 1];
+		_markerLocal setMarkerShapeLocal "ICON";
+		_markerLocal setMarkerTypeLocal "hd_destroy";
+		_markerLocal setMarkerColorLocal "ColorBlack";
+		_markerLocal setMarkerTextLocal "Zelt";
+		
+		_return = [[format["civ_spawn_tent_%1",getPlayerUID player],"Tent","\a3\ui_f\data\map\locationtypes\vegetationbroadleaf_ca.paa"]];
+		};
+ 
+        //the rest of your spawnpoints
+		
+		_return = _return + [
 			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
@@ -47,7 +63,7 @@ switch (_side) do
 			["rebel_spawn_1","Rebel Outpost 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
 		};
-		
+
 		if(license_civ_corporation && playerSide == civilian) then 
 		{
 		_return = _return + [
