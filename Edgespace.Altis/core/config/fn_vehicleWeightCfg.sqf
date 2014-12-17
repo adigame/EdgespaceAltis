@@ -1,9 +1,6 @@
 /*
 	File: fn_vehicleWeightCfg.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Master configuration for vehicle weight.
+	Description: Master configuration for vehicle weight.
 */
 private["_className"];
 _className = [_this,0,"",[""]] call BIS_fnc_param;

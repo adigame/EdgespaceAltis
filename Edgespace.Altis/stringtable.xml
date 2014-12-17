@@ -2712,30 +2712,45 @@
 			<Original>Rob Player</Original>
 			
 		</Key>
-		<Package name="Craft">
-	<Key ID="STR_CRAFT_Title">
-		<Original>Crafting Menu</Original>
-		
-	</Key>
-	<Key ID="STR_PM_CraftStats">
-		<Original>Object to craft</Original>
- 		
- 	</Key>
-	<Key ID="STR_PM_CraftMaterials">
-		<Original>Materials needed</Original>
- 		
- 	</Key>
-	<Key ID="STR_CRAFT_Button">
-		<Original>Craft !</Original>
- 		
- 	</Key>
-	<Key ID="STR_PM_NoMaterial">
-		<Original>You do not have all the required materials !</Original>
- 		
-	</Key>
-	<Key ID="STR_CRAFT_Process">
-		<Original>You have crafted : %1</Original>
-		
-	</Key>
-	</Package>
+<Package name="Craft">
+		<Key ID="STR_CRAFT_Title">
+			<Original>Crafting Menu</Original>
+		</Key>
+		<Key ID="STR_PM_CraftStats">
+			<Original>Object to craft</Original>
+		</Key>
+		<Key ID="STR_PM_CraftMaterials">
+			<Original>Materials needed</Original>
+		</Key>
+		<Key ID="STR_CRAFT_Button">
+			<Original>Craft !</Original>
+		</Key>
+		<Key ID="STR_PM_NoMaterial">
+			<Original>You do not have all the required materials !</Original>
+		</Key>
+		<Key ID="STR_CRAFT_Process">
+			<Original>You have crafted : %1</Original>
+		</Key>
+
+		<Key ID="STR_CRAFT_FILTER_Weapon">
+			<Original>Weapons</Original>
+		</Key>
+
+		<Key ID="STR_CRAFT_FILTER_Uniform">
+			<Original>Uniforms</Original>
+		</Key>
+		<Key ID="STR_CRAFT_FILTER_Backpack">
+			<Original>Backpacks</Original>
+		</Key>
+		<Key ID="STR_CRAFT_FILTER_Item">
+			<Original>Items</Original>
+		</Key>
+		<Key ID="STR_CRAFT_AR_Backpack">
+			<Original>You already have a backpack ! Put it on the ground before crafting a new.</Original>
+		</Key>
+		<Key ID="STR_CRAFT_AR_Uniform">
+			<Original>You already have an uniform ! Put it on the ground before crafting a new.</Original>
+		</Key>
+
+	</Package> 
 </Project>

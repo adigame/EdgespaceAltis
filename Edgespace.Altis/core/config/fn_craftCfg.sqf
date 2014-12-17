@@ -19,15 +19,64 @@ switch(_craft) do
 		{
 			default
 			{
-				["Crafting System",
+				["Weapons",
 					[
-						["hgun_P07_F", ["life_inv_goldbar",1,"life_inv_copperr",1]],
-						["SMG_01_F", ["life_inv_goldbar",3,"life_inv_copperr",5,"life_inv_ironr",6,"life_inv_diamondr",1]],
-						["arifle_Mk20_F", ["life_inv_goldbar",6,"life_inv_copperr",10,"life_inv_ironr",8]]
+						//[Object classname, [item #1,quantity item #1,item #2,quantity item #2]],]
+						["hgun_P07_F", ["life_inv_goldbar",2,"life_inv_copperr",1]],
+						["SMG_01_F", ["life_inv_goldbar",6,"life_inv_copperr",3,"life_inv_ironr",3,"life_inv_diamondr",1]]
 
 					]
 				];
 			};
 		};
 	};
+
+	case "uniform":
+	{
+		switch(true) do
+		{
+			default
+			{
+				["Clothes",
+					[
+						//[Object classname, [item #1,quantity item #1,item #2,quantity item #2]],]
+						["U_IG_Guerilla1_1", ["life_inv_goldbar",1]]
+					]
+				];
+			};
+		};
+	};
+
+	case "backpack":
+	{
+		switch(true) do
+		{
+			default
+			{
+				["Backpacks",
+					[
+						//[Object classname, [item #1,quantity item #1,item #2,quantity item #2]],]
+						["B_Carryall_oli", ["life_inv_goldbar",1]]
+					]
+				];
+			};
+		};
+	};
+
+	case "item":
+	{
+		switch(true) do
+		{
+			default
+			{
+				["Items",
+					[
+						//[Object classname, [item #1,quantity item #1,item #2,quantity item #2]],]
+						["life_inv_pickaxe", ["life_inv_goldbar",1]]
+					]
+				];
+			};
+		};
+	};
 };
+ 

@@ -256,6 +256,7 @@ class Life_Client_Core
 		class revokeLicense {};
 		class craft {};
 		class craft_update {};
+		class craft_updateFilter {};
 	};
 	
 	class Functions

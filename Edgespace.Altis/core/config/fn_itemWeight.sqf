@@ -1,9 +1,6 @@
 /*
 	File: fn_itemWeight.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Gets the items weight and returns it.
+	Description: Gets the items weight and returns it.
 */
 private["_item"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
@@ -66,7 +63,7 @@ switch (_item) do
 	case "painkillers": {5};
 	case "morphium": {6};
 	case "zipties": {1};
-	case "artifact": {15}; //TREASURE HUNTING ITEMS
+	case "artifact": {15}; //TREASURE HUNTING ITEMS BEFORE APPRAISAL
  	case "roundobject": {17};
 	case "squareobject": {17};
 	case "pottery": {19};

@@ -1,9 +1,6 @@
 /*
 	File: fn_tent.sqf
-	Author: Raku @ Veterans of Altis
-	
-	Description:
-	Sets up a tent with a fireplace, a chair and a campinglight.
+	Description: Sets up a tent with a fireplace, a chair and a camping light.
 */
 private["_nearestTents","_nearestVehicles","_nearestRoad","_tent","_tentSpawnPosition","_item","_chair","_fire","_light"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
@@ -94,5 +91,5 @@ if(_nearestTents isEqualTo [] && _nearestVehicles isEqualTo [] && _nearestRoad i
 		_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];
 	};
 } else {
-	hint "Cant setup tent, there is a \n\ntent (7 meters),\n campfire (7 meters),vehicle (15 meters),\n or road (50 meters)\n\n nearby.";
+	hint "You can;t set-up a tent here, there is \n\ntent (7 meters),\n campfire (7 meters),vehicle (15 meters),\n or road (50 meters)\n\n nearby.";
 };
