@@ -34,7 +34,7 @@ if(player distance (getMarkerPos "jail_marker2") > 100) then
 {
 	player setPos (getMarkerPos "jail_marker2");
 };
-
+// Remove items and licenses
 [1] call life_fnc_removeLicenses;
 if(life_inv_heroinu > 0) then {[false,"heroinu",life_inv_heroinu] call life_fnc_handleInv;};
 if(life_inv_heroinp > 0) then {[false,"heroinp",life_inv_heroinp] call life_fnc_handleInv;};

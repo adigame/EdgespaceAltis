@@ -1,3 +1,9 @@
+/*
+	Author: Raku @ Veterans of Altis
+	
+	Description:
+	Sets up tents on the map
+*/
 private["_tickTime","_queryResult","_query"];
 _query = format["SELECT type, position, pid FROM tents WHERE alive=1"];
  
@@ -26,7 +32,7 @@ diag_log "------------------------------------------------";
 	_chair allowDamage false;
 	_fire allowDamage false;
 	_light allowDamage false;
-		sleep 0.3;
+	sleep 0.3;
 	_chair attachTo [_tent];
 	_fire attachTo [_tent];
 	_light attachTo [_tent];

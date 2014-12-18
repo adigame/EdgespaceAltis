@@ -16,3 +16,4 @@ if(count _queryResult > 0) then {
 	_pos = call compile format["%1",_queryResult select 1];
 	_queryResult set[1,_pos];
 	missionNamespace setVariable[format["tent_%1",_this],_queryResult];
+};

@@ -1,11 +1,7 @@
 #define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
 /*
 	File: fn_vehStoreItem.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Used in the vehicle trunk menu, stores the selected item and puts it in the vehicles virtual inventory
-	if the vehicle has room for the item.
+	Description:Used in the vehicle trunk menu, stores the selected item and puts it in the vehicles virtual inventory if the vehicle has room for the item.
 */
 private["_ctrl","_num","_totalWeight","_itemWeight","_veh_data","_inv","_index","_val"];
 disableSerialization;

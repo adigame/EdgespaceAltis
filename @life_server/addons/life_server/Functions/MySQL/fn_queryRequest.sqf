@@ -6,15 +6,20 @@
 	Handles the incoming request and sends an asynchronous query 
 	request to the database.
 	
-	Return:
-	ARRAY - If array has 0 elements it should be handled as an error in client-side files.
+	Return:	ARRAY - If array has 0 elements it should be handled as an error in client-side files.
 	STRING - The request had invalid handles or an unknown error and is logged to the RPT.
+	
+		
+	Client        Client		        Server		             Client
+	init.sqf ---> fn_dataQuery.sqf ---> fn_queryRequest.sqf ---> fn_requestReceived
+	
 */
 private["_uid","_side","_query","_return","_queryResult","_qResult","_handler","_thread","_tickTime","_loops","_returnCount"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
 _ownerID = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
 
+// Check to see if a player actually called this
 if(isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
 
@@ -99,7 +104,7 @@ _queryResult set[8,_new];
 		diag_log "------------------------------------------------";
 
 
-// 9 Proficency
+// 9 Proficiency
 //Parse licenses (Always index 9)
 _new = [(_queryResult select 9)] call DB_fnc_mresToArray;
 if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
@@ -175,4 +180,5 @@ switch (_side) do {
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[13,_keyArr];
 
+// Pass results array with player ID the client side fn_requestReceived.sqf
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

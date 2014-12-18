@@ -1,9 +1,6 @@
 #include <macro.h>
 /*
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sends specific information to the server to update on the player,
+	Description: Sends specific information to the server to update on the player,
 	meant to keep the network traffic down with large sums of data flowing
 	through life_fnc_MP
 */

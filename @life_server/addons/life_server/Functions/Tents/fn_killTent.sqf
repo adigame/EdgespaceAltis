@@ -1,3 +1,9 @@
+/*
+	File: fn_killTent.sqf
+	Author: Raku @ Veterans of Altis
+	
+	Kills the tent.
+*/
 private["_uid","_query"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 if(_uid == "") exitWith {};
