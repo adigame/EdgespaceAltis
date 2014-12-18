@@ -59,28 +59,10 @@ if(_nearestTents isEqualTo [] && _nearestVehicles isEqualTo [] && _nearestRoad i
 		
 		_tent = createVehicle [_tentType, [1.6650946,1.6626484,5], [], 0, "CAN_COLLIDE"];
 		_tent setDir 90;
-		_chair = createVehicle ["Land_CampingChair_V1_F", [3.2369072,2.8136106,5], [], 0, "CAN_COLLIDE"];
-		_fire = createVehicle ["Land_FirePlace_F", [2.5509803,3.8476455,5], [], 0, "CAN_COLLIDE"];
-		_light = createVehicle ["Land_Camping_Light_off_F", [0.98040187,3.285964,5], [], 0, "CAN_COLLIDE"];
-		_chair attachTo [_tent];
-		_fire attachTo [_tent];
-		_light attachTo [_tent];
 		_tent setDir (floor (random 360));		
 		_tent setPos (_tentSpawnPosition);
 		_tent setPosATL [(getPosATL _tent) select 0, (getPosATL _tent) select 1, 0];
-		_chair setDir (+63.3056);
-		_chair setPos (getPos _chair);
-		_chair setPosATL [(getPosATL _chair) select 0, (getPosATL _chair) select 1, 0];
-		_fire setPos (getPos _fire);
-		_fire setPosATL [(getPosATL _fire) select 0, (getPosATL _fire) select 1, 0];
-		_light setPos (getPos _light);
-		_light setPosATL [(getPosATL _light) select 0, (getPosATL _light) select 1, 0];
-		
 		_tent allowDamage false;
-		_chair allowDamage false;
-		_fire allowDamage false;
-		_light allowDamage false;
-		
 		[8,_tentType,(getPos _tent)] call SOCK_fnc_updatePartial;
 		
 		life_tent = [_tentType,_tentSpawnPosition];		

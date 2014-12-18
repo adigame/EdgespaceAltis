@@ -41,7 +41,7 @@ switch (_side) do
 		_markerLocal setMarkerShapeLocal "ICON";
 		_markerLocal setMarkerTypeLocal "hd_destroy";
 		_markerLocal setMarkerColorLocal "ColorBlack";
-		_markerLocal setMarkerTextLocal "Zelt";
+		_markerLocal setMarkerTextLocal "Your Tent";
 		
 		_return = [[format["civ_spawn_tent_%1",getPlayerUID player],"Tent","\a3\ui_f\data\map\locationtypes\vegetationbroadleaf_ca.paa"]];
 		};

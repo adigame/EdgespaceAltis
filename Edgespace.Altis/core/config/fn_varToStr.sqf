@@ -109,17 +109,30 @@ switch (_var) do
 	case "life_inv_tentciv": {"Tent"};
 	
 	//Prof Block
-	case "Oil_Prof": {(localize "STR_Prof_Oil")};
-	case "Iron_Prof": {(localize "STR_Prof_Iron")};
-	case "Copper_Prof": {(localize "STR_Prof_Copper")};
-	case "Rock_Prof": {(localize "STR_Prof_Rock")};
-	case "Fruit_Prof": {(localize "STR_Prof_Fruit")};
-	case "Salt_Prof": {(localize "STR_Prof_Salt")};
-	case "Sand_Prof": {(localize "STR_Prof_Sand")};
-	case "Diamond_Prof": {(localize "STR_Prof_Diamond")};
-	case "Cocain_Prof": {(localize "STR_Prof_Cocain")};
-	case "Canabis_Prof": {(localize "STR_Prof_Canabis")};
-	case "Heroin_Prof": {(localize "STR_Prof_Heroin")};
+	case "Oil_Prof": {("Oil Proficiency")};
+	case "Iron_Prof": {("Iron Proficiency")};
+	case "Copper_Prof": {("Copper Proficiency")};
+	case "Rock_Prof": {("Rock Proficiency")};
+	case "Fruit_Prof": {("Fruit Proficiency")};
+	case "Salt_Prof": {("Salt Proficiency")};
+	case "Sand_Prof": {("Sand Proficiency")};
+	case "Diamond_Prof": {("Diamond Proficiency")};
+	case "Cocain_Prof": {("Cocaine Proficiency")};
+	case "Canabis_Prof": {("Cannabis Proficiency")};
+	case "Heroin_Prof": {("Heroin Proficiency")};
+	case "Glass_Prof": {("Glass Proficiency")};
+	case "Gold_Prof": {("Gold Proficiency")};
+	case "Plat_Prof": {("Platinum Proficiency")};
+	case "Wine_Prof": {("Wine Proficiency")};
+	case "Moonshine_Prof": {("Moonshine Proficiency")};
+	case "Meth_Prof": {("Meth Proficiency")};
+	case "Whiskey_Prof": {("Whiskey Proficiency")};
+	case "Beer_Prof": {("Beer Proficiency")};
+	case "Uranium_Prof": {("Uranium Proficiency")};
+	case "Yeast_Prof": {("Yeast Proficiency")};
+	case "Hops_Prof": {("Hops Proficiency")};
+	case "Rye_Prof": {("Rye Proficiency")};
+
 		
 	//License Block
 	case "license_civ_driver": {"Drivers License"};

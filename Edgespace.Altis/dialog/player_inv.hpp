@@ -344,8 +344,8 @@ class playerSettings {
 		class ButtonMarket : Life_RscButtonMenu {
 			idc = -1;
 			text = "Market";
+			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
 			onButtonClick = "[] call life_fnc_OpenEconomy;";
-			//x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;
 			w = (6.25 / 40);
@@ -354,11 +354,11 @@ class playerSettings {
 		
 		class ProfButton : life_RscButtonMenu {
 			text = "Proficiency";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
 			onButtonClick = "[] call life_fnc_profSetup;";
 			x = 0.11;
 			y = 0.70;
-			w = (5.75 / 40);
+			w = (6.25 / 40);
 			h = (1 / 25);
  		};
 	};

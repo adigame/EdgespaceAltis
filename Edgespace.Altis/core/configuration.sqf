@@ -289,7 +289,19 @@ life_prof =
 ["Fruit_Prof","civ"],
 ["Diamond_Prof","civ"],
 ["Rock_Prof","civ"],
-["Sand_Prof","civ"]
+["Sand_Prof","civ"],
+["Glass_Prof","civ"],
+["Gold_Prof","civ"],
+["Plat_Prof","civ"],
+["Wine_Prof","civ"],
+["Moonshine_Prof","civ"],
+["Meth_Prof","civ"],
+["Whiskey_Prof","civ"],
+["Beer_Prof","civ"],
+["Uranium_Prof","civ"],
+["Yeast_Prof","civ"],
+["Hops_Prof","civ"],
+["Rye_Prof","civ"]
 ];
  
  
