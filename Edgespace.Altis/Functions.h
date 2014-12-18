@@ -28,8 +28,6 @@ class SpyGlass
 		class payLoad{};
 		class variableCheck{};
 		class initSpy {preInit=1;};
-		class profSetUp {};
-		class addExp {};
 	};
 };
 
@@ -315,6 +313,8 @@ class Life_Client_Core
 		class randomRound {};
 		class globalsound {};
 		class globalsoundclient {};
+		class profSetUp {};
+		class addExp {};
 	};
 	
 	class Network
