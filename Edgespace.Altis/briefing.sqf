@@ -25,6 +25,9 @@ player createDiaryRecord["changelog",
 				 15/12/2014 - Dynamic Economy<br/>
 				 15/12/2014 - Various Fixes<br/>
 				 15/12/2014 - Added Vehicle Insurance<br/>
+				 17/12/2014 - Factions<br/>
+				 18/12/2014 - Added Tents as Spawn Points<br/>
+				 18/12/2014 - Added Proficiency System<br/>
 				 "
 		]
 	];

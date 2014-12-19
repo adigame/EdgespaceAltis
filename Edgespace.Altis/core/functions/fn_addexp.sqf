@@ -5,7 +5,7 @@ Author: Jacob "PapaBear" Tyler
 Description:
 Add exp to given prof
 
-["Canabis_Prof",40] call life_fnc_addExp;
+["Uranium_Prof",200] call life_fnc_addExp;
 [true,"cannabis",1] call life_fnc_handleInv; 
 */
 //add exp
@@ -57,7 +57,7 @@ titleText [format["You have gained %1 xp!",_amount],"PLAIN"]; titleFadeOut 5;
 					{ 
 						missionNamespace setVariable [_type,[(_profData select 0) + 1,(_exp)]];
 						_text = [_type] call life_fnc_varToStr;
-							titleText [format["%1 is now at level %2 you can now process %1 faster.",_text,_level],"PLAIN"]; titleFadeOut 5;
+							titleText [format["%1 is now at level %2 you can now gather and process %1 faster.",_text,_level],"PLAIN"]; titleFadeOut 5;
 					};
 			};
  

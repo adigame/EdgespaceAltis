@@ -161,7 +161,7 @@
 	while {true} do
 	{
 		sleep 1.5;
-		if(life_inv_uranium2 != 0) then {
+		if((life_inv_uranium1 != 0) || (life_inv_uranium2 != 0) || (life_inv_uranium3 != 0) || (life_inv_uranium4 != 0) || (life_inv_uranium != 0)) then {
 			player forceWalk true;
 			player setFatigue 1;
 			hint "The uranium is so heavy you can barely walk..";
