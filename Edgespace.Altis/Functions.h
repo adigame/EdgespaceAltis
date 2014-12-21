@@ -142,6 +142,7 @@ class Life_Client_Core
 		// Police Search Action copInteractionMenu
 		class searchAction {};
 		class searchVehAction {};
+		class skyDiving {};
 		
 		// Unrestrain for Cops
 		class unrestrain {};

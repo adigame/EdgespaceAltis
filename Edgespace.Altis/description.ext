@@ -179,7 +179,11 @@ class CfgSounds
 	sound[] = {"\sounds\suicidevest.ogg", 1.0, 1};
 	titles[] = {};
 	}; 
-
+	class airplane {
+	name = "airplane";
+	sound[] = {"\sounds\airplane.ogg", 1.0, 1};
+	titles[] = {};
+	}; 	
 };
 
 class CfgDebriefing

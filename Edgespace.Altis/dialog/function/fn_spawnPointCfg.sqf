@@ -52,15 +52,16 @@ switch (_side) do
 			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_training","Shooting Range","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			
 		];
 		// Only Allow Rebel to Spawn at the Rebel HQ
 		if(license_civ_rebel && playerSide == civilian) then 
 		{
 		_return = _return + [
 			["reb_spawn_hq","Rebel HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["rebel_spawn_1","Rebel Outpost 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["rebel_spawn_1","Rebel Outpost 1","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["rebel_spawn_training","Rebel Training Facility","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
 		};
 

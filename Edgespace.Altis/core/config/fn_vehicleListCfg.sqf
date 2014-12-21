@@ -199,6 +199,42 @@ switch (_shop) do
 		];
 	};
 	
+	case "reb_ship_1":
+	{
+		_return =
+		[
+			["C_Rubberboat",5000],
+			["O_SDV_01_F",70000],
+			["C_Boat_Civil_01_F",60000],
+			["B_Boat_Transport_01_F",15000]
+		];
+		
+		if(license_civ_rebel) then
+		{
+			_return set[count _return,["I_Boat_Armed_01_minigun_F",300000]];
+
+		};
+		
+	};
+	
+	case "corp_ship_1":
+	{
+		_return =
+		[
+			["C_Rubberboat",5000],
+			["O_SDV_01_F",70000],
+			["C_Boat_Civil_01_F",60000],
+			["B_Boat_Transport_01_F",15000]
+		];
+		
+		if(license_civ_corporation) then
+		{
+			_return set[count _return,["I_Boat_Armed_01_minigun_F",300000]];
+		};
+		
+	};
+	
+	
 	case "donator_car":
 	{
 		if(__GETC__(life_donator) > 1) then
